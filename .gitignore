@@ -1,0 +1,27 @@
+# Private source material — never publish
+chatgpt-chat-refrences.md
+Claude Code Prompt — Build Production-Ready Adaptive UX-UI Skill.md
+
+# Maintainer-only: validator, test scenarios, maintenance notes
+scripts/
+evals/
+MAINTAINING.md
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
