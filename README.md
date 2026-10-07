@@ -32,7 +32,23 @@ Most UX checklists apply the same rules to everything. The right interface for a
 
 ## Examples
 
-Three demo pages, each built with flaws planted on purpose. One agent audited each page with the skill without being told what was planted; a second agent applied the safe fixes. The screenshots are unedited captures of the baseline and the fixed version.
+Five demo pages, each built with flaws planted on purpose. One agent audited each page with the skill without being told what was planted; a second agent applied the safe fixes. The screenshots are unedited captures of the baseline and the fixed version.
+
+### Monitoring dashboard
+
+| Before | After |
+|---|---|
+| ![Monitoring dashboard before](docs/examples/monitoring-dashboard-before-desktop.png) | ![Monitoring dashboard after](docs/examples/monitoring-dashboard-after-desktop.png) |
+
+Found 12 of 12 planted flaws. The banner said "All systems operational" while a monitor was down; it now reports the real state. Failing monitors moved to the top, every state got its own shape, stale data is labelled, and the layout fits the window. Thresholds and alert logic were not touched; one-click delete was reported, not changed.
+
+### Clinic booking flow
+
+| Before | After |
+|---|---|
+| ![Booking calendar before](docs/examples/clinic-booking-before-step3.png) | ![Booking calendar after](docs/examples/clinic-booking-after-step3.png) |
+
+Found 13 of 13. Unavailable days are now marked before the patient picks one, choices made so far appear in the side rail, fields have real labels, and a fake "Only 1 slot left" badge is gone. Availability, pricing and deposit logic were not touched.
 
 ### Fashion product page, phone width
 
@@ -58,7 +74,7 @@ Found 10 of 10. Added status words, aligned totals, readable timestamps, honest 
 
 Found 12 of 12. Fixed the reversed phone number, the progress bar filling from the wrong side, broken Arabic headings and missing labels. Reported, but did not change, a submit handler that wipes the form on error, because that is checkout behaviour.
 
-In all three, the business-logic files were untouched and the test suites passed before and after. **[Full details for each example: what was found, fixed and deliberately skipped →](docs/examples/README.md)**
+In all five, the business-logic files were untouched and the test suites passed before and after. **[Full details for each example: what was found, fixed and deliberately skipped →](docs/examples/README.md)**
 
 ## What it does
 

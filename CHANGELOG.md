@@ -9,7 +9,7 @@ The version is also recorded in `SKILL.md` under `metadata.version`.
 Changes from running the skill end to end (audit, then fix) on three demo pages.
 
 ### Added
-- `docs/examples/`: before and after screenshots of three demo pages, with what was found, fixed and deliberately left alone.
+- `docs/examples/`: before and after screenshots of five demo pages, with what was found, fixed and deliberately left alone.
 - Fallback when the user cannot be asked: take the conservative option, leave the contested change unmade, record the decision.
 - Functional recommendations are numbered FR1, FR2.
 - Implementation report: a "Decisions taken without asking" section.
