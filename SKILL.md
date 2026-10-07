@@ -2,7 +2,7 @@
 name: adaptive-fwm-ux-ui
 description: "Adaptive, evidence-based UX/UI audit and safe improvement for any website or app. Classifies each surface first (user goal, business goal, audience, environment, risk, device, language), then applies only the matching rule modules: ecommerce, fashion, lead generation, service business, B2B marketing, content sites, SaaS apps, dashboards, monitoring, admin tools, AI products, booking, marketplaces and high-stakes flows, plus forms, navigation, tables, search and filters, charts, loading/empty/error states, mobile and RTL/Arabic. Preserves existing functionality and brand identity. Use whenever the user asks to audit, review, critique, check, improve, fix or polish the UX, UI, usability, accessibility (WCAG 2.2 AA), responsiveness, conversion flow, checkout, forms, navigation, tables or dashboards of a page, screen, component, flow or whole product, or to plan UX before a build, even if they only say 'check my website', 'make this easier to use' or 'why does this page feel off'."
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Adaptive UX/UI audit and improvement
@@ -44,7 +44,7 @@ A scoped review or focus pass still classifies the surface first; it just audits
 
 **Exclusions.** The user can rule areas out ("skip the admin", "only the storefront"). An excluded area is neither audited nor edited. Shared components, tokens and stylesheets are the trap: a fix made for an included area can change an excluded one. If a fix would touch something an excluded area also uses, stop and ask before applying it.
 
-**Read-only means the project is left exactly as found.** If inspecting the rendered UI needs a helper script, screenshots or a build output, put them in a temporary directory outside the project (or the scratch location your environment provides), never in the repository. Name them in the report's "Access used" line and delete them when done. If something had to be written inside the project (running a dev server or build often writes caches, logs or output), say so plainly; do not describe the tree as untouched. Do not submit real forms, place orders, enter payment details or create accounts on a live system to see a state; mark those states as not triggered.
+**Read-only means the project is left exactly as found.** If inspecting the rendered UI needs a helper script, screenshots or a build output, put them in a temporary directory outside the project (or the scratch location your environment provides), never in the repository. Name them in the report's "Access used" line and delete them when done, keeping only screenshots the report cites as evidence. The same applies in fix mode. If something had to be written inside the project (running a dev server or build often writes caches, logs or output), say so plainly; do not describe the tree as untouched. Do not submit real forms, place orders, enter payment details or create accounts on a live system to see a state; mark those states as not triggered.
 
 ## Step 2 — Gather evidence
 
@@ -178,7 +178,7 @@ Screens are only good or bad relative to the task they serve, so begin with task
 
 Priority measures user impact on that surface's main tasks, not how much you dislike something. Most findings in a healthy product are P2 or P3; if everything is P1, recalibrate.
 
-Each finding has: priority; route or screen; component; workflow; issue; evidence (file and line, or what you observed, marked verified or inferred); rule (module and section) with its evidence class; user impact; recommendation; UI-only? (yes/no); functionality risk (none/low/medium/high, with the reason); status (reported, implemented, or not implemented — functional).
+Each finding has: priority; route or screen; component; workflow; issue; evidence (file and line, or what you observed, marked verified or inferred); rule (module and section) with its evidence class; user impact; recommendation; UI-only? (yes, no, or partly, saying which part is which); functionality risk (none/low/medium/high, with the reason); status (reported, implemented, or not implemented — functional).
 
 ### Evidence classes
 
@@ -194,7 +194,7 @@ Never present a recommendation as a WCAG failure, and never present a preference
 
 ## Step 8 — Report
 
-Use [assets/ux-audit-template.md](assets/ux-audit-template.md) for a full audit. Keep its section order: executive summary; classification; workflows; strengths to preserve; findings by priority; accessibility; responsive; brand; functional recommendations not implemented; recommended order of work. For a scoped review, use the same headings and drop the ones that do not apply. Write the report in the language the user wrote in unless they ask otherwise, translating the template headings too; keep finding and recommendation numbers, priorities, success-criterion numbers, module names, file paths and code in their original form. Number findings `F1, F2…` and recommended changes `R1, R2…`, so that "do 3" is never ambiguous, and keep the numbers stable for the rest of the conversation. A report that exists only in chat cannot be acted on in a later session: after a full audit, offer to save it to a file at a location the user chooses, and do not write it into the project unasked. Cite sources in a report only when the user asks or a claim is likely to be challenged; the modules already trace to [references/research-sources.md](references/research-sources.md).
+Use [assets/ux-audit-template.md](assets/ux-audit-template.md) for a full audit. Keep its section order: executive summary; classification; workflows; strengths to preserve; findings by priority; accessibility; responsive; brand; functional recommendations not implemented; recommended order of work. For a scoped review, use the same headings and drop the ones that do not apply. Write the report in the language the user wrote in unless they ask otherwise, translating the template headings too; keep finding and recommendation numbers, priorities, success-criterion numbers, module names, file paths and code in their original form. Number findings `F1, F2…` and recommended changes `R1, R2…`, so that "do 3" is never ambiguous, and keep the numbers stable for the rest of the conversation. Number functional recommendations `FR1, FR2…`. List a change under R only if it can be made within the safe boundary; if it means editing a handler or other behavior-bearing code, say so in the R item so the reader knows equivalence must be verified. A report that exists only in chat cannot be acted on in a later session: after a full audit, offer to save it to a file at a location the user chooses, and do not write it into the project unasked. Cite sources in a report only when the user asks or a claim is likely to be challenged; the modules already trace to [references/research-sources.md](references/research-sources.md).
 
 ## Step 9 — Implement (only in a fix mode)
 
@@ -204,7 +204,7 @@ Read [references/implementation-safety.md](references/implementation-safety.md) 
 2. Find the build, lint and test commands and run a baseline where practical, noting failures that already exist.
 3. Implement UI-safe changes in small groups by workflow or screen, highest priority first.
 4. Prefer edits to styles, tokens usage, layout, semantic markup, labels, ARIA, focus handling, copy, grouping, ordering and the presentation of states. Be cautious with state, hooks, stores, API calls, event handlers, routing and auth; if behavior-bearing code must be touched, prove the behavior is unchanged.
-5. When a fix would visibly change layout or brand expression in a way the user may not expect, or when more than one reasonable design exists, describe the options and ask before applying it. Clear-cut fixes (a missing label, an invisible focus ring, a clipped button) do not need a question.
+5. When a fix would visibly change layout or brand expression in a way the user may not expect, or when more than one reasonable design exists, describe the options and ask before applying it. Clear-cut fixes (a missing label, an invisible focus ring, a clipped button) do not need a question. If the user has said they are unavailable, or cannot be asked, take the most conservative option that keeps the brand and existing behavior, leave the contested change unmade, and record each such decision in the report.
 6. Validate after each group, then inspect the full diff and run the final checks.
 7. Do not commit, push or open a pull request unless the user asks.
 

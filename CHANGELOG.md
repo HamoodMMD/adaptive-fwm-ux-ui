@@ -4,6 +4,22 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.0.2 - 2026-10-07
+
+Changes from running the skill end to end (audit, then fix) on three demo pages.
+
+### Added
+- `docs/examples/`: before and after screenshots of three demo pages, with what was found, fixed and deliberately left alone.
+- Fallback when the user cannot be asked: take the conservative option, leave the contested change unmade, record the decision.
+- Functional recommendations are numbered FR1, FR2.
+- Implementation report: a "Decisions taken without asking" section.
+
+### Changed
+- "UI-only?" may be answered "partly".
+- A recommended change that needs a handler edit must say so.
+- The helper-file rule also covers fix mode; screenshots cited as evidence may be kept outside the project.
+- README redesigned with an examples section.
+
 ## 1.0.1 - 2026-10-07
 
 Clarifications from the first real audit and a blind test of 23 scenarios.

@@ -8,6 +8,10 @@
 
 <Three to six sentences: what was changed, what was deliberately left, whether everything was verified, and anything the reader must do next.>
 
+## Decisions taken without asking
+
+<Each place where the skill says to ask the user and the user could not be asked: the choice made, why it was the conservative one, and what the user should confirm. Write "None" if there were none.>
+
 ## 2. Baseline
 
 | Item | Before any change |

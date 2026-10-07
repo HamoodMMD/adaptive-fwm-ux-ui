@@ -1,10 +1,64 @@
-# adaptive-fwm-ux-ui
+<h1 align="center">adaptive-fwm-ux-ui</h1>
 
-An Agent Skill for auditing and safely improving the UX and UI of any website or application.
+<p align="center">
+  <strong>An Agent Skill that audits and safely improves the UX and UI of any website or app.</strong><br>
+  It works out what it is looking at first, applies only the rules that fit, and leaves your functionality and brand alone.
+</p>
 
-Most UX checklists apply the same rules to everything. This skill starts by working out what it is looking at — a store, an agency site, a monitoring dashboard, an admin tool, an AI workspace, a booking flow — and who uses it for what. Then it loads only the rules that fit, audits against them, and, if asked, makes the changes that are safe to make. It will not alter how the product works or what the brand looks like unless you tell it to.
+<p align="center">
+  <a href="#examples">Examples</a> ·
+  <a href="#installation">Installation</a> ·
+  <a href="#usage">Usage</a> ·
+  <a href="#how-classification-works">How it works</a> ·
+  <a href="#modules">Modules</a> ·
+  <a href="#limitations">Limitations</a>
+</p>
 
-**Version:** 1.0.1 · **Format:** [Agent Skills](https://agentskills.io/specification) · **Target:** WCAG 2.2 Level AA
+<p align="center">
+  Version 1.0.2 · <a href="https://agentskills.io/specification">Agent Skills</a> format · Claude Code and Codex · WCAG 2.2 AA · 27 rule modules · 109 indexed sources
+</p>
+
+---
+
+Most UX checklists apply the same rules to everything. The right interface for a fashion store is the wrong interface for an incident dashboard, so this skill starts by working out what kind of product surface it is looking at and who uses it for what. Then it loads only the rules that fit, audits against them, and, if asked, makes the changes that are safe to make.
+
+| | |
+|---|---|
+| **Adaptive** | Classifies each surface of a product, then picks from 14 product profiles and 8 interface patterns. A store, its customer account and its staff admin get different rules. |
+| **Evidence-based** | Every finding names its rule and what kind of rule it is: a WCAG requirement, an established principle, published research, design-system guidance, or a judgment call. |
+| **Safe** | Read-only by default. In fix mode it changes presentation only; anything touching logic, data, pricing or permissions is reported, not edited. |
+| **Brand-preserving** | Takes an inventory of the existing identity and fixes how a brand element is used before proposing to change the element. No house style. |
+| **Honest** | Never adds fake controls or data, never recommends manufactured urgency, and says what it could not verify. |
+
+## Examples
+
+Three demo pages, each built with flaws planted on purpose. One agent audited each page with the skill without being told what was planted; a second agent applied the safe fixes. The screenshots are unedited captures of the baseline and the fixed version.
+
+### Fashion product page, phone width
+
+| Before | After |
+|---|---|
+| ![Fashion product page before](docs/examples/fashion-product-before-mobile.png) | ![Fashion product page after](docs/examples/fashion-product-after-mobile.png) |
+
+Found 12 of 12 planted flaws. Fixed the layout that hid the buy controls on phones, removed a fake "Only 2 left!" countdown, named the colours, restored contrast and keyboard access. Left the pre-ticked marketing box and the missing size for the owner to decide.
+
+### Internal orders table
+
+| Before | After |
+|---|---|
+| ![Orders table before](docs/examples/admin-orders-before-desktop.png) | ![Orders table after](docs/examples/admin-orders-after-desktop.png) |
+
+Found 10 of 10. Added status words, aligned totals, readable timestamps, honest selection counts and specific delete confirmations. Kept the 30px rows and the dark theme; did not turn the table into cards.
+
+### Arabic checkout
+
+| Before | After |
+|---|---|
+| ![Arabic checkout before](docs/examples/arabic-checkout-before-desktop.png) | ![Arabic checkout after](docs/examples/arabic-checkout-after-desktop.png) |
+
+Found 12 of 12. Fixed the reversed phone number, the progress bar filling from the wrong side, broken Arabic headings and missing labels. Reported, but did not change, a submit handler that wipes the form on error, because that is checkout behaviour.
+
+In all three, the business-logic files were untouched and the test suites passed before and after. **[Full details for each example: what was found, fixed and deliberately skipped →](docs/examples/README.md)**
 
 ## What it does
 
@@ -148,6 +202,7 @@ adaptive-fwm-ux-ui/
 │   ├── profiles/                 14 modules chosen by classification
 │   └── patterns/                 8 modules chosen by what is on screen
 ├── assets/                       classification, audit and implementation report templates
+├── docs/examples/                before and after screenshots with write-ups
 ├── README.md
 └── CHANGELOG.md
 ```

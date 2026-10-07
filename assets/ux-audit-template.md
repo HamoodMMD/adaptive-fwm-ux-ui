@@ -68,7 +68,7 @@ List by priority, highest first. One block per finding.
 | **Rule** | <module › section> — <Requirement (SC x.y.z, Level) / Principle / Research / Guidance / Judgment> |
 | **User impact** | <Who is affected and how> |
 | **Recommendation** | <The specific change> |
-| **UI-only?** | Yes / No |
+| **UI-only?** | Yes / No / Partly (say which part) |
 | **Functionality risk** | None / Low / Medium / High — <why> |
 | **Status** | Reported / Implemented / Not implemented — functional |
 
@@ -131,9 +131,9 @@ Safe UI changes, grouped by workflow or screen, in the order to do them.
 
 Improvements that need changes to behavior, data, logic or integrations. Not implemented; listed for a product and engineering decision.
 
-| # | Recommendation | User benefit | What would have to change | Area affected |
+| ID | Recommendation | User benefit | What would have to change | Area affected |
 |---|---|---|---|---|
-| | | | | |
+| FR1 | | | | |
 
 ## 11. Suggested order of work
 
