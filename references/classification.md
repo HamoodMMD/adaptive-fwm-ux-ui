@@ -37,7 +37,7 @@ Three dimensions switch modules on directly, whatever the profile:
 - **AI involvement ≠ none** → add `ai-product`.
 - **Language = RTL, bilingual or multilingual** → add `patterns/rtl-bilingual`.
 
-Apply `high-stakes` and `ai-product` where the condition actually holds. When it holds only for particular actions or panels inside a surface (the payment step, a delete action, an AI summary panel), scope the module to those and do not count it toward the two-secondary limit. Count it as a secondary only when it characterizes the whole surface, such as an AI workspace or a payments console.
+Apply `high-stakes` and `ai-product` where the condition actually holds. When it holds only for particular actions or panels inside a surface (the payment step, a delete action, an AI summary panel), scope the module to those and do not count it toward the two-secondary limit. Count it as a secondary only when it characterizes the whole surface, such as an AI workspace or a payments console. An ordinary card payment is enough to scope `high-stakes` to the pay step; routine, reversible team or settings changes are not. Record a scoped overlay in the notes for the surface, and mark it conditional if you have not yet confirmed the action exists.
 
 ## Signals
 
@@ -75,6 +75,8 @@ The **primary** profile describes what kind of surface the user is in: its envir
 
    Two "usually primary" profiles can also combine. A company selling *services* to businesses is `service-business` primary with `b2b-marketing` secondary; a company selling a *product or platform* to businesses is `b2b-marketing` primary. A store that also takes bookings is `ecommerce` or `booking-reservation` primary according to which transaction dominates.
 
+   A landing or pricing page that belongs to a business product's site is `b2b-marketing` primary with `sales-lead-generation` secondary; only a standalone campaign page is `sales-lead-generation` primary. A blog attached to a commercial site is its own `informational-content` surface even though it exists partly to sell. A provider's or seller's own tool is `saas-application`; a tool where staff process other people's records is `admin-backoffice`.
+
 3. A normally-secondary profile becomes primary when nothing broader applies: a standalone landing page is `sales-lead-generation`; a standalone chat tool with no workspace features is `ai-product`; a standalone metrics page is `dashboard-analytics`.
 4. Keep at most two secondaries. If more than two qualify, first check whether the surface is really two surfaces that should be split, and whether `high-stakes` or `ai-product` applies only to part of it (then scope it to that part, as described under Dimensions). If more than two still qualify, keep the two that change the most recommendations and say which one was left out.
 5. When two primaries are equally plausible and their rules agree, pick either, say so, and move on. Ask only if they would lead to different recommendations.
@@ -87,7 +89,7 @@ Worked compositions:
 | Agency website | service-business | sales-lead-generation, b2b-marketing | forms, navigation, responsive-mobile |
 | Monitoring SaaS | saas-application | monitoring-observability, dashboard-analytics | charts-data-viz, tables, loading-empty-error-states |
 | AI workspace | saas-application | ai-product | forms, loading-empty-error-states |
-| Booking marketplace | booking-reservation | marketplace-directory | search-filter-sort, forms, responsive-mobile |
+| Booking marketplace (one search-and-book flow; split into surfaces for a whole-product audit, see Hard cases) | booking-reservation | marketplace-directory | search-filter-sort, forms, responsive-mobile |
 | Internal operations tool | admin-backoffice | — | tables, search-filter-sort, forms |
 | Documentation site | informational-content | — | navigation, search-filter-sort |
 
@@ -114,7 +116,7 @@ Give a project-level summary, then override per surface. Example for one fashion
 |---|---|---|---|---|
 | Home and campaigns | `/`, `/collections/*` | ecommerce (discovery) | fashion-apparel | Visual-led; marketing whitespace is appropriate |
 | Product | `/product/*` | ecommerce | fashion-apparel | Size, fit, variant imagery |
-| Checkout | `/cart`, `/checkout/*` | ecommerce | high-stakes | Payment step; error prevention weighs more |
+| Checkout | `/cart`, `/checkout/*` | ecommerce | — | `high-stakes` scoped to the payment step only |
 | Customer account | `/account/*` | saas-application (account and settings sections only) | ecommerce (orders, returns) | No onboarding or team rules |
 | Staff admin | `/admin/*` | admin-backoffice | — | Density and efficiency preserved; desktop-dominant |
 
@@ -152,7 +154,7 @@ Device context is usually answerable from evidence (analytics notes in docs, mob
 | Technical dashboard with a public landing page | Landing page: b2b-marketing or sales-lead-generation. App: saas-application + dashboard-analytics (and monitoring-observability if it is about system health) | Never apply marketing whitespace to the dashboard |
 | AI product with no dashboard | ai-product primary; add saas-application only if there are accounts, workspaces or settings to audit | Do not go looking for dashboards that are not there |
 | Marketplace with booking | Discovery surfaces: marketplace-directory. Reservation flow: booking-reservation. Provider tools: saas-application or admin-backoffice | Two-sided products are always several surfaces |
-| Restaurant with online ordering | ecommerce primary for the ordering flow (menu as catalog, modifiers as variants); booking-reservation secondary for pickup or delivery time and table reservations; service-business for the brochure pages | Skip shipping-by-courier and returns rules |
+| Restaurant with online ordering | ecommerce primary for the ordering flow (menu as catalog, modifiers as variants); booking-reservation secondary for the chosen pickup or delivery slot; a table reservation page is its own surface with booking-reservation primary; service-business for the brochure pages | Skip shipping-by-courier and returns rules |
 | Arabic-only store | ecommerce + `rtl-bilingual` (RTL sections; skip language-switching) | RTL correctness is needed even with one language |
 | Bilingual admin app | admin-backoffice + `rtl-bilingual` + tables | Mirrored tables and mixed-direction data are the main risks |
 | Mobile-first consumer app | Profile by task as usual (a signed-in app people return to is saas-application); `responsive-mobile` weighted heavily; desktop rules about hover and density dropped | Device context changes weighting, not the profile |
@@ -183,7 +185,7 @@ Some surfaces match nothing here: a game, a social feed, a media player, a learn
 Report the classification with [assets/classification-template.md](../assets/classification-template.md). For a scoped review, three lines are enough:
 
 ```
-Surface: checkout (/cart, /checkout/*) — ecommerce + high-stakes; patterns: forms, responsive-mobile
+Surface: checkout (/cart, /checkout/*) — ecommerce; high-stakes scoped to the payment step; patterns: forms, responsive-mobile
 Users and goal: consumers completing a purchase, mostly on mobile
 Confidence: high (cart and order models, payment SDK, checkout routes)
 ```

@@ -4,7 +4,7 @@ An overlay for surfaces where people choose clothing, footwear or accessories. I
 
 **Load when:** garments, footwear or wearable accessories are the product, on a store or on a brand site.
 **Skip when:** the business is in fashion but the surface is not about choosing garments (a wholesale order form, an inventory tool, a careers page).
-**Usually secondary to:** `profiles/ecommerce`. On a brand or lookbook site with no store, use only the imagery, collections and taxonomy sections.
+**Usually secondary to:** `profiles/ecommerce`. On a brand or lookbook site with no store, use only the "Visual-led discovery", "Taxonomy" and "Product imagery" sections, ignoring their shopping bullets (swatches, variant-linked galleries).
 **Pair with (when present):** `patterns/search-filter-sort`, `patterns/responsive-mobile`, `patterns/forms` for custom measurements.
 
 ## Objectives

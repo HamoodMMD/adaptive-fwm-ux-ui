@@ -2,7 +2,7 @@
 name: adaptive-fwm-ux-ui
 description: "Adaptive, evidence-based UX/UI audit and safe improvement for any website or app. Classifies each surface first (user goal, business goal, audience, environment, risk, device, language), then applies only the matching rule modules: ecommerce, fashion, lead generation, service business, B2B marketing, content sites, SaaS apps, dashboards, monitoring, admin tools, AI products, booking, marketplaces and high-stakes flows, plus forms, navigation, tables, search and filters, charts, loading/empty/error states, mobile and RTL/Arabic. Preserves existing functionality and brand identity. Use whenever the user asks to audit, review, critique, check, improve, fix or polish the UX, UI, usability, accessibility (WCAG 2.2 AA), responsiveness, conversion flow, checkout, forms, navigation, tables or dashboards of a page, screen, component, flow or whole product, or to plan UX before a build, even if they only say 'check my website', 'make this easier to use' or 'why does this page feel off'."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Adaptive UX/UI audit and improvement
@@ -21,7 +21,7 @@ These hold in every mode. Each one exists because breaking it is how a "UX impro
 2. **Read-only unless asked to change things.** "Audit", "review", "check" and "what's wrong with" mean report only. Edit files only when the user asks to fix, improve, implement or apply. When it is unclear, audit and offer the fixes.
 3. **Protect functionality.** Unless the user explicitly authorizes functional work, UI work must not alter APIs, schemas, data, routes, auth, permissions, pricing, tax, inventory, checkout, payment, booking, monitoring or alert logic, AI prompts or model behavior, analytics contracts, background jobs or integrations. A recommendation that needs any of that is reported under the heading `FUNCTIONAL UX RECOMMENDATIONS — NOT IMPLEMENTED` and left alone. The full boundary is in [references/implementation-safety.md](references/implementation-safety.md).
 4. **Protect the brand.** The existing logo, palette, type, spacing, radius, shadows, motion, imagery, components and tokens are the brief, not a draft. Fix how a brand element is *used* before proposing to change the element. Never restyle toward a generic look.
-5. **Nothing fake.** Never add a control, metric, chart, search, filter, export, progress value, review, badge or AI feature that is not backed by real functionality or data. Recommend it instead.
+5. **Nothing fake.** Never add a control, metric, chart, search, filter, export, progress value, review, badge or AI feature that is not backed by real functionality or data. Recommend it instead. When the user directly asks for a new feature ("add a search bar"), that is a request for functional work: confirm the scope, then build it for real or not at all.
 6. **No deception.** Never recommend or build fake urgency or scarcity, fake reviews, confirmshaming, hidden costs, pre-ticked consent or obstructed cancellation, even where it would lift a metric.
 7. **Evidence over taste.** Tie every finding to a rule and say what kind of rule it is (see [Evidence classes](#evidence-classes)). Do not invent statistics or promise conversion gains. A stylistic preference is not a finding.
 8. **Keep secrets out.** Do not print, copy or quote keys, tokens, credentials or personal data found while inspecting a project; redact them. Do not edit environment or secret files. Do not send project content to external services unless the user asks.
@@ -38,7 +38,13 @@ Infer the mode from the request. Natural language is enough; there is no command
 | **Design plan** | "plan the UX", "how should we structure this" before a build | No | Classification, workflows, structure and rules to follow |
 | **Focus pass** | "accessibility pass", "mobile pass", "check the checkout", "check the Arabic layout" | Only if asked | Audit weighted to that focus |
 
+Modes combine. Scope (whole product, one surface or flow, one focus) and editing (read-only or fix) are separate choices: "accessibility pass and fix it" is a focus pass in fix mode; "audit the booking flow" is a scoped, read-only review. A **full audit** means a whole product or whole surface with no narrowing; it uses the full templates and all five core modules. Anything narrower uses the short classification and loads the optional core modules only when their own trigger fits. In fix mode, deliver the audit and then continue to the fixes without waiting, except where Step 9 says to ask.
+
 A scoped review or focus pass still classifies the surface first; it just audits less. If the request does not clearly authorize edits, stay read-only and end the report with the list of safe fixes you could apply.
+
+**Exclusions.** The user can rule areas out ("skip the admin", "only the storefront"). An excluded area is neither audited nor edited. Shared components, tokens and stylesheets are the trap: a fix made for an included area can change an excluded one. If a fix would touch something an excluded area also uses, stop and ask before applying it.
+
+**Read-only means the project is left exactly as found.** If inspecting the rendered UI needs a helper script, screenshots or a build output, put them in a temporary directory outside the project (or the scratch location your environment provides), never in the repository. Name them in the report's "Access used" line and delete them when done. If something had to be written inside the project (running a dev server or build often writes caches, logs or output), say so plainly; do not describe the tree as untouched. Do not submit real forms, place orders, enter payment details or create accounts on a live system to see a state; mark those states as not triggered.
 
 ## Step 2 — Gather evidence
 
@@ -70,7 +76,7 @@ Be honest about what you could not see. What you can verify depends on your acce
 
 Mark each finding as *verified* (observed in the rendered UI) or *inferred* (from code or a screenshot) so the reader knows what to re-check.
 
-If you have no access to the product at all (no code, no URL you can open, no screenshots), ask for one of them before auditing. A description supports a classification and a plan, not findings.
+If you have no access to the product at all (no code, no URL you can open, no screenshots), still do Steps 3 and 4 from the description, give the user the classification and the plan, and then ask for code, a URL or screenshots. A description supports a classification and a plan, not findings.
 
 ## Step 3 — Classify each surface
 
@@ -78,7 +84,7 @@ Classify by **surface**, not by project and not by industry. A surface is a grou
 
 For each surface decide: primary user goal, business goal, audience, environment (public, authenticated, internal), interaction model, frequency of use, complexity, consequence of errors, device context, content density, language and direction, AI involvement, transaction model and roles. Then choose **one primary profile, zero to two secondary profiles**, and the pattern modules for what is actually on the screen.
 
-Read [references/classification.md](references/classification.md) for the signals, the rules for choosing primary versus secondary, route-level classification, hard cases and the fallback when no profile fits. Skip it only when the user has already named the surface type and it maps cleanly onto one row of the profile table below.
+Read [references/classification.md](references/classification.md) for the signals, the rules for choosing primary versus secondary, route-level classification, hard cases and the fallback when no profile fits. Always read it: the rules for scoping `high-stakes` and `ai-product` to part of a surface live only there.
 
 Confidence is qualitative. Never state a percentage.
 
@@ -98,7 +104,7 @@ Loading everything defeats the purpose: irrelevant rules produce irrelevant find
 |---|---|
 | [references/core/universal-ux.md](references/core/universal-ux.md) | Always |
 | [references/core/accessibility.md](references/core/accessibility.md) | Always |
-| [references/core/brand-preservation.md](references/core/brand-preservation.md) | Always when recommending or making any visual change |
+| [references/core/brand-preservation.md](references/core/brand-preservation.md) | Always |
 | [references/core/content-and-trust.md](references/core/content-and-trust.md) | Full audits; any surface that asks for money, data or commitment; any copy review |
 | [references/core/performance.md](references/core/performance.md) | Full audits; media-heavy or animated surfaces; reports of slowness or jank |
 
@@ -131,8 +137,10 @@ Loading everything defeats the purpose: irrelevant rules produce irrelevant find
 | [search-filter-sort](references/patterns/search-filter-sort.md) | search, filters or sorting |
 | [charts-data-viz](references/patterns/charts-data-viz.md) | charts, sparklines or metric visualizations |
 | [loading-empty-error-states](references/patterns/loading-empty-error-states.md) | asynchronous data, or any app-like surface |
-| [responsive-mobile](references/patterns/responsive-mobile.md) | mobile or mixed device use, or a responsive pass |
+| [responsive-mobile](references/patterns/responsive-mobile.md) | mobile or mixed device use, an unknown device mix on a public surface (assume mixed), or a responsive pass. For desktop-only internal tools, only its checks for honest behavior at narrow widths and zoom |
 | [rtl-bilingual](references/patterns/rtl-bilingual.md) | an RTL language, more than one language, or a language switcher |
+
+Pattern modules depend on what the interface contains, which you may not know until you have looked. Choose them after gathering evidence, and add one the moment its element turns up. "Load" means read the module before auditing the surface it applies to; for a module scoped to one step or panel, read only the sections that bear on it.
 
 If no profile fits, say so, audit with the core and pattern modules only, and name the gap. Do not force the nearest profile onto a surface it does not describe.
 
@@ -186,7 +194,7 @@ Never present a recommendation as a WCAG failure, and never present a preference
 
 ## Step 8 — Report
 
-Use [assets/ux-audit-template.md](assets/ux-audit-template.md) for a full audit. Keep its section order: executive summary; classification; workflows; strengths to preserve; findings by priority; accessibility; responsive; brand; functional recommendations not implemented; recommended order of work. For a scoped review, use the same headings and drop the ones that do not apply. Write the report in the language the user wrote in unless they ask otherwise. Cite sources in a report only when the user asks or a claim is likely to be challenged; the modules already trace to [references/research-sources.md](references/research-sources.md).
+Use [assets/ux-audit-template.md](assets/ux-audit-template.md) for a full audit. Keep its section order: executive summary; classification; workflows; strengths to preserve; findings by priority; accessibility; responsive; brand; functional recommendations not implemented; recommended order of work. For a scoped review, use the same headings and drop the ones that do not apply. Write the report in the language the user wrote in unless they ask otherwise, translating the template headings too; keep finding and recommendation numbers, priorities, success-criterion numbers, module names, file paths and code in their original form. Number findings `F1, F2…` and recommended changes `R1, R2…`, so that "do 3" is never ambiguous, and keep the numbers stable for the rest of the conversation. A report that exists only in chat cannot be acted on in a later session: after a full audit, offer to save it to a file at a location the user chooses, and do not write it into the project unasked. Cite sources in a report only when the user asks or a claim is likely to be challenged; the modules already trace to [references/research-sources.md](references/research-sources.md).
 
 ## Step 9 — Implement (only in a fix mode)
 

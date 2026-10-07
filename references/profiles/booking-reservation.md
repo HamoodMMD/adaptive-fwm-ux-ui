@@ -3,7 +3,7 @@
 Flows where people reserve a time, a date range, a seat, a room, a table, a person or a resource.
 
 **Load when:** availability, calendars, time slots or capacity decide what the user can choose.
-**Skip when:** dates appear only as delivery estimates for an order.
+**Skip when:** dates appear only as delivery estimates for an order. A pickup or delivery slot the customer chooses does count; use the availability, time-selection, conflict and confirmation sections for it.
 **Journey:** choose what, where and with whom → see availability → pick date and time → give details → review → confirm → manage (reschedule, cancel).
 **Pair with (when present):** `patterns/forms`, `patterns/responsive-mobile`, `patterns/search-filter-sort`, `patterns/loading-empty-error-states`; `profiles/marketplace-directory` when choosing among many providers; `profiles/high-stakes` for payment.
 

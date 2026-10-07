@@ -44,6 +44,9 @@ If a recommendation needs anything on the list, write it up under `FUNCTIONAL UX
 
 Some changes look visual and are not:
 
+- **Adding a derived design token** (a darker step of a brand color) is allowed as a flagged change: add it beside the original, never replace the original, and report it for the owner.
+- **Showing existing data under a new condition** (a low-stock note below some threshold) introduces a business rule. The owner chooses the threshold; without one, recommend it.
+
 - **Removing or reordering form fields** can break backend validation, CRM mapping or autofill. Recommend it.
 - **Changing an element type** (`div` to `button`, `a` to `button`) changes default behavior: form submission, navigation, keyboard activation. Add `type="button"` where needed and re-test the handler.
 - **Hiding a control** for a role or state is permission logic if it changes who can do what. Changing how an already-unavailable control is presented is UI.
@@ -78,7 +81,7 @@ Do not delete project code, remove features, rewrite architecture, replace the d
 
 ### While editing
 
-5. Work in small groups by workflow or screen, highest priority first. One concern per group.
+5. Work in small groups by workflow or screen, highest priority first. One concern per group. Stay inside the scope the user set: before editing a shared component, token or global stylesheet, check what else uses it, and ask first if that includes an area the user excluded.
 6. Follow the project's own conventions: its components before new ones, its tokens before raw values, its naming, its file layout.
 7. After each group, re-run the relevant checks and re-walk the affected workflow.
 8. When a behavior-bearing file must be touched, keep the diff minimal, leave logic lines untouched where possible, and verify equivalence: same handlers fire, same requests are sent with the same payloads, same routes resolve, same validation outcomes, same analytics events.

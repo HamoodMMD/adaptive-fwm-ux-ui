@@ -45,7 +45,7 @@ Before recommending a visual change, decide which it is:
 - **Preference** — "this would look more modern". Not a finding. Leave it.
 
 ### The fix ladder
-When a brand element causes a usability problem, climb only as far as needed:
+When a brand element causes a usability problem, climb only as far as needed. For a color, calculate its contrast against the background first, because that decides which rungs exist. Below 4.5:1 it cannot be small text. Below 3:1 it cannot be text at any size, nor a border, icon or focus ring that carries meaning; underlining a link does not fix its contrast. A very light brand color therefore skips rung 1 as text and survives as a fill behind dark text, as decoration, or through a derived darker step (rung 5).
 
 1. **Change where it is used.** Keep the brand color for large text, fills, borders, icons and accents; stop using it for small body text or thin lines where it fails.
 2. **Change what it is paired with.** A different existing background or foreground token from the same palette.
@@ -58,7 +58,7 @@ Worked examples:
 
 | Situation | Preserve | Change |
 |---|---|---|
-| Brand purple fails contrast as small text on white | The purple, everywhere it works: buttons, headings, large text, accents | Use the neutral text color for body copy; purple for links only with an underline; or add a darker text step of the same hue |
+| Brand purple fails contrast as small text on white | The purple, everywhere it works: buttons, headings, large text, accents | Use the neutral text color for body copy; purple for links only where it reaches 4.5:1, with an underline; otherwise add a darker text step of the same hue |
 | Glass panels are part of the identity, but a pricing table on glass is hard to read | Glass on navigation, cards, hero | Raise the panel's opacity or lower blur behind the table; give dense text a solid surface inside the glass frame |
 | Thin elegant typeface is the brand voice, but fails at small sizes | The typeface for headings and display | Heavier weight or a paired text face from the same family for small UI text; minimum size raised |
 | Pale gold accent used for the focus ring is invisible | Gold as an accent | Focus ring in a high-contrast neutral with a gold inner or offset ring |

@@ -4,6 +4,8 @@
 **Mode:** <audit only | scoped review | focus pass: … | design plan>
 **Scope:** <what was audited>
 **Access used:** <source code | running app | public URL | screenshots> — <what could not be inspected>
+**Excluded by the user:** <areas not audited, or none>
+**Helper files:** <temporary scripts or captures created, where, and whether removed — or none>
 **Target:** WCAG 2.2 Level AA
 
 ## 1. Executive summary
@@ -121,9 +123,9 @@ List by priority, highest first. One block per finding.
 
 Safe UI changes, grouped by workflow or screen, in the order to do them.
 
-| # | Change | Findings addressed | Effort | Risk |
+| ID | Change | Findings addressed | Effort | Risk |
 |---|---|---|---|---|
-| | | | | |
+| R1 | | | | |
 
 ## 10. FUNCTIONAL UX RECOMMENDATIONS — NOT IMPLEMENTED
 

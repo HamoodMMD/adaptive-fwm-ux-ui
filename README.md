@@ -4,7 +4,7 @@ An Agent Skill for auditing and safely improving the UX and UI of any website or
 
 Most UX checklists apply the same rules to everything. This skill starts by working out what it is looking at — a store, an agency site, a monitoring dashboard, an admin tool, an AI workspace, a booking flow — and who uses it for what. Then it loads only the rules that fit, audits against them, and, if asked, makes the changes that are safe to make. It will not alter how the product works or what the brand looks like unless you tell it to.
 
-**Version:** 1.0.0 · **Format:** [Agent Skills](https://agentskills.io/specification) · **Target:** WCAG 2.2 Level AA
+**Version:** 1.0.1 · **Format:** [Agent Skills](https://agentskills.io/specification) · **Target:** WCAG 2.2 Level AA
 
 ## What it does
 

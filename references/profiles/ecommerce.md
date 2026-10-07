@@ -100,7 +100,7 @@ A shopper can find a suitable product, be confident it is the right one, know th
 
 ## Exceptions and context
 
-- **Digital goods and licenses:** drop shipping, stock and delivery-date rules. Replace with delivery method (download, key by email), license terms, system requirements, activation and refund terms.
+- **Digital goods and licenses:** drop shipping, stock and delivery-date rules. Replace with delivery method (download, key by email), license terms, system requirements, activation and refund terms. Check that the delivery email is read back before payment, that the confirmation says where the key is going and what to do if it does not arrive, and that the key can be found again later.
 - **Single-product or very small catalogs:** category navigation, filters and sort may be unnecessary. Do not recommend them.
 - **B2B ordering:** quick order by SKU, bulk quantities, account-specific pricing and reorder matter more than visual discovery; forced sign-in can be legitimate. Combine with `saas-application` or `admin-backoffice` for the logged-in tools.
 - **Food and restaurant ordering:** menu as catalog, modifiers as variants, pickup or delivery time as a booking choice; no returns or courier rules.

@@ -32,7 +32,7 @@ Users can find the row they want, compare values across rows and columns without
 - Only columns that serve the tasks are shown by default; others are available through a column chooser where the product has one. Do not remove columns users rely on to make the table look lighter.
 
 ### Alignment and formatting
-- Text aligns to the reading start edge. Numbers that are compared align to the end edge with the same number of decimals, using tabular (fixed-width) figures so digits line up by place value.
+- Text aligns to the reading start edge. Numbers that are compared are right-aligned (and stay right-aligned in RTL layouts, see `rtl-bilingual`) with the same number of decimals, using tabular (fixed-width) figures so digits line up by place value.
 - Headers align with their column's content.
 - Dates and times use one consistent format, sortable by eye; time zone is stated once if needed.
 - Status cells use text plus an icon or shape, not color alone.
