@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  Version 1.0.2 · <a href="https://agentskills.io/specification">Agent Skills</a> format · Claude Code and Codex · WCAG 2.2 AA · 27 rule modules · 109 indexed sources
+  Version 1.0.3 · <a href="https://agentskills.io/specification">Agent Skills</a> format · Claude Code and Codex · WCAG 2.2 AA · 27 rule modules · 109 indexed sources
 </p>
 
 ---

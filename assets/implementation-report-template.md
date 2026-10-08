@@ -12,6 +12,10 @@
 
 <Each place where the skill says to ask the user and the user could not be asked: the choice made, why it was the conservative one, and what the user should confirm. Write "None" if there were none.>
 
+## Behavior changed under the harmful side-effect exception
+
+<For each use: the code removed or narrowed, the harm it caused, the scenarios compared before and after, the result, and how to revert. Write "None" if the exception was not used.>
+
 ## 2. Baseline
 
 | Item | Before any change |

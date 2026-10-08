@@ -4,6 +4,15 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.0.3 - 2026-10-07
+
+### Added
+- Harmful side-effect exception: a fix pass may remove a side effect that destroys the user's own input (a form cleared on a failed submit, choices discarded on going back) when five conditions hold, including verified identical output. Every use is reported under its own heading.
+- Rule for existing content that cannot be verified: report it, ask the owner, do not alter it; evident placeholder content is at least P1.
+
+### Changed
+- Reordering one region on narrow screens so the primary action is reachable no longer needs a question, if all content is kept and wider layouts are unchanged.
+
 ## 1.0.2 - 2026-10-07
 
 Changes from running the skill end to end (audit, then fix) on three demo pages.

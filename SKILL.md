@@ -2,7 +2,7 @@
 name: adaptive-fwm-ux-ui
 description: "Adaptive, evidence-based UX/UI audit and safe improvement for any website or app. Classifies each surface first (user goal, business goal, audience, environment, risk, device, language), then applies only the matching rule modules: ecommerce, fashion, lead generation, service business, B2B marketing, content sites, SaaS apps, dashboards, monitoring, admin tools, AI products, booking, marketplaces and high-stakes flows, plus forms, navigation, tables, search and filters, charts, loading/empty/error states, mobile and RTL/Arabic. Preserves existing functionality and brand identity. Use whenever the user asks to audit, review, critique, check, improve, fix or polish the UX, UI, usability, accessibility (WCAG 2.2 AA), responsiveness, conversion flow, checkout, forms, navigation, tables or dashboards of a page, screen, component, flow or whole product, or to plan UX before a build, even if they only say 'check my website', 'make this easier to use' or 'why does this page feel off'."
 metadata:
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # Adaptive UX/UI audit and improvement
@@ -203,8 +203,8 @@ Read [references/implementation-safety.md](references/implementation-safety.md) 
 1. Record `git status`, the current branch and any existing uncommitted changes. Never overwrite or tidy work that is not yours.
 2. Find the build, lint and test commands and run a baseline where practical, noting failures that already exist.
 3. Implement UI-safe changes in small groups by workflow or screen, highest priority first.
-4. Prefer edits to styles, tokens usage, layout, semantic markup, labels, ARIA, focus handling, copy, grouping, ordering and the presentation of states. Be cautious with state, hooks, stores, API calls, event handlers, routing and auth; if behavior-bearing code must be touched, prove the behavior is unchanged.
-5. When a fix would visibly change layout or brand expression in a way the user may not expect, or when more than one reasonable design exists, describe the options and ask before applying it. Clear-cut fixes (a missing label, an invisible focus ring, a clipped button) do not need a question. If the user has said they are unavailable, or cannot be asked, take the most conservative option that keeps the brand and existing behavior, leave the contested change unmade, and record each such decision in the report.
+4. Prefer edits to styles, tokens usage, layout, semantic markup, labels, ARIA, focus handling, copy, grouping, ordering and the presentation of states. Be cautious with state, hooks, stores, API calls, event handlers, routing and auth; if behavior-bearing code must be touched, prove the behavior is unchanged. One narrow exception lets you remove a side effect that destroys the user's own input, such as a form cleared on a failed submit; its conditions are in the safety reference.
+5. When a fix would visibly change layout or brand expression in a way the user may not expect, or when more than one reasonable design exists, describe the options and ask before applying it. Clear-cut fixes (a missing label, an invisible focus ring, a clipped button) do not need a question. Neither does reordering or tightening one region on narrow screens so that the primary action is reachable, provided all content is kept and wider layouts are unchanged; report it. If the user has said they are unavailable, or cannot be asked, take the most conservative option that keeps the brand and existing behavior, leave the contested change unmade, and record each such decision in the report.
 6. Validate after each group, then inspect the full diff and run the final checks.
 7. Do not commit, push or open a pull request unless the user asks.
 

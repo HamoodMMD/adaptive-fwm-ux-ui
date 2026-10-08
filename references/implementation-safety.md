@@ -55,6 +55,24 @@ Some changes look visual and are not:
 - **Payment and identity fields** are often hosted iframes or SDK components with compliance constraints. Style them only through the provider's supported options.
 - **Markup around third-party embeds, consent banners and tag managers** often has selectors that outside scripts depend on.
 
+## The harmful side-effect exception
+
+Some of the worst usability defects live inside interface handlers: a failed submit that clears the form, a Back button that throws away later answers, an error path that resets a selection. The general rule would leave these untouched because they are in behavior-bearing code. That leaves the most damaging problem on the page as the one thing a fix pass will not fix.
+
+So one narrow exception applies. You may remove or correct such a side effect when **every** condition holds:
+
+1. **The harm is to the user's own input or place in the interface**: typed text, selections, scroll position, focus. It is not a business rule.
+2. **The fix removes or narrows the side effect.** It adds no feature, state, request or dependency. Deleting a `form.reset()` call on the error path qualifies; adding autosave does not.
+3. **Nothing that leaves the page changes for the same input.** Given the same values in the interface at the moment of the action, what is validated, submitted, saved, charged, routed or tracked is identical before and after, on both the success path and the failure path. Removing the side effect can still change what a user ends up submitting later in the session, because their input now survives (an opt-out box that a reset used to re-tick stays unticked). Report every such knock-on effect.
+4. **You verify condition 3**, by running the same scenarios against the original and the changed code and comparing results. If you cannot run them, the exception does not apply.
+5. **The line itself does nothing in a protected area.** It does not compute, validate, send or decide anything about payment, pricing, authentication, permissions, inventory, booking rules, alerting or AI prompts. Interface wiring inside a checkout or booking handler qualifies when it only touches what is on screen.
+
+When you use the exception, say so in the implementation report under its own heading, "Behavior changed under the harmful side-effect exception": the line removed, the harm it caused, the scenarios compared, and how to revert it. It applies even when the user cannot be asked, because leaving the harm in place is not the conservative choice. If any condition is in doubt, report the defect as a functional recommendation instead.
+
+## Existing content that cannot be verified
+
+"Nothing fake" governs what you add. Projects also arrive containing claims you cannot check: statistics, testimonials, client names, awards, prices, phone numbers. Report them as findings under the trust rules and ask the owner to confirm or remove them. Do not delete, reword or replace them yourself unless the owner says they are placeholders. Content that is evidently placeholder (sample text, reserved or fictional phone numbers, example domains on a page about to go live) is at least P1, because it will be seen by real visitors.
+
 ## Nothing fake
 
 Do not add search, filters, export, refresh, AI features, progress percentages, dashboard data, recommendations, metrics, controls, buttons, links, settings, integrations, charts or checkout steps that are not backed by working functionality and real data. If it does not exist, recommend it. Placeholder or sample content must never ship looking like real data.
