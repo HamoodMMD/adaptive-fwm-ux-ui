@@ -105,6 +105,8 @@ Pattern modules follow the interface, not the profile. Load one when its element
 - data fetched asynchronously, or any app-like surface → `loading-empty-error-states`
 - mobile or mixed use, or the user asked about responsiveness → `responsive-mobile`
 - `dir="rtl"`, Arabic, Hebrew, Persian or Urdu content, translation files, or a language switcher → `rtl-bilingual`
+- a public marketing, sales, content or store surface in a full audit, or a question about sizes → `visual-scale`
+- prices, plans, discounts, free offers, trials, guarantees, urgency or scarcity wording, or a selling or lead-generation goal → `pricing-and-persuasion`
 
 For a desktop-dominant internal tool, `responsive-mobile` is loaded only to check that the tool degrades honestly at narrower widths, not to redesign it for phones.
 

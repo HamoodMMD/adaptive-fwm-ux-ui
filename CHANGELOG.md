@@ -4,6 +4,22 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.1.0 - 2026-10-08
+
+Two new pattern modules, from a review of published research and a measurement of real commercial sites.
+
+### Added
+- `patterns/visual-scale`: text size, line length, line height, type scale, header height, first screen and hero, buttons and targets. Separates requirements (WCAG), published guidance and observed practice, with a table of what 28 established commercial sites ship at desktop and phone sizes.
+- `patterns/pricing-and-persuasion`: price display, framing, anchoring and contrast, three options and decoys, number of choices, "free", loss framing, urgency and scarcity, affordability framing, defaults, risk reduction. Each effect is listed with how well the research supports it.
+- The offer inventory: every price, plan, discount, free item, guarantee, deadline and proof element is listed with its source before any change, and only inventory items may appear in the work.
+- A three-level action table for selling changes: what a fix pass may rearrange, what must be recommended to the owner, and what is never done.
+- 43 sources: peer-reviewed studies on choice psychology (including the replications and critiques), usability research on pricing and comparison, consumer-protection rules on former prices, "free", reviews, drip pricing and urgency, and typography guidance.
+
+### Changed
+- Ground rule 6 and "Nothing fake" now cover the offer itself: no invented or altered price, plan, tier, feature, discount, former price, free item, trial, guarantee, deadline or stock level.
+- The primary action appears once per screen; a header that does not fit one row on a phone moves an item into the menu.
+- README limitations updated to describe the testing actually done.
+
 ## 1.0.3 - 2026-10-07
 
 ### Added

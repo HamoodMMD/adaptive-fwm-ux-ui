@@ -44,7 +44,7 @@ A shopper can find a suitable product, be confident it is the right one, know th
 
 ### Product page
 - **Images:** several per product, large, zoomable; at least one showing scale or use in context; images match the selected variant.
-- **Price:** current price prominent; any original price and saving shown honestly; currency and tax inclusion clear.
+- **Price:** current price prominent; any original price and saving shown honestly; currency and tax inclusion clear. Detail on reference prices, discounts, "free", urgency and defaults: `patterns/pricing-and-persuasion`.
 - **Variants:** options exposed as visible buttons or swatches rather than buried in a dropdown, so availability is seen at a glance. Unavailable options remain visible and marked as unavailable, not removed. Color options have text names as well as swatches.
 - **Stock and quantity:** availability for the selected variant is stated. Quantity uses a stepper with direct numeric entry.
 - **Delivery and returns:** estimated delivery expressed as a date or date range where possible, shipping cost or the threshold for free shipping, and a link to the returns policy, all on the product page, not first revealed in checkout.

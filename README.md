@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  Version 1.0.3 · <a href="https://agentskills.io/specification">Agent Skills</a> format · Claude Code and Codex · WCAG 2.2 AA · 27 rule modules · 109 indexed sources
+  Version 1.1.0 · <a href="https://agentskills.io/specification">Agent Skills</a> format · Claude Code and Codex · WCAG 2.2 AA · 29 rule modules · 152 indexed sources
 </p>
 
 ---
@@ -163,7 +163,9 @@ If nothing fits, the skill says so and audits with the core and pattern modules 
 
 **Profiles** — chosen by classification: `ecommerce`, `fashion-apparel`, `sales-lead-generation`, `service-business`, `informational-content`, `b2b-marketing`, `saas-application`, `dashboard-analytics`, `monitoring-observability`, `admin-backoffice`, `ai-product`, `booking-reservation`, `marketplace-directory`, `high-stakes`.
 
-**Patterns** — chosen by what is on the screen: `forms`, `navigation`, `tables`, `search-filter-sort`, `charts-data-viz`, `loading-empty-error-states`, `responsive-mobile`, `rtl-bilingual`.
+**Patterns** — chosen by what is on the screen: `forms`, `navigation`, `tables`, `search-filter-sort`, `charts-data-viz`, `loading-empty-error-states`, `responsive-mobile`, `rtl-bilingual`, `visual-scale`, `pricing-and-persuasion`.
+
+`visual-scale` covers the measurable details (text size, line length, header height, first screen, buttons) and keeps three kinds of number apart: requirements, published guidance, and what 28 established commercial sites were measured to ship. `pricing-and-persuasion` covers framing, anchoring, the middle option, "free", loss wording, defaults, urgency and choice overload, says how well each is supported by research, and holds one line throughout: the skill arranges the offer that exists and never invents a price, plan, discount, free item, deadline or review.
 
 Every module has the same shape: when to load it, objectives, priority principles, concrete checks, anti-patterns, exceptions, implementation cautions, and sources.
 
@@ -202,7 +204,9 @@ Priorities: **P0** blocks a primary task or locks out a group of users; **P1** d
 - **Copy in languages the agent cannot verify** is checked for structure and rendering, not wording.
 - **Some guidance is judgment.** Where no strong published source exists (marketplaces, agentic AI, made-to-measure apparel flows), the modules say so. See "Known gaps" in [`references/research-sources.md`](references/research-sources.md).
 - **Research ages.** Sources were checked on the dates recorded in the index.
-- **Scenario testing so far is a desk check** by the author against the written rules, not a set of independent agent runs.
+- **Selling techniques are presented with their evidence, not as promises.** Several well-known effects are weaker in practice than their reputation, and the skill never predicts a conversion gain.
+- **Not legal advice.** The pricing module cites consumer-protection rules to show what is regulated. It flags likely problems; it does not certify compliance.
+- **Testing so far** is a set of blind agent runs on routing scenarios and demo pages (see [Examples](#examples)). It has not been tested with real users, on real devices or with screen readers.
 
 ## Repository layout
 
@@ -216,7 +220,7 @@ adaptive-fwm-ux-ui/
 │   ├── research-sources.md       source index
 │   ├── core/                     5 modules for every surface
 │   ├── profiles/                 14 modules chosen by classification
-│   └── patterns/                 8 modules chosen by what is on screen
+│   └── patterns/                 10 modules chosen by what is on screen
 ├── assets/                       classification, audit and implementation report templates
 ├── docs/examples/                before and after screenshots with write-ups
 ├── README.md

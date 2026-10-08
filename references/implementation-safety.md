@@ -77,6 +77,8 @@ When you use the exception, say so in the implementation report under its own he
 
 Do not add search, filters, export, refresh, AI features, progress percentages, dashboard data, recommendations, metrics, controls, buttons, links, settings, integrations, charts or checkout steps that are not backed by working functionality and real data. If it does not exist, recommend it. Placeholder or sample content must never ship looking like real data.
 
+The same holds for the offer itself. Do not add or alter a price, price range, plan, tier, feature, discount, former price, saving, free item, trial, guarantee, deadline, stock level, rating, review count or customer number, and do not describe anything as "free", "included" or "recommended" unless the project already says so. A page that would sell better with something that does not exist gets a request to the owner, not sample content. What may be rearranged, what must be recommended and what is never done: `patterns/pricing-and-persuasion.md`.
+
 ## Nothing destructive
 
 Do not delete project code, remove features, rewrite architecture, replace the design system or component library, add or swap dependencies, change the framework or migrate libraries unless the user asked for exactly that. Do not "clean up" unrelated code you happen to notice; mention it instead.

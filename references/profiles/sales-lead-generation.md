@@ -5,7 +5,7 @@ Surfaces whose job is to turn a visitor into an inquiry: contact, quote request,
 **Load when:** the conversion is a lead, not an online purchase: landing pages, sales pages, quote and contact flows.
 **Skip when:** the user completes the purchase online (use `ecommerce`) or the surface is reference content with no conversion goal.
 **Journey:** arrive → understand the offer → believe it → resolve doubts → take the lead action → know what happens next.
-**Pair with (when present):** `patterns/forms`, `patterns/responsive-mobile`; `profiles/service-business` or `profiles/b2b-marketing` for the surrounding site.
+**Pair with (when present):** `patterns/forms`, `patterns/responsive-mobile`, `patterns/pricing-and-persuasion`, `patterns/visual-scale`; `profiles/service-business` or `profiles/b2b-marketing` for the surrounding site.
 
 ## Objectives
 
@@ -28,7 +28,7 @@ A visitor quickly understands what is offered, for whom and why it is credible, 
 - The offer is concrete: what the visitor gets by acting (a quote within a day, a 30-minute call, a site visit, a price list).
 
 ### Call-to-action hierarchy
-- One primary action per view, visually dominant, with the same wording everywhere on the page.
+- One primary action per view, visually dominant, with the same wording everywhere on the page. It appears once per view: a header button and a hero button with the same label on one phone screen is a duplicate, and one of them moves (usually the header's, into the menu).
 - The label names the action or its outcome: "Get a quote", "Book a call", "Chat on WhatsApp". Vague labels such as "Submit", "Learn more" or "Get started" do not tell the visitor what happens.
 - A secondary, lower-commitment action exists for visitors who are not ready: view pricing, see case studies, download details.
 - On long pages the primary action reappears at natural decision points (after the offer, after proof, after pricing, at the end), not after every paragraph.
@@ -51,6 +51,7 @@ A visitor quickly understands what is offered, for whom and why it is credible, 
 - Where price truly depends on scope, the factors that drive it are explained and the quote step is positioned as the way to get an exact figure.
 - Plans or packages are comparable: same attributes in the same order, differences highlighted, the recommended option marked without disguising the others.
 - Taxes, minimum terms and extra fees are stated.
+- Framing, anchoring, highlighted plans, "free", urgency and other selling techniques: `patterns/pricing-and-persuasion`.
 
 ### Inquiry and quote forms
 - The form asks for the minimum needed to respond. Extra qualification questions are optional or come after first contact.
