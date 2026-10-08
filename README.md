@@ -1,231 +1,313 @@
 <h1 align="center">adaptive-fwm-ux-ui</h1>
 
 <p align="center">
-  <strong>An Agent Skill that audits and safely improves the UX and UI of any website or app.</strong><br>
-  It works out what it is looking at first, applies only the rules that fit, and leaves your functionality and brand alone.
+  <strong>A skill that teaches your AI coding agent to audit and fix the UX and UI of any website or app,<br>without breaking how it works or what it looks like.</strong>
 </p>
 
 <p align="center">
-  <a href="#examples">Examples</a> ·
-  <a href="#installation">Installation</a> ·
-  <a href="#usage">Usage</a> ·
-  <a href="#how-classification-works">How it works</a> ·
-  <a href="#modules">Modules</a> ·
-  <a href="#limitations">Limitations</a>
+  <img alt="Version 1.1.0" src="https://img.shields.io/badge/version-1.1.0-1f6feb">
+  <img alt="Agent Skills format" src="https://img.shields.io/badge/format-Agent%20Skills-6e40c9">
+  <img alt="Works with Claude Code and Codex" src="https://img.shields.io/badge/works%20with-Claude%20Code%20%C2%B7%20Codex-2da44e">
+  <img alt="WCAG 2.2 AA" src="https://img.shields.io/badge/accessibility-WCAG%202.2%20AA-d4a72c">
+  <img alt="29 rule modules" src="https://img.shields.io/badge/rule%20modules-29-8250df">
+  <img alt="152 sources" src="https://img.shields.io/badge/sources-152-57606a">
 </p>
 
 <p align="center">
-  Version 1.1.0 · <a href="https://agentskills.io/specification">Agent Skills</a> format · Claude Code and Codex · WCAG 2.2 AA · 29 rule modules · 152 indexed sources
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#see-it-work">Examples</a> ·
+  <a href="#what-you-can-ask">What you can ask</a> ·
+  <a href="#what-it-will-never-do">Safety</a> ·
+  <a href="#how-it-works">How it works</a> ·
+  <a href="#questions">Questions</a>
 </p>
 
 ---
 
-Most UX checklists apply the same rules to everything. The right interface for a fashion store is the wrong interface for an incident dashboard, so this skill starts by working out what kind of product surface it is looking at and who uses it for what. Then it loads only the rules that fit, audits against them, and, if asked, makes the changes that are safe to make.
+## Why this exists
 
-| | |
+Most UX checklists apply the same rules to everything. But a good fashion store and a good server-monitoring dashboard have almost nothing in common. Advice that helps one will hurt the other.
+
+So this skill **looks first, then judges**. It works out what each part of your product is for and who uses it, loads only the rules that fit, and reports what it finds with the evidence behind each point. If you ask it to fix things, it changes presentation only and leaves your logic, your data and your brand alone.
+
+| You get | What that means |
 |---|---|
-| **Adaptive** | Classifies each surface of a product, then picks from 14 product profiles and 8 interface patterns. A store, its customer account and its staff admin get different rules. |
-| **Evidence-based** | Every finding names its rule and what kind of rule it is: a WCAG requirement, an established principle, published research, design-system guidance, or a judgment call. |
-| **Safe** | Read-only by default. In fix mode it changes presentation only; anything touching logic, data, pricing or permissions is reported, not edited. |
-| **Brand-preserving** | Takes an inventory of the existing identity and fixes how a brand element is used before proposing to change the element. No house style. |
-| **Honest** | Never adds fake controls or data, never recommends manufactured urgency, and says what it could not verify. |
+| 🎯 **Advice that fits** | Your store, your customer account area and your staff admin are judged by different rules. |
+| 📚 **Reasons, not opinions** | Every finding says which rule it rests on: an accessibility requirement, published research, or a judgment call. |
+| 🔒 **Nothing broken** | Read-only by default. In fix mode it never touches pricing, checkout, logins, data or business logic. |
+| 🎨 **Your brand, kept** | It works inside your existing colors, type and style. It has no house style of its own. |
+| ✅ **Nothing invented** | No fake reviews, fake countdowns, fake prices or made-up statistics. Ever. |
 
-## Examples
+## Quick start
 
-Five demo pages, each built with flaws planted on purpose. One agent audited each page with the skill without being told what was planted; a second agent applied the safe fixes. The screenshots are unedited captures of the baseline and the fixed version.
-
-### Monitoring dashboard
-
-| Before | After |
-|---|---|
-| ![Monitoring dashboard before](docs/examples/monitoring-dashboard-before-desktop.png) | ![Monitoring dashboard after](docs/examples/monitoring-dashboard-after-desktop.png) |
-
-Found 12 of 12 planted flaws. The banner said "All systems operational" while a monitor was down; it now reports the real state. Failing monitors moved to the top, every state got its own shape, stale data is labelled, and the layout fits the window. Thresholds and alert logic were not touched; one-click delete was reported, not changed.
-
-### Clinic booking flow
-
-| Before | After |
-|---|---|
-| ![Booking calendar before](docs/examples/clinic-booking-before-step3.png) | ![Booking calendar after](docs/examples/clinic-booking-after-step3.png) |
-
-Found 13 of 13. Unavailable days are now marked before the patient picks one, choices made so far appear in the side rail, fields have real labels, and a fake "Only 1 slot left" badge is gone. Availability, pricing and deposit logic were not touched.
-
-### Fashion product page, phone width
-
-| Before | After |
-|---|---|
-| ![Fashion product page before](docs/examples/fashion-product-before-mobile.png) | ![Fashion product page after](docs/examples/fashion-product-after-mobile.png) |
-
-Found 12 of 12 planted flaws. Fixed the layout that hid the buy controls on phones, removed a fake "Only 2 left!" countdown, named the colours, restored contrast and keyboard access. Left the pre-ticked marketing box and the missing size for the owner to decide.
-
-### Internal orders table
-
-| Before | After |
-|---|---|
-| ![Orders table before](docs/examples/admin-orders-before-desktop.png) | ![Orders table after](docs/examples/admin-orders-after-desktop.png) |
-
-Found 10 of 10. Added status words, aligned totals, readable timestamps, honest selection counts and specific delete confirmations. Kept the 30px rows and the dark theme; did not turn the table into cards.
-
-### Arabic checkout
-
-| Before | After |
-|---|---|
-| ![Arabic checkout before](docs/examples/arabic-checkout-before-desktop.png) | ![Arabic checkout after](docs/examples/arabic-checkout-after-desktop.png) |
-
-Found 12 of 12. Fixed the reversed phone number, the progress bar filling from the wrong side, broken Arabic headings and missing labels. Reported, but did not change, a submit handler that wipes the form on error, because that is checkout behaviour.
-
-In all five, the business-logic files were untouched and the test suites passed before and after. **[Full details for each example: what was found, fixed and deliberately skipped →](docs/examples/README.md)**
-
-## What it does
-
-- Classifies each *surface* of a product (not just the project, and never just the industry) across fourteen dimensions such as user goal, business goal, audience, environment, risk, device and language.
-- Composes one primary profile, up to two secondary profiles, and the pattern modules for what is actually on the screen.
-- Audits user workflows first, then individual screens, against evidence-based rules.
-- Reports findings with a priority, the evidence, the rule and what kind of rule it is: a WCAG requirement, an established principle, published research, design-system guidance, or a judgment call.
-- Records what already works under "Strengths / preserve", so good parts are not redesigned.
-- Separates safe UI changes from recommendations that need functional work, and implements only the former.
-- Verifies accessibility, responsive behavior and regressions after any change.
-
-## Installation
-
-A skill is a folder. Put this one where your agent looks for skills, keeping the folder name `adaptive-fwm-ux-ui` (the Agent Skills format requires the folder name to match the skill name).
-
-| Agent | Personal (all projects) | Project (this repository) |
-|---|---|---|
-| Claude Code | `~/.claude/skills/adaptive-fwm-ux-ui/` | `.claude/skills/adaptive-fwm-ux-ui/` |
-| Codex | `~/.agents/skills/adaptive-fwm-ux-ui/` | `.agents/skills/adaptive-fwm-ux-ui/` |
-| Other Agent Skills-compatible tools | See the tool's documentation for its skills directory | |
-
-Clone straight into place:
+**1. Install it** (one command):
 
 ```bash
 git clone https://github.com/HamoodMMD/adaptive-fwm-ux-ui.git ~/.claude/skills/adaptive-fwm-ux-ui
 ```
 
-or copy the folder. Only `SKILL.md`, `references/` and `assets/` are needed at run time.
+Using Codex? Clone into `~/.agents/skills/adaptive-fwm-ux-ui` instead. [More install options](#installation).
 
-The skill uses only the portable frontmatter fields (`name`, `description`, `metadata`), has no dependencies, and needs no network access to run.
+**2. Open your project in your agent and ask in plain words:**
 
-## Usage
+> Audit my website's UX. Don't change anything.
 
-Ask in plain language. There is no command syntax.
+**3. Read the report.** When you are ready:
 
-**Audit only** — nothing is modified:
+> Fix the safe issues.
 
-> Audit this ecommerce store for UX/UI problems but do not change functionality.
+That's all. There are no commands to learn.
 
-> Check my website UX.
+## See it work
 
-**Audit and fix** — safe UI changes are implemented, everything else is reported:
+Each page below was built with flaws planted on purpose. One AI agent audited the page with this skill, without being told what was planted. A second agent applied the fixes. The screenshots are real, unedited captures.
 
-> Review this dashboard using the adaptive UX skill and fix safe UI issues.
+### A phone product page that hid its own Buy button
 
-**One screen, component or flow:**
+| Before | After |
+|---|---|
+| ![Fashion product page before](docs/examples/fashion-product-before-mobile.png) | ![Fashion product page after](docs/examples/fashion-product-after-mobile.png) |
 
-> Audit only the checkout.
+**Found 12 of 12 planted flaws.** The buy controls are reachable again, a fake "Only 2 left!" countdown is gone, colors have names, and text is readable. It left the pre-ticked marketing box for the owner to decide, because that changes what data is collected.
 
-**A focus pass:**
+### A status page that said "All systems operational" during an outage
 
-> Check this Arabic/English service website for mobile and accessibility issues.
+| Before | After |
+|---|---|
+| ![Monitoring dashboard before](docs/examples/monitoring-dashboard-before-desktop.png) | ![Monitoring dashboard after](docs/examples/monitoring-dashboard-after-desktop.png) |
 
-> Review this AI workspace with emphasis on generation, feedback, and user control.
+**Found 12 of 12.** The banner now reports the real state, failing monitors are at the top, and old data is labelled as old. Alert thresholds were not touched.
 
-**A design plan before building:**
+<details>
+<summary><strong>Three more examples: clinic booking, staff orders table, Arabic checkout</strong></summary>
 
-> We're adding a booking flow to this clinic site. Plan the UX before I build it.
+<br>
 
-Requests that say *audit*, *review* or *check* are read-only. The skill edits files only when asked to *fix*, *improve*, *implement* or *apply*. When it is unclear, it audits and offers the list of safe fixes.
+**Clinic booking flow** — found 13 of 13. Unavailable days are marked before the patient picks one, earlier choices stay visible, and a fake "Only 1 slot left" badge is gone. Availability and deposit logic untouched.
 
-## How classification works
+| Before | After |
+|---|---|
+| ![Booking calendar before](docs/examples/clinic-booking-before-step3.png) | ![Booking calendar after](docs/examples/clinic-booking-after-step3.png) |
 
-1. **Evidence, in order.** What you said; earlier conversation; project docs; the repository; routes and navigation; UI copy; data models; component names; APIs; inference; and only then questions.
-2. **Surfaces.** The project is split into groups of screens that share users and a goal. One fashion brand might have a store, a customer account area and a staff admin, each classified separately.
-3. **Dimensions.** Each surface is described by user goal, business goal, audience, environment, interaction model, frequency, complexity, error consequence, device context, content density, language, AI involvement, transaction model and roles.
-4. **Profiles and patterns.** One primary profile, up to two secondary, plus pattern modules for the interface elements present.
-5. **Confidence.** High: proceed. Medium: state the classification and the alternative, and proceed if both lead to compatible advice. Low: ask at most three to five short questions. Confidence is qualitative; the skill never invents a percentage.
+**Internal orders table** — found 10 of 10. Status words, aligned totals, readable times, specific delete confirmations. It kept the compact rows and dark theme, because staff tools should stay dense.
 
-Examples:
+| Before | After |
+|---|---|
+| ![Orders table before](docs/examples/admin-orders-before-desktop.png) | ![Orders table after](docs/examples/admin-orders-after-desktop.png) |
 
-| Product | Profiles | Typical patterns |
+**Arabic checkout** — found 12 of 12. Fixed a reversed phone number, a progress bar filling from the wrong side, and broken Arabic headings.
+
+| Before | After |
+|---|---|
+| ![Arabic checkout before](docs/examples/arabic-checkout-before-desktop.png) | ![Arabic checkout after](docs/examples/arabic-checkout-after-desktop.png) |
+
+</details>
+
+In every example the business-logic files were untouched and the tests passed before and after.
+**[Read the full write-ups: what was found, what was fixed, and what was deliberately left alone →](docs/examples/README.md)**
+
+## What you can ask
+
+| You want to… | Say something like… | Does it edit files? |
 |---|---|---|
-| Fashion store | ecommerce + fashion-apparel | search-filter-sort, forms, responsive-mobile |
-| Agency website | service-business + sales-lead-generation + b2b-marketing | forms, navigation |
-| Monitoring SaaS | saas-application + monitoring-observability + dashboard-analytics | charts-data-viz, tables |
-| AI workspace | saas-application + ai-product | forms, loading-empty-error-states |
-| Internal admin tool | admin-backoffice | tables, search-filter-sort, forms |
-| Booking marketplace | booking-reservation + marketplace-directory | search-filter-sort, forms |
+| Find problems | "Audit my site" · "Review this dashboard" · "What's wrong with this page?" | No |
+| Find and fix | "Fix the UX issues" · "Improve this page" · "Apply the safe changes" | Yes, presentation only |
+| Look at one part | "Audit only the checkout" · "Check the signup form" | Only if you ask |
+| Skip a part | "Audit everything except the admin panel" | Only if you ask |
+| Focus on one thing | "Do an accessibility pass" · "Check it on mobile" · "Check the Arabic layout" | Only if you ask |
+| Check the details | "Are my font sizes and header size right?" | Only if you ask |
+| Review a sales page | "Review my pricing page" · "Is my landing page clear?" | Only if you ask |
+| Plan before building | "Plan the UX for a booking flow before I build it" | No |
 
-If nothing fits, the skill says so and audits with the core and pattern modules alone instead of forcing a profile.
+**The rule of thumb:** *audit, review, check* never change anything. *Fix, improve, implement, apply* do. If your request is unclear, it audits and offers you the list of fixes.
 
-## Modules
+You can combine these: *"Audit only the checkout on mobile and fix what's safe."*
 
-**Core** — apply to every surface: `universal-ux`, `accessibility`, `performance`, `content-and-trust`, `brand-preservation`.
+## What it will never do
 
-**Profiles** — chosen by classification: `ecommerce`, `fashion-apparel`, `sales-lead-generation`, `service-business`, `informational-content`, `b2b-marketing`, `saas-application`, `dashboard-analytics`, `monitoring-observability`, `admin-backoffice`, `ai-product`, `booking-reservation`, `marketplace-directory`, `high-stakes`.
+These hold in every mode, whatever you ask for in passing.
 
-**Patterns** — chosen by what is on the screen: `forms`, `navigation`, `tables`, `search-filter-sort`, `charts-data-viz`, `loading-empty-error-states`, `responsive-mobile`, `rtl-bilingual`, `visual-scale`, `pricing-and-persuasion`.
+**It will not change how your product works.** Unless you explicitly ask for functional work, it leaves alone: APIs, databases, routes, logins and permissions, pricing, tax, stock, cart and checkout, payments, bookings, alerts, analytics, AI prompts and integrations. If a real improvement needs one of those, it writes it up under *Functional recommendations — not implemented* and lets you decide.
 
-`visual-scale` covers the measurable details (text size, line length, header height, first screen, buttons) and keeps three kinds of number apart: requirements, published guidance, and what 28 established commercial sites were measured to ship. `pricing-and-persuasion` covers framing, anchoring, the middle option, "free", loss wording, defaults, urgency and choice overload, says how well each is supported by research, and holds one line throughout: the skill arranges the offer that exists and never invents a price, plan, discount, free item, deadline or review.
+**It will not redesign your brand.** Your logo, colors, fonts, spacing and style are treated as the brief. If your brand purple is too pale to read as small text, it stops using it for small text. It does not swap your purple.
 
-Every module has the same shape: when to load it, objectives, priority principles, concrete checks, anti-patterns, exceptions, implementation cautions, and sources.
+**It will not invent anything to make a page look or sell better.** No price, plan, discount, "free" offer, deadline, stock count, testimonial, rating or statistic appears unless your project already states it. If your page would be stronger with a real testimonial or a starting price, it tells you what to supply and leaves the space empty.
 
-## Brand preservation
+**It will not use tricks.** No fake urgency, fake scarcity, hidden fees, pre-ticked boxes, or guilt-trip wording, even if it would lift a number.
 
-Before judging anything visual, the skill takes an inventory of the existing identity: logo, colors, type, spacing, radius, shadows, motion, imagery, components and modes. All of it is preserved by default.
+**It will not commit or push** unless you tell it to.
 
-When a brand element causes a usability problem, the skill changes how the element is *used* before it considers changing the element. A brand purple that fails contrast as small text stays the brand purple; it stops being used for small text. Changes to a base brand element are recommended to the owner, never applied silently.
+## How it works
 
-The skill has no house style. It will not turn a product into generic SaaS, stock Tailwind, Material, or whatever is fashionable.
+```mermaid
+flowchart LR
+    A[Look at<br>the project] --> B[Classify each<br>part of it]
+    B --> C[Load only the<br>rules that fit]
+    C --> D[Audit the<br>user journeys]
+    D --> E[Report, by<br>priority]
+    E -.->|only if you ask| F[Fix what is safe<br>and verify]
+```
 
-## Functionality safety
+1. **Look.** It reads what you said, your docs, your code, your pages and your copy before asking you anything.
+2. **Classify.** It splits the product into *surfaces* (groups of screens with the same users and goal) and describes each one: who uses it, why, on what device, how risky a mistake is, what language.
+3. **Load.** It picks one main profile, up to two supporting ones, and the patterns for what is actually on screen.
+4. **Audit.** It walks through what users are trying to do, then checks individual screens.
+5. **Report.** Findings are ranked from **P0** (blocks people) to **P3** (polish), each with its evidence. It also lists what already works, so good parts are not redesigned.
+6. **Fix, if asked.** Small groups of changes, tests run before and after, the full diff checked, and anything it could not verify is said plainly.
 
-Unless you explicitly authorize functional work, the skill does not change APIs, schemas, data, routes, authentication, permissions, pricing, tax, inventory, checkout, payment, booking, monitoring or alert logic, AI prompts or model behavior, analytics contracts, background jobs or integrations.
+**Examples of what gets loaded:**
 
-Improvements that would need such changes are listed under `FUNCTIONAL UX RECOMMENDATIONS — NOT IMPLEMENTED` for you to decide on.
+| Your product | Rules it uses |
+|---|---|
+| Fashion store | ecommerce + fashion + filters, forms, mobile |
+| Agency or service website | service business + lead generation + forms, pricing, visual scale |
+| Monitoring tool | SaaS app + monitoring + dashboards, charts, tables |
+| AI workspace | SaaS app + AI product + forms, loading and error states |
+| Staff admin panel | admin tools + tables, filters, forms |
+| Booking marketplace | booking + marketplace + filters, forms |
 
-It also never adds fake functionality: no search box that does not search, no chart of invented data, no progress bar driven by a timer. And it never recommends deceptive patterns such as fake scarcity, hidden costs or obstructed cancellation.
+<details>
+<summary><strong>All 29 rule modules</strong></summary>
 
-When implementing, it records the git state, runs a baseline, changes things in small groups, checks the diff, re-runs the checks, and does not commit or push unless asked. Details: [`references/implementation-safety.md`](references/implementation-safety.md).
+<br>
 
-## Reports
+**Core (5)** — apply everywhere
+`universal-ux` · `accessibility` · `performance` · `content-and-trust` · `brand-preservation`
 
-- **Audit report** — executive summary, classification, workflows, strengths to preserve, findings by priority, accessibility, responsive behavior, brand, recommended changes, functional recommendations not implemented, order of work, and the limits of the audit.
-- **Implementation report** — baseline, files changed, changes by workflow, accessibility and responsive verification, functionality and brand preservation, tests compared with the baseline, anything not verified, and remaining issues.
+**Profiles (14)** — chosen by what the surface is for
+`ecommerce` · `fashion-apparel` · `sales-lead-generation` · `service-business` · `informational-content` · `b2b-marketing` · `saas-application` · `dashboard-analytics` · `monitoring-observability` · `admin-backoffice` · `ai-product` · `booking-reservation` · `marketplace-directory` · `high-stakes`
 
-Priorities: **P0** blocks a primary task or locks out a group of users; **P1** does major damage to completion, comprehension or error risk; **P2** is meaningful friction; **P3** is polish.
+**Patterns (10)** — chosen by what is on the screen
+`forms` · `navigation` · `tables` · `search-filter-sort` · `charts-data-viz` · `loading-empty-error-states` · `responsive-mobile` · `rtl-bilingual` · `visual-scale` · `pricing-and-persuasion`
+
+Every module has the same shape: when to load it, objectives, principles, concrete checks, anti-patterns, exceptions, cautions for implementation, and sources.
+
+</details>
+
+### The details: sizes, and selling honestly
+
+Two modules deal with the questions people ask most.
+
+**`visual-scale`** covers font sizes, line length, header height, the first screen and button sizes. It keeps three kinds of number apart so you know how much weight each carries:
+
+| Kind | Example |
+|---|---|
+| **Requirement** (can be failed) | Tap targets at least 24 by 24 pixels; text resizable to 200% |
+| **Published guidance** | Body text at least 16px; 50 to 75 characters per line |
+| **Observed practice** (measured on 28 well-known commercial sites) | Main headline around 64px on desktop and 38px on phones; header about 72px and 64px |
+
+It will not resize your type just to match what is typical.
+
+**`pricing-and-persuasion`** covers the well-known selling effects: framing, anchoring, the "rule of three", the power of "free", loss aversion, urgency, per-day pricing, defaults and the paradox of choice. For each one it says how to use it honestly, and how well the research really supports it (several famous effects are weaker than their reputation). Changes are sorted into three levels:
+
+| It may do | It recommends to you | It never does |
+|---|---|---|
+| Reorder and align your existing plans | Add or rename a plan | Invent a price, plan or discount |
+| Make the real price and billing terms prominent | Mark a plan "most popular" | Write "free" where you don't offer it |
+| Move your real guarantee next to the button | Show a per-day price | Add countdowns, "only 2 left", or reviews |
+
+It also never promises that a change will increase sales.
+
+## Installation
+
+A skill is just a folder. Put it where your agent looks for skills and keep the folder name `adaptive-fwm-ux-ui`.
+
+| Agent | For all your projects | For one project only |
+|---|---|---|
+| **Claude Code** | `~/.claude/skills/adaptive-fwm-ux-ui/` | `.claude/skills/adaptive-fwm-ux-ui/` |
+| **Codex** | `~/.agents/skills/adaptive-fwm-ux-ui/` | `.agents/skills/adaptive-fwm-ux-ui/` |
+| **Other Agent Skills tools** | See your tool's documentation for its skills folder | |
+
+macOS and Linux:
+
+```bash
+git clone https://github.com/HamoodMMD/adaptive-fwm-ux-ui.git ~/.claude/skills/adaptive-fwm-ux-ui
+```
+
+Windows (PowerShell):
+
+```powershell
+git clone https://github.com/HamoodMMD/adaptive-fwm-ux-ui.git "$HOME\.claude\skills\adaptive-fwm-ux-ui"
+```
+
+To update later, run `git pull` inside that folder.
+
+It has no dependencies and needs no network access to run. Only `SKILL.md`, `references/` and `assets/` are used at run time.
+
+## Questions
+
+<details>
+<summary><strong>Will it change my code if I just ask it to "check" my site?</strong></summary>
+
+No. *Audit, review* and *check* are read-only. It does not leave helper files in your project either.
+</details>
+
+<details>
+<summary><strong>Is this a set of guidelines, or does it do the fixing?</strong></summary>
+
+Both. By default it audits and reports. When you ask it to fix, it makes the changes itself, within the safety limits above, and gives you a report of exactly what changed.
+</details>
+
+<details>
+<summary><strong>How do I try it without risk?</strong></summary>
+
+Ask for an audit only. Or ask for fixes on a new git branch and review the diff before merging. It never commits or pushes on its own.
+</details>
+
+<details>
+<summary><strong>Will it interfere when I say "audit" about something else, like security or SEO?</strong></summary>
+
+It is meant for UX, UI, usability and accessibility requests. A security audit or an SEO audit is a different job, and the skill does not claim it.
+</details>
+
+<details>
+<summary><strong>Can I use it with a design skill that builds new pages?</strong></summary>
+
+Yes. They do different jobs: a design skill creates a new look, and this one checks and repairs an existing interface without restyling it. A common flow is to build with one and audit with the other.
+</details>
+
+<details>
+<summary><strong>Does it work for Arabic and other right-to-left sites?</strong></summary>
+
+Yes. There is a dedicated module for RTL and bilingual layouts. It checks structure and rendering; it does not judge the quality of wording in languages the agent cannot verify.
+</details>
+
+<details>
+<summary><strong>Can it make my page sell more?</strong></summary>
+
+It can make your real offer clearer and easier to act on, which is usually what a sales page is missing. It will not invent offers, and it will not promise a conversion increase, because no honest tool can.
+</details>
 
 ## Limitations
 
-- **It predicts; it does not observe users.** Findings rest on published research and standards. They are not a substitute for testing with your own users.
-- **What it can verify depends on access.** From source code alone it cannot confirm rendered contrast, real layouts or focus order; it marks such findings as inferred. Give it a running app or screenshots for more.
-- **Not a conformance certificate.** It finds WCAG problems; it cannot prove there are none, and it gives no legal advice.
-- **Not performance engineering.** It covers performance only where users feel it.
-- **Not a rebrand or redesign tool.** It works within the existing identity.
-- **Copy in languages the agent cannot verify** is checked for structure and rendering, not wording.
-- **Some guidance is judgment.** Where no strong published source exists (marketplaces, agentic AI, made-to-measure apparel flows), the modules say so. See "Known gaps" in [`references/research-sources.md`](references/research-sources.md).
-- **Research ages.** Sources were checked on the dates recorded in the index.
-- **Selling techniques are presented with their evidence, not as promises.** Several well-known effects are weaker in practice than their reputation, and the skill never predicts a conversion gain.
-- **Not legal advice.** The pricing module cites consumer-protection rules to show what is regulated. It flags likely problems; it does not certify compliance.
-- **Testing so far** is a set of blind agent runs on routing scenarios and demo pages (see [Examples](#examples)). It has not been tested with real users, on real devices or with screen readers.
+- **It predicts; it does not watch real users.** Findings rest on published research and standards, not on testing with your customers.
+- **What it can verify depends on what it can see.** From code alone it cannot confirm real colors, layouts or keyboard order, and it marks those findings as *inferred*. A running app or screenshots give better results.
+- **It is not a compliance certificate or legal advice.** It finds accessibility and consumer-protection problems; it cannot prove there are none.
+- **It is not a redesign or rebrand tool,** and not a performance-engineering tool.
+- **Some guidance is judgment.** Where strong research is thin, the modules say so. See "Known gaps" in [`references/research-sources.md`](references/research-sources.md).
+- **The measured site figures will date.** They were taken in October 2026, by script, one visit per page.
+- **Testing so far** is blind AI-agent runs on routing scenarios and demo pages. It has not been tested with real users, on physical devices or with screen readers.
 
-## Repository layout
+## Under the hood
 
 ```text
 adaptive-fwm-ux-ui/
-├── SKILL.md                      router: workflow, loading tables, rules that always hold
+├── SKILL.md                      the router: workflow, loading tables, rules that always hold
 ├── references/
-│   ├── classification.md         dimensions, signals, primary/secondary, routes, hard cases
+│   ├── classification.md         how surfaces are classified
 │   ├── conflict-resolution.md    what wins when rules disagree
 │   ├── implementation-safety.md  what may be edited, and the procedure
-│   ├── research-sources.md       source index
+│   ├── research-sources.md       all 152 sources, with how each was checked
 │   ├── core/                     5 modules for every surface
 │   ├── profiles/                 14 modules chosen by classification
 │   └── patterns/                 10 modules chosen by what is on screen
-├── assets/                       classification, audit and implementation report templates
-├── docs/examples/                before and after screenshots with write-ups
-├── README.md
-└── CHANGELOG.md
+├── assets/                       report templates
+└── docs/examples/                before and after screenshots with write-ups
 ```
+
+Sources include WCAG 2.2, Nielsen Norman Group, Baymard Institute, GOV.UK and US government design systems, Google and Apple platform guidance, peer-reviewed studies on decision-making, and consumer-protection rules. Each entry records whether the page was read in full or confirmed by summary only.
+
+See the [changelog](CHANGELOG.md) for what changed in each version.
 
 ## License
 
