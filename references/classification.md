@@ -107,6 +107,7 @@ Pattern modules follow the interface, not the profile. Load one when its element
 - `dir="rtl"`, Arabic, Hebrew, Persian or Urdu content, translation files, or a language switcher → `rtl-bilingual`
 - a public marketing, sales, content or store surface in a full audit, or a question about sizes → `visual-scale`
 - prices, plans, discounts, free offers, trials, guarantees, urgency or scarcity wording, or a selling or lead-generation goal → `pricing-and-persuasion`
+- the surface's job is to sell, sign up or win a lead → `sales-journey`, and record its selling strategy from `selling-strategies.md`
 
 For a desktop-dominant internal tool, `responsive-mobile` is loaded only to check that the tool degrades honestly at narrower widths, not to redesign it for phones.
 

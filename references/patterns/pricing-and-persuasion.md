@@ -103,7 +103,7 @@ Pre-selected options are accepted far more often than chosen ones.
 - Ratings, review counts and customer numbers near a price are real, current and attributed. Detail: `core/content-and-trust`.
 
 ### One action, once per view
-- A view carries one instance of the primary action. After any change, check that the same button does not now appear twice on one screen (for example in a header and a hero on a phone).
+- A view carries one instance of the primary action. After any change, check that the same button does not now appear twice on one screen (for example in a header and a hero on a phone). Removing a duplicate must not leave the action out of reach: no more than about two phone screens of scrolling without one in view (`patterns/sales-journey`, Close).
 
 ### Observed practice
 What 19 established subscription pricing pages showed in October 2026 (SURVEY-01 in the source index; found by reading page text, so "not found" is not proof of absence). These describe what those companies really offer. They are context for an audit, never a reason to add something the owner does not offer.

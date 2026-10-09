@@ -21,7 +21,7 @@ On every supported screen, users can read the content, reach the controls, compl
 
 ### Content priority
 - At each width the most important content and the primary action for that surface come first, without scrolling past decoration.
-- The primary action appears once per screen. If the header and the first section both carry it at phone width, one of them moves; the header stays one row.
+- The primary action appears once per screen. If the header and the first section both carry it at phone width, one of them moves or shrinks; the header stays one row. Removing a duplicate must not leave the action out of reach: no more than about two phone screens of scrolling without one in view (`patterns/sales-journey`, Close).
 - Order on small screens is chosen deliberately; it is not simply the desktop source order collapsed.
 - Nothing essential is hidden on small screens. Secondary material may be collapsed behind a clearly labeled control.
 - Long pages use headings, in-page links or collapsible sections to keep scrolling manageable.

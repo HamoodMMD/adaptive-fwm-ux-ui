@@ -45,6 +45,16 @@ For each key workflow:
 | Can they recover from mistakes? | |
 | Can experienced users repeat it efficiently? | |
 
+### Sales journey (selling surfaces only)
+
+Selling strategy: <attempted, confidence, fit>. Walk-out test, first on <device>:
+
+| # | Stage | Moment a visitor could leave | Cause |
+|---|---|---|---|
+| 1 | <greet / guide / show / answer / close / after> | | <did not understand / could not find / ...> |
+
+The offer's own reasons to leave (for the owner, not interface findings): <list, or none>.
+
 ## 4. Strengths / preserve
 
 <What works and should not be changed, with the reason. Be specific: a redesign that removes these would be a regression.>
@@ -134,6 +144,18 @@ Improvements that need changes to behavior, data, logic or integrations. Not imp
 | ID | Recommendation | User benefit | What would have to change | Area affected |
 |---|---|---|---|---|
 | FR1 | | | | |
+
+### Content the owner needs to supply
+
+Real material the page needs and the project does not contain. Nothing here was written or invented.
+
+| What is needed | Where it would go | Why it matters |
+|---|---|---|
+| <testimonial, price range, photographs of work, address…> | | |
+
+### Strategy recommendations
+
+<Only if the selling strategy does not suit the offer, or the owner asked about another one: the strategy, why it fits, what it would require. The owner decides.>
 
 ## 11. Suggested order of work
 

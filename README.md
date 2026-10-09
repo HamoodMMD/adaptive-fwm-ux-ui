@@ -5,18 +5,19 @@
 </p>
 
 <p align="center">
-  <img alt="Version 1.1.0" src="https://img.shields.io/badge/version-1.1.0-1f6feb">
+  <img alt="Version 1.2.0" src="https://img.shields.io/badge/version-1.2.0-1f6feb">
   <img alt="Agent Skills format" src="https://img.shields.io/badge/format-Agent%20Skills-6e40c9">
   <img alt="Works with Claude Code and Codex" src="https://img.shields.io/badge/works%20with-Claude%20Code%20%C2%B7%20Codex-2da44e">
   <img alt="WCAG 2.2 AA" src="https://img.shields.io/badge/accessibility-WCAG%202.2%20AA-d4a72c">
-  <img alt="29 rule modules" src="https://img.shields.io/badge/rule%20modules-29-8250df">
-  <img alt="152 sources" src="https://img.shields.io/badge/sources-152-57606a">
+  <img alt="30 rule modules" src="https://img.shields.io/badge/rule%20modules-30-8250df">
+  <img alt="183 sources" src="https://img.shields.io/badge/sources-183-57606a">
 </p>
 
 <p align="center">
   <a href="#quick-start">Quick start</a> ·
   <a href="#see-it-work">Examples</a> ·
   <a href="#what-you-can-ask">What you can ask</a> ·
+  <a href="#your-site-is-a-salesperson">Selling</a> ·
   <a href="#what-it-will-never-do">Safety</a> ·
   <a href="#how-it-works">How it works</a> ·
   <a href="#questions">Questions</a>
@@ -117,11 +118,53 @@ In every example the business-logic files were untouched and the tests passed be
 | Focus on one thing | "Do an accessibility pass" · "Check it on mobile" · "Check the Arabic layout" | Only if you ask |
 | Check the details | "Are my font sizes and header size right?" | Only if you ask |
 | Review a sales page | "Review my pricing page" · "Is my landing page clear?" | Only if you ask |
+| Judge the site as a salesperson | "Would a visitor stay and buy, or walk out?" · "What is my site's selling strategy?" | Only if you ask |
 | Plan before building | "Plan the UX for a booking flow before I build it" | No |
 
 **The rule of thumb:** *audit, review, check* never change anything. *Fix, improve, implement, apply* do. If your request is unclear, it audits and offers you the list of fixes.
 
 You can combine these: *"Audit only the checkout on mobile and fix what's safe."*
+
+## Your site is a salesperson
+
+A selling site does what a good salesperson does in a shop. A site that is confusing or hard to get around is a bad one, and visitors leave the way customers walk out. For any page whose job is to sell or win a lead, the skill checks six stages:
+
+| Stage | A good salesperson… | A bad one… |
+|---|---|---|
+| **Greet** | Says hello and lets you look. The first screen says what this is and what you can do. | Blocks the door with pop-ups before you have seen anything. |
+| **Guide** | Asks what you are looking for and points the way. | Makes you search the whole shop. |
+| **Show** | Puts the product in your hands. | Talks about the company. |
+| **Answer** | Hears your doubt and answers it there. | Changes the subject. |
+| **Close** | Has the till open when you are ready. | Sends you to queue somewhere else. |
+| **After** | Tells you what happens next. | Leaves you wondering if it worked. |
+
+It runs a **walk-out test**: it goes through your page as a first-time visitor on a phone and writes down every moment a reasonable person could give up, and why (did not understand, could not find, had to wait, was interrupted, had to work, did not believe).
+
+### Thirteen ways to sell
+
+Good salespeople do not all sell the same way. Each strong site has a deliberate manner, and its whole interface carries it out. The skill works out which one your site is attempting, whether it suits what you sell, and whether your interface helps or gets in the way.
+
+| Strategy | The idea | Seen on |
+|---|---|---|
+| Immersive storytelling | Make people want it before they think about price | Apple, Rivian, Tesla |
+| Guided choice | Ask a few easy questions, then recommend | Warby Parker, Lemonade, Noom |
+| Quiet catalog | The product sells itself; the interface gets out of the way | Allbirds, Glossier, Everlane |
+| Authority by depth | Show who already relies on it; let readers go as deep as they need | Stripe, Plaid, Cloudflare |
+| The site is the demo | The site is as fast and precise as the product | Linear, Vercel, Raycast |
+| Try it now | Shorten the distance to first use | Canva, Notion, Grammarly |
+| Proof first | Lead with other people's evidence | Thumbtack, Ridge, Casper |
+| Offer first | Say the price first | Mint Mobile |
+| The letter | Win the reader with an argument in a human voice | Basecamp, HEY |
+| Build your own | Let the buyer assemble their version | Apple's buy pages, Rivian |
+| Task first | Put the search or request form where the pitch would be | Booking.com, Airbnb, Uber, Wise |
+| Portfolio and conversation | Show the work and make it easy to talk | Pentagram, IDEO, Toptal |
+| Plain dealing | Say what you do, what it costs and how to get it | Most small and local business sites (not in the survey) |
+
+These come from walking 66 real selling pages from top to bottom on phone and desktop. Three rules keep it honest:
+
+- **Your strategy is yours.** The skill judges your site against its own manner and helps it execute. It may recommend a different strategy; it never switches yours.
+- **Named sites are evidence, never templates.** It will not restyle your site to look like Apple. Ask it to "sell like Apple" and it tells you which strategy Apple uses, whether that suits your offer, which habits transfer, and what you would need to supply.
+- **A strategy cannot be built from nothing.** Storytelling needs real imagery and proof-first needs real proof. If the material is missing, it tells you what to supply.
 
 ## What it will never do
 
@@ -167,7 +210,7 @@ flowchart LR
 | Booking marketplace | booking + marketplace + filters, forms |
 
 <details>
-<summary><strong>All 29 rule modules</strong></summary>
+<summary><strong>All 30 rule modules</strong></summary>
 
 <br>
 
@@ -177,8 +220,10 @@ flowchart LR
 **Profiles (14)** — chosen by what the surface is for
 `ecommerce` · `fashion-apparel` · `sales-lead-generation` · `service-business` · `informational-content` · `b2b-marketing` · `saas-application` · `dashboard-analytics` · `monitoring-observability` · `admin-backoffice` · `ai-product` · `booking-reservation` · `marketplace-directory` · `high-stakes`
 
-**Patterns (10)** — chosen by what is on the screen
-`forms` · `navigation` · `tables` · `search-filter-sort` · `charts-data-viz` · `loading-empty-error-states` · `responsive-mobile` · `rtl-bilingual` · `visual-scale` · `pricing-and-persuasion`
+**Patterns (11)** — chosen by what is on the screen
+`forms` · `navigation` · `tables` · `search-filter-sort` · `charts-data-viz` · `loading-empty-error-states` · `responsive-mobile` · `rtl-bilingual` · `visual-scale` · `pricing-and-persuasion` · `sales-journey`
+
+Plus a catalog of thirteen selling strategies in `references/selling-strategies.md`.
 
 Every module has the same shape: when to load it, objectives, principles, concrete checks, anti-patterns, exceptions, cautions for implementation, and sources.
 
@@ -286,6 +331,7 @@ It can make your real offer clearer and easier to act on, which is usually what 
 - **It is not a redesign or rebrand tool,** and not a performance-engineering tool.
 - **Some guidance is judgment.** Where strong research is thin, the modules say so. See "Known gaps" in [`references/research-sources.md`](references/research-sources.md).
 - **The measured site figures will date.** They were taken in October 2026, by script, one visit per page.
+- **The thirteen selling strategies are an interpretation.** They group what real sites were observed doing, supported by research on each technique. No study validates the grouping itself, the sites walked were large brands, and naming a site's strategy is a judgment the skill labels as one.
 - **Testing so far** is blind AI-agent runs on routing scenarios and demo pages. It has not been tested with real users, on physical devices or with screen readers.
 
 ## Under the hood
@@ -297,10 +343,11 @@ adaptive-fwm-ux-ui/
 │   ├── classification.md         how surfaces are classified
 │   ├── conflict-resolution.md    what wins when rules disagree
 │   ├── implementation-safety.md  what may be edited, and the procedure
-│   ├── research-sources.md       all 152 sources, with how each was checked
+│   ├── selling-strategies.md     thirteen ways a site can sell, when each fits, how each fails
+│   ├── research-sources.md       all 183 sources, with how each was checked
 │   ├── core/                     5 modules for every surface
 │   ├── profiles/                 14 modules chosen by classification
-│   └── patterns/                 10 modules chosen by what is on screen
+│   └── patterns/                 11 modules chosen by what is on screen
 ├── assets/                       report templates
 └── docs/examples/                before and after screenshots with write-ups
 ```

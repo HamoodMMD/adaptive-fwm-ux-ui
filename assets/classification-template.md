@@ -35,6 +35,7 @@ Complete once per surface when surfaces differ; once overall when they do not. "
 | AI involvement | | |
 | Transaction model | | |
 | Roles | | |
+| Selling strategy (selling surfaces only) | <attempted strategy, any supporting ones, and whether it suits the offer> | <first screen, main action, what repeats> |
 
 ## Evidence
 

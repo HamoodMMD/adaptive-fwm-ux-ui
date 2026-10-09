@@ -9,6 +9,8 @@ Sites for companies that sell services: agencies, consultancies, contractors, cl
 
 This profile covers the information a service site must carry and how it is organized. The mechanics of calls to action and inquiry forms are in `sales-lead-generation`.
 
+**Selling surfaces:** read `patterns/sales-journey` and `selling-strategies.md` for home, landing, product and pricing pages.
+
 ## Objectives
 
 Within moments a visitor knows what the company does, for whom and where. Within minutes they can judge whether the company is real, capable and a fit, understand how working together goes, and reach a person.

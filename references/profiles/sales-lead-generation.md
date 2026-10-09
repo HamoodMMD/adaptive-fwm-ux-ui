@@ -5,7 +5,7 @@ Surfaces whose job is to turn a visitor into an inquiry: contact, quote request,
 **Load when:** the conversion is a lead, not an online purchase: landing pages, sales pages, quote and contact flows.
 **Skip when:** the user completes the purchase online (use `ecommerce`) or the surface is reference content with no conversion goal.
 **Journey:** arrive → understand the offer → believe it → resolve doubts → take the lead action → know what happens next.
-**Pair with (when present):** `patterns/forms`, `patterns/responsive-mobile`, `patterns/pricing-and-persuasion`, `patterns/visual-scale`; `profiles/service-business` or `profiles/b2b-marketing` for the surrounding site.
+**Pair with (when present):** `patterns/forms`, `patterns/responsive-mobile`, `patterns/pricing-and-persuasion`, `patterns/visual-scale`, `patterns/sales-journey`; `profiles/service-business` or `profiles/b2b-marketing` for the surrounding site.
 
 ## Objectives
 
@@ -28,7 +28,7 @@ A visitor quickly understands what is offered, for whom and why it is credible, 
 - The offer is concrete: what the visitor gets by acting (a quote within a day, a 30-minute call, a site visit, a price list).
 
 ### Call-to-action hierarchy
-- One primary action per view, visually dominant, with the same wording everywhere on the page. It appears once per view: a header button and a hero button with the same label on one phone screen is a duplicate, and one of them moves (usually the header's, into the menu).
+- One primary action per view, visually dominant, with the same wording everywhere on the page. It appears once per view: a header button and a hero button with the same label on one phone screen is a duplicate, and one of them changes: the header's becomes compact, hides while the hero's is on screen, or moves into the menu. Removing a duplicate must not leave the action out of reach: no more than about two phone screens of scrolling without one in view (`patterns/sales-journey`, Close).
 - The label names the action or its outcome: "Get a quote", "Book a call", "Chat on WhatsApp". Vague labels such as "Submit", "Learn more" or "Get started" do not tell the visitor what happens.
 - A secondary, lower-commitment action exists for visitors who are not ready: view pricing, see case studies, download details.
 - On long pages the primary action reappears at natural decision points (after the offer, after proof, after pricing, at the end), not after every paragraph.

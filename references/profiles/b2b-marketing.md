@@ -7,6 +7,8 @@ Public sites that market a product or service to organizations, where buying is 
 **Journey:** discover → understand what it is and whether it fits → compare and validate → build an internal case → engage (trial, demo, contact) → return several times with colleagues.
 **Pair with:** `profiles/sales-lead-generation` for demo and contact mechanics; `profiles/service-business` when what is sold is a service; `profiles/informational-content` for docs and resource libraries; `patterns/navigation`, `patterns/forms`.
 
+**Selling surfaces:** read `patterns/sales-journey` and `selling-strategies.md` for home, landing, product and pricing pages.
+
 ## Objectives
 
 A researcher can work out what the product does and whether it suits their situation without talking to anyone, collect the facts their colleagues will ask for, trust the company enough to shortlist it, and take the next step in the way their organization buys.

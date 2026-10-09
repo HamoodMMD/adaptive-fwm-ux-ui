@@ -4,6 +4,26 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.2.0 - 2026-10-09
+
+The site as a salesperson: a walk of 66 real selling pages and a review of research on why visitors stay or leave.
+
+### Added
+- `patterns/sales-journey`: six stages a selling site must handle (greet, guide, show, answer, close, after), each with checks and the way a bad salesperson fails it; a walk-out test that records every moment a first-time visitor could give up; ease-of-getting-around checks; observed figures from 56 phone page loads.
+- `references/selling-strategies.md`: thirteen selling strategies (immersive storytelling, guided choice, quiet catalog, authority by depth, the site is the demo, try it now, proof first, offer first, the letter, build your own, task first, portfolio and conversation, plain dealing). For each: the logic, what it looked like on real sites, what to check and how it fails; plus tables for identifying a strategy and for which strategy suits which offer.
+- Classification now records the selling strategy a surface is attempting and whether it suits the offer.
+- 32 sources on first impressions, dwell time, effort, information scent, pop-ups, login walls, scrolling effects, minimalism, tone, speed and sales.
+
+### Changed
+- The primary action now has two limits that apply together: never two instances visible at once, and never more than about two phone screens without one in view.
+- Audit template: a sales-journey block with the walk-out table, "Content the owner needs to supply" and strategy recommendations.
+- A blind test of the first draft led to: priority by impact with stage only as a tie-break, a rule for pricing and product pages, a small-site path, a rule of record to avoid duplicate findings, and handling for "make mine sell like <brand>".
+
+### Rules
+- The strategy belongs to the owner: the skill judges a site against its own manner and helps it execute. Recommending a different strategy is allowed; switching it is not.
+- Named sites are evidence, never templates. No site is restyled toward another brand.
+- A strategy is never built from invented material; missing imagery, proof or content is requested from the owner.
+
 ## 1.1.0 - 2026-10-08
 
 Two new pattern modules, from a review of published research and a measurement of real commercial sites.

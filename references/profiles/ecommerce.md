@@ -7,6 +7,8 @@ Surfaces where people find, evaluate and buy products through a cart and checkou
 **Journey:** land → find → evaluate → choose variant → cart → checkout → confirmation → after the order.
 **Pair with (when present):** `patterns/search-filter-sort`, `patterns/forms`, `patterns/responsive-mobile`, `patterns/loading-empty-error-states`; `profiles/fashion-apparel` for clothing; `profiles/high-stakes` on the payment step.
 
+**Selling surfaces:** read `patterns/sales-journey` and `selling-strategies.md` for home, landing, product and pricing pages.
+
 ## Objectives
 
 A shopper can find a suitable product, be confident it is the right one, know the full cost and delivery expectation before committing, and pay without being forced through steps that serve only the seller.

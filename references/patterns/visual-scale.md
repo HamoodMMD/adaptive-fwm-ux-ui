@@ -41,7 +41,7 @@ Text is comfortable to read at every width, the hierarchy is visible at a glance
 - Text is not justified. Long passages are not centered.
 
 ### Type scale and hierarchy
-- A small set of sizes is used consistently: commonly five to seven steps from caption to display.
+- A small set of sizes is used consistently: commonly five to seven designed steps from caption to display. (Established sites rendered 7 to 10 distinct sizes once small labels and one-off elements are counted; far more than that suggests drift.)
 - Each level is distinguishable from the next by size, weight or color; two levels that differ by a pixel or two read as a mistake.
 - The page has one main headline, and it is the largest text on the first screen.
 - Headings step down on small screens: a headline that works at 64px on a desktop usually needs to be 32 to 42px on a phone to avoid one-word lines.
