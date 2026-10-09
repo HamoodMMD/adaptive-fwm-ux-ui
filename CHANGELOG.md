@@ -4,6 +4,19 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.3.0 - 2026-10-09
+
+Psychology in interface decisions, from checking a set of widely repeated claims against the studies behind them.
+
+### Added
+- `patterns/ux-psychology`: defaults, progress and momentum, giving before asking, ownership and effort, loss and consequences, honest comparison, memory and attention, waiting, engagement and habit. Each effect is listed with how well the research has held up.
+- A five-step check for any psychology claim (which study, the right effect, has it held up, does the situation match, is the example honest) and a disclosure test: would the visitor feel helped or tricked if they saw how the element works.
+- 17 sources, including the original studies and the replications or meta-analyses that qualify them.
+
+### Rules
+- The honest version of every effect uses true facts: real progress, real availability, real consequences, comparisons in the same units.
+- No invented threats, shaming decline options, fake delays, inflated progress or compulsion mechanics.
+
 ## 1.2.0 - 2026-10-09
 
 The site as a salesperson: a walk of 66 real selling pages and a review of research on why visitors stay or leave.

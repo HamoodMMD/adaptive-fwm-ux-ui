@@ -2,7 +2,7 @@
 name: adaptive-fwm-ux-ui
 description: "Adaptive, evidence-based UX/UI audit and safe improvement for any website or app. Classifies each surface first (user goal, business goal, audience, environment, risk, device, language), then applies only the matching rule modules: ecommerce, fashion, lead generation, service business, B2B marketing, content sites, SaaS apps, dashboards, monitoring, admin tools, AI products, booking, marketplaces and high-stakes flows, plus forms, navigation, tables, search and filters, charts, loading/empty/error states, mobile, RTL/Arabic, type scale, pricing and selling. Preserves existing functionality and brand identity. Use whenever the user asks to audit, review, critique, check, improve, fix or polish the UX, UI, usability, accessibility (WCAG 2.2 AA), responsiveness, conversion flow, checkout, forms, navigation, tables or dashboards of a page, screen, component, flow or whole product, or to plan UX before a build, even if they only say 'check my website', 'make this easier to use' or 'why does this page feel off'."
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # Adaptive UX/UI audit and improvement
@@ -23,7 +23,7 @@ These hold in every mode. Each one exists because breaking it is how a "UX impro
 4. **Protect the brand.** The existing logo, palette, type, spacing, radius, shadows, motion, imagery, components and tokens are the brief, not a draft. Fix how a brand element is *used* before proposing to change the element. Never restyle toward a generic look.
 5. **Nothing fake.** Never add a control, metric, chart, search, filter, export, progress value, review, badge or AI feature that is not backed by real functionality or data. Recommend it instead. When the user directly asks for a new feature ("add a search bar"), that is a request for functional work: confirm the scope, then build it for real or not at all.
 6. **No deception.** Never recommend or build fake urgency or scarcity, fake reviews, confirmshaming, hidden costs, pre-ticked consent or obstructed cancellation, even where it would lift a metric. Presentation techniques from sales psychology (framing, anchoring, a highlighted middle plan, "free", loss wording) may only arrange what the owner really offers: never invent or alter a price, plan, tier, feature, discount, former price, free item, trial, guarantee, deadline or stock level to make a page sell better. Rules: [references/patterns/pricing-and-persuasion.md](references/patterns/pricing-and-persuasion.md).
-7. **Evidence over taste.** Tie every finding to a rule and say what kind of rule it is (see [Evidence classes](#evidence-classes)). Do not invent statistics or promise conversion gains. A stylistic preference is not a finding.
+7. **Evidence over taste.** A psychology principle quoted in a brief, article or video is a claim to check, not a rule: confirm the study, whether it has held up, and whether the example is honest ([references/patterns/ux-psychology.md](references/patterns/ux-psychology.md)). Tie every finding to a rule and say what kind of rule it is (see [Evidence classes](#evidence-classes)). Do not invent statistics or promise conversion gains. A stylistic preference is not a finding.
 8. **Keep secrets out.** Do not print, copy or quote keys, tokens, credentials or personal data found while inspecting a project; redact them. Do not edit environment or secret files. Do not send project content to external services unless the user asks.
 
 ## Step 1 — Pick the mode
@@ -143,6 +143,7 @@ Loading everything defeats the purpose: irrelevant rules produce irrelevant find
 | [rtl-bilingual](references/patterns/rtl-bilingual.md) | an RTL language, more than one language, or a language switcher |
 | [visual-scale](references/patterns/visual-scale.md) | a public, marketing, sales, content or store surface in a full audit; any question about font, header, banner, hero or button sizes |
 | [sales-journey](references/patterns/sales-journey.md) | a surface whose job is to sell, sign up or win a lead: commercial home pages, landing, product and pricing pages. Read with [selling-strategies](references/selling-strategies.md) |
+| [ux-psychology](references/patterns/ux-psychology.md) | onboarding, sign-up, multi-step flows, defaults, progress indicators, upgrade prompts or engagement features; or anyone cites a psychological principle to justify a design |
 | [pricing-and-persuasion](references/patterns/pricing-and-persuasion.md) | a price, plan choice, discount, free offer, trial, guarantee, urgency or scarcity wording, or a surface whose job is to sell or generate leads |
 
 Pattern modules depend on what the interface contains, which you may not know until you have looked. Choose them after gathering evidence, and add one the moment its element turns up. "Load" means read the module before auditing the surface it applies to; for a module scoped to one step or panel, read only the sections that bear on it.

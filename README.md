@@ -5,12 +5,12 @@
 </p>
 
 <p align="center">
-  <img alt="Version 1.2.0" src="https://img.shields.io/badge/version-1.2.0-1f6feb">
+  <img alt="Version 1.3.0" src="https://img.shields.io/badge/version-1.3.0-1f6feb">
   <img alt="Agent Skills format" src="https://img.shields.io/badge/format-Agent%20Skills-6e40c9">
   <img alt="Works with Claude Code and Codex" src="https://img.shields.io/badge/works%20with-Claude%20Code%20%C2%B7%20Codex-2da44e">
   <img alt="WCAG 2.2 AA" src="https://img.shields.io/badge/accessibility-WCAG%202.2%20AA-d4a72c">
-  <img alt="30 rule modules" src="https://img.shields.io/badge/rule%20modules-30-8250df">
-  <img alt="183 sources" src="https://img.shields.io/badge/sources-183-57606a">
+  <img alt="31 rule modules" src="https://img.shields.io/badge/rule%20modules-31-8250df">
+  <img alt="200 sources" src="https://img.shields.io/badge/sources-200-57606a">
 </p>
 
 <p align="center">
@@ -118,6 +118,7 @@ In every example the business-logic files were untouched and the tests passed be
 | Focus on one thing | "Do an accessibility pass" · "Check it on mobile" · "Check the Arabic layout" | Only if you ask |
 | Check the details | "Are my font sizes and header size right?" | Only if you ask |
 | Review a sales page | "Review my pricing page" · "Is my landing page clear?" | Only if you ask |
+| Check a psychology claim | "This video says to use loss aversion on my upgrade screen. Is that right?" | Only if you ask |
 | Judge the site as a salesperson | "Would a visitor stay and buy, or walk out?" · "What is my site's selling strategy?" | Only if you ask |
 | Plan before building | "Plan the UX for a booking flow before I build it" | No |
 
@@ -210,7 +211,7 @@ flowchart LR
 | Booking marketplace | booking + marketplace + filters, forms |
 
 <details>
-<summary><strong>All 30 rule modules</strong></summary>
+<summary><strong>All 31 rule modules</strong></summary>
 
 <br>
 
@@ -220,8 +221,8 @@ flowchart LR
 **Profiles (14)** — chosen by what the surface is for
 `ecommerce` · `fashion-apparel` · `sales-lead-generation` · `service-business` · `informational-content` · `b2b-marketing` · `saas-application` · `dashboard-analytics` · `monitoring-observability` · `admin-backoffice` · `ai-product` · `booking-reservation` · `marketplace-directory` · `high-stakes`
 
-**Patterns (11)** — chosen by what is on the screen
-`forms` · `navigation` · `tables` · `search-filter-sort` · `charts-data-viz` · `loading-empty-error-states` · `responsive-mobile` · `rtl-bilingual` · `visual-scale` · `pricing-and-persuasion` · `sales-journey`
+**Patterns (12)** — chosen by what is on the screen
+`forms` · `navigation` · `tables` · `search-filter-sort` · `charts-data-viz` · `loading-empty-error-states` · `responsive-mobile` · `rtl-bilingual` · `visual-scale` · `pricing-and-persuasion` · `sales-journey` · `ux-psychology`
 
 Plus a catalog of thirteen selling strategies in `references/selling-strategies.md`.
 
@@ -252,6 +253,8 @@ It will not resize your type just to match what is typical.
 | Move your real guarantee next to the button | Show a per-day price | Add countdowns, "only 2 left", or reviews |
 
 It also never promises that a change will increase sales.
+
+**`ux-psychology`** covers the effects design articles and videos love to quote: smart defaults, the goal gradient, reciprocity, the IKEA and endowment effects, loss aversion, memory limits and more. It checks each claim against the study behind it, because popular versions are often half right. The famous jam study, for example, has not replicated reliably, and "decision fatigue" failed two large replications. Its test for any technique: if the visitor could see exactly how this works, would they feel helped or tricked?
 
 ## Installation
 
@@ -344,10 +347,10 @@ adaptive-fwm-ux-ui/
 │   ├── conflict-resolution.md    what wins when rules disagree
 │   ├── implementation-safety.md  what may be edited, and the procedure
 │   ├── selling-strategies.md     thirteen ways a site can sell, when each fits, how each fails
-│   ├── research-sources.md       all 183 sources, with how each was checked
+│   ├── research-sources.md       all 200 sources, with how each was checked
 │   ├── core/                     5 modules for every surface
 │   ├── profiles/                 14 modules chosen by classification
-│   └── patterns/                 11 modules chosen by what is on screen
+│   └── patterns/                 12 modules chosen by what is on screen
 ├── assets/                       report templates
 └── docs/examples/                before and after screenshots with write-ups
 ```
