@@ -101,6 +101,12 @@ Pre-selected options are accepted far more often than chosen ones.
 
 ### Proof near the price
 - Ratings, review counts and customer numbers near a price are real, current and attributed. Detail: `core/content-and-trust`.
+- A rating shows its count and its spread. A less-than-perfect average with visible criticism is more believable than a wall of five stars; never suggest hiding lower ratings.
+
+### Joining and leaving
+- Starting a subscription or trial takes an explicit act, with price, period and renewal stated beside it and a decline option as visible as the accept.
+- Cancelling is as easy to find and finish as joining. Retention offers may appear once; they do not stand between the customer and the cancel control.
+- Virtual currencies, credits and in-app items: `patterns/virtual-goods`.
 
 ### One action, once per view
 - A view carries one instance of the primary action. After any change, check that the same button does not now appear twice on one screen (for example in a header and a hero on a phone). Removing a duplicate must not leave the action out of reach: no more than about two phone screens of scrolling without one in view (`patterns/sales-journey`, Close).
@@ -156,6 +162,8 @@ What 19 established subscription pricing pages showed in October 2026 (SURVEY-01
 | Left-digit pricing | Supported when the leftmost digit changes. |
 | Choice overload | The average effect across studies is near zero; it appears when options are complex and preferences are unclear. |
 | Defaults | Among the strongest effects, which is why paid defaults are treated as deceptive. |
+| Showing fees late (drip pricing) | A large field experiment found it raises spending. It works against the buyer, which is why it is restricted and why the full price belongs up front. |
+| Splitting a price into parts | Lowers the total buyers remember. State the total as well as the parts. |
 | Nudges in general | Published results overstate the effect; after correcting for publication bias, little remains on average. |
 
 ## Implementation cautions
@@ -169,6 +177,7 @@ Three levels of action. Apply them to every change in this module.
 | Move existing conditions, fees and guarantees next to the price | Add a guarantee, trial, free item or free tier | Write "free", "included" or "no card needed" where the project does not say so |
 | Put an existing saving beside the prices it comes from | Show a derived figure (per-day cost, yearly saving, percent off) | Add urgency, scarcity, countdowns or activity notices |
 | Remove pre-selection from a paid extra only when no handler or total depends on it; otherwise recommend | Change a default plan, billing period or quantity | Add testimonials, ratings, counts, logos or awards |
+| Remove pressure the code proves false, under the rule in `implementation-safety.md` |  |  |
 | Rewrite a price label so it states the period and tax already documented in the project | Add a price range or starting price for a quote-based service | State or imply an expected uplift |
 
 - A derived figure is arithmetic on the owner's prices, but rounding, tax and currency make it a claim. Give the owner the calculation and let them approve the number. A figure the project already produces (a total its own code calculates and displays) is not derived; you may move it, label it and make it prominent.
@@ -192,6 +201,7 @@ Three levels of action. Apply them to every change in this module.
 - [NNG-41] Scarcity; [NNG-47] reciprocity; [NNG-34] social proof
 - [NNG-42] Comparison tables; [NNG-43] communicating discounts; [NNG-44] taxes and fees; [NNG-46] pricing, trials and trust; [NNG-28] showing prices
 - [BAY-15] Price and discount display; [BAY-16] price per unit
+- [BEH-35] Hidden fees experiment; [BEH-36] partitioned prices; [BEH-37] reviews and ratings; [LAW-13] enrollment and cancellation
 - [LAW-01] Former-price comparisons; [LAW-02] use of the word "free"; [LAW-03] reviews and testimonials; [LAW-04] practices always considered unfair; [LAW-05] prior price in reductions; [LAW-06] drip pricing and fake reviews; [LAW-07] interface manipulation on platforms; [LAW-08] disclosures before billing
 
 The three-level action table and the offer inventory are this skill's own rules (evidence class: Judgment), built to keep persuasion inside what the owner actually offers.

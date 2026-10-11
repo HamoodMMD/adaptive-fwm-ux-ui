@@ -44,7 +44,7 @@ A sensible starting value turns filling in a form into checking one. Defaults ar
 ### Progress and momentum
 People work harder as a goal gets closer, and are more likely to finish something that already looks started.
 - Progress shown is progress made. A step counts as done only if the person did it or the system truly completed it for them.
-- The steps are named and their number is known from the start.
+- The steps are named and their number is known from the start. This is orientation, which `patterns/forms` requires for any multi-step form; it is not a promise that showing progress raises completion.
 - The first steps are the easy ones, so early movement is quick. Slow early movement on a progress display raises abandonment.
 - The indicator moves at an honest, even pace. It does not race and then stall, or sit at 99%.
 - Completion is acknowledged, and what the person has already done is kept if they leave and return.
@@ -88,6 +88,27 @@ People judge a wait partly by what they believe is being done for them.
 - When a real operation takes time, say what is happening in specific terms.
 - Never add an artificial delay or a staged "working" animation to make an instant result look laborious.
 - Detail on loading states: `patterns/loading-empty-error-states`.
+
+### Ease of use itself
+Ease is not only pleasant; it is one of the two things that most reliably predict whether people adopt a tool. The other is whether they find it useful.
+- Judge every screen by the effort it asks: reading, deciding, typing, waiting, remembering (`patterns/sales-journey`, ease of getting around).
+- Something that looks hard is expected to be hard. Dense, cramped or hard-to-read instructions make a task seem bigger than it is; keep steps short and legible.
+- Security is judged by eye. Payment and personal-data fields that look deliberate and contained feel safer than the same fields left plain.
+
+### Popular claims that do not hold up
+Correct these when a brief or reference relies on them.
+
+| Claim | What is actually known |
+|---|---|
+| "Attention spans are eight seconds, shorter than a goldfish's" | No study exists behind the figure. People stay as long as a page keeps earning it. |
+| "Everything must be within three clicks" | No data supports a limit. Clear labels and fast pages matter; counting clicks does not. |
+| "Menus need seven items or fewer" | A misreading of a memory estimate. Visible options are recognized, not remembered. |
+| "Red (or green, or orange) buttons convert best" | The tests behind this show contrast with the page winning, not a hue. Color meaning depends on context. |
+| "53% of visitors leave after three seconds" | One company's analytics, not a controlled result. Slower pages do lose people; the figure is not a law. |
+| "A perfect five-star rating sells best" | Ratings in the mid-fours are trusted more; having real reviews at all matters most. |
+| "Trust badges raise conversion" | They make a page feel safer. Evidence that they raise sales comes from vendors' own tests. |
+| "Tell people what others do and they follow" | A real but modest effect; the famous original result was larger than later replications. |
+| "More choice kills sales", "willpower runs out" | See the table below. |
 
 ### Engagement and habit
 - Features that return people to the product do so because the product was useful: reminders the person set, saved work, a real update.
@@ -142,7 +163,7 @@ Isolation and serial-position effects, sunk cost, commitment and variable reward
 - A progress indicator needs state and a true count of steps. Restyling one that exists is presentation; adding one, or changing what it counts, is functional. Never adjust its figures to look further along.
 - Removing or moving a sign-up wall, adding a preview, or letting people build before registering changes the product's flow and data. Recommend it with what would have to change.
 - Warnings must be driven by real system state. If the code cannot know that files are at risk, the warning cannot say so.
-- Rewording a decline option to neutral language is presentation and may be done in a fix pass. Removing a manufactured threat changes marketing content: report it at P1 or higher and recommend removal.
+- Rewording a decline option to neutral language is presentation and may be done in a fix pass. A manufactured threat or false scarcity message is removed only under the rule "Existing pressure that the code proves false" in `implementation-safety.md`; otherwise report it at P1 or higher and recommend removal.
 - Do not add delays, streaks, counters, notifications or reward mechanics.
 - When citing an effect in a report, give its evidence status from the table and name the obstacle the change removes. Do not predict an outcome.
 
@@ -157,6 +178,8 @@ Isolation and serial-position effects, sunk cost, commitment and variable reward
 - [BEH-29] Zeigarnik and resumption meta-analysis; [BEH-30] working memory capacity; [NNG-73] short-term memory and menus
 - [NNG-72] Recognition and recall; [NNG-75] choice and decision time; [NNG-74] proximity; [NNG-59] peak-end rule; [NNG-52] cognitive load
 - [BEH-26] Operational transparency during waits
+- [BEH-41] Ease of use and adoption; [BEH-40] effort judged from legibility; [BAY-19], [BAY-20] perceived security
+- [BEH-43] Attention-span myth; [NNG-76] three-click rule; [BEH-42] color in context; [WEB-13] the three-second figure; [BEH-37] ratings; [BEH-38], [BEH-39] social norms and their replication
 - [BEH-13] Publication bias in nudge research; [LAW-09] addictive design; [LAW-07] manipulative interfaces
 
 The disclosure test, the claim-vetting steps and the split between presentation and owner decisions are this skill's own rules (evidence class: Judgment).

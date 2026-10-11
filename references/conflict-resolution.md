@@ -43,6 +43,27 @@ Keep motion that explains a change of state or location. Remove motion that only
 ### Conversion versus accessibility and trust
 Never raise conversion by removing information users need (full price, fees, policies), by blocking exits, or by manufacturing urgency. When a growth pattern and an honest pattern compete, the honest one wins and the trade-off is reported, not hidden.
 
+### Keeping the action in reach versus not repeating it
+Both hold. Never show two instances of the same primary action at once; never leave more than about two phone screens without one in view. Satisfy both by repeating the action at decision points or by one compact sticky action. If only one can be met without functional work, keep the action in reach and report the duplicate.
+
+### Leaving unverified content versus removing deception
+Content that might be true (a testimonial, a statistic, a client name) is reported and left for the owner. Pressure that the project's own code proves false (a hard-coded stock count, a restarting timer) may be removed in a fix pass under the conditions in [implementation-safety.md](implementation-safety.md). When it is unclear which kind it is, treat it as the first.
+
+### Helpful defaults versus steering
+A default that saves effort and favors the user is good design. A default that spends the user's money, extends a commitment or shares their data is steering, whatever it does for a metric. The first is encouraged; the second is reported at P1 or higher and changed only by the owner when a total or submission depends on it.
+
+### A selling strategy versus ease and speed
+The strategy sets the manner; the sales journey sets the floor. Immersive storytelling may be long and rich, but the first screen must still say what is offered, the price and the action must stay findable, and the page must load. When a strategy's execution breaks a sales-journey check, fix the execution and keep the strategy.
+
+### Brand motion versus reading without delay
+Motion that is part of the identity stays. Where it makes people wait to read or act, shorten it, play it once, and exempt prices, actions and form fields. Do not remove it.
+
+### A quoted psychology principle versus the evidence
+A principle cited by the user, a brief or a reference is checked before it is applied ([patterns/ux-psychology.md](patterns/ux-psychology.md)). If the user still wants a technique whose evidence is weak, apply it and say what the evidence is. If the technique needs something untrue, it falls under the honesty limits and is not built.
+
+### Observed practice versus a rule
+Figures measured from other sites describe what is common. They never outrank a requirement, published guidance, the project's brand or the surface's task, and a difference from them is at most an observation.
+
 ### Inline validation versus validate-on-submit
 Sources genuinely differ: ecommerce research supports validating a field when the user leaves it; GOV.UK validates on submit unless research shows a benefit. They agree on what matters: never show an error while the user is still typing a first attempt, always validate on submit, and clear an error as soon as it is fixed. Keep the project's existing timing unless it is premature or missing.
 

@@ -16,6 +16,10 @@
 
 <For each use: the code removed or narrowed, the harm it caused, the scenarios compared before and after, the result, and how to revert. Write "None" if the exception was not used.>
 
+## Deceptive elements removed
+
+<For each: the element, the code evidence that it was not driven by real state, and how to restore it or show the real figure. Write "None" if nothing was removed.>
+
 ## 2. Baseline
 
 | Item | Before any change |

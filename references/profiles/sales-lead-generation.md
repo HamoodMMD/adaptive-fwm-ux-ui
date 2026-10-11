@@ -49,7 +49,7 @@ A visitor quickly understands what is offered, for whom and why it is credible, 
 ### Pricing presentation
 - A price, price range, starting price or typical scenario is shown wherever the business can state one. Hiding all pricing sends research-stage visitors elsewhere and reads as evasive.
 - Where price truly depends on scope, the factors that drive it are explained and the quote step is positioned as the way to get an exact figure.
-- Plans or packages are comparable: same attributes in the same order, differences highlighted, the recommended option marked without disguising the others.
+- Plans or packages are comparable: same attributes in the same order, differences highlighted. Where the owner has named a recommended option it is marked without disguising the others; the skill does not choose one (`patterns/pricing-and-persuasion`).
 - Taxes, minimum terms and extra fees are stated.
 - Framing, anchoring, highlighted plans, "free", urgency and other selling techniques: `patterns/pricing-and-persuasion`.
 

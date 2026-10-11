@@ -45,7 +45,7 @@ A reader can tell at once whether a page answers their question, find the part t
 
 ### Reading typography
 - Body text is large enough to read comfortably on each device and uses the brand's text face at a legible weight.
-- Line length is moderate. About 70 to 80 characters per line is a common upper bound, and 80 is the limit in WCAG's enhanced (AAA) guidance. Very long lines and very short ones both make reading harder.
+- Line length is moderate: about 50 to 75 characters per line, with 80 as the upper bound (the limit in WCAG's enhanced, AAA, guidance). Figures and sources: `patterns/visual-scale`. Very long lines and very short ones both make reading harder.
 - Line height is generous for body text; paragraphs are clearly separated.
 - Text is aligned to the reading start edge, not fully justified.
 - Contrast meets the requirements for body text; links are distinguishable by more than color.

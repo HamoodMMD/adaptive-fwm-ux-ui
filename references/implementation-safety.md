@@ -73,6 +73,18 @@ When you use the exception, say so in the implementation report under its own he
 
 "Nothing fake" governs what you add. Projects also arrive containing claims you cannot check: statistics, testimonials, client names, awards, prices, phone numbers. Report them as findings under the trust rules and ask the owner to confirm or remove them. Do not delete, reword or replace them yourself unless the owner says they are placeholders. Content that is evidently placeholder (sample text, reserved or fictional phone numbers, example domains on a page about to go live) is at least P1, because it will be seen by real visitors.
 
+## Existing pressure that the code proves false
+
+Unverifiable content is left for the owner because it might be true. Some content cannot be true, and the project itself proves it: "Only 2 left!" from a fixed string, a countdown that restarts on every load, "14 people are viewing this" from a random number, a warning about a loss that no code checks for. Leaving these in place would mean shipping a known deception.
+
+In a fix pass you may remove such an element, or reword it to what is true, when all of these hold:
+
+1. The code shows it is not driven by real state: a literal, a timer with no end date, a random or hard-coded number.
+2. Removing it changes nothing that is validated, submitted, charged or tracked.
+3. It is a statement of pressure (scarcity, urgency, activity, threat), not a price, a term, a claim about the product or proof.
+
+Report each removal under "Deceptive elements removed" with the evidence and how to restore it, and tell the owner how to show the real figure if one exists. If the value might come from real data you cannot see, or any condition is in doubt, do not touch it: report it at P1 or higher. In an audit-only pass, report it and change nothing.
+
 ## Nothing fake
 
 Do not add search, filters, export, refresh, AI features, progress percentages, dashboard data, recommendations, metrics, controls, buttons, links, settings, integrations, charts or checkout steps that are not backed by working functionality and real data. If it does not exist, recommend it. Placeholder or sample content must never ship looking like real data.

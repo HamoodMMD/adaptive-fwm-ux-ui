@@ -34,7 +34,7 @@ Text is comfortable to read at every width, the hierarchy is visible at a glance
 - Sizes are set in relative units so the visitor's browser setting is respected.
 
 ### Line length and spacing
-- Paragraphs run about 50 to 75 characters per line; up to 90 is tolerable, over 100 tires readers. Constrain the text column (`max-width` near `70ch`), not the whole page.
+- Paragraphs run about 50 to 75 characters per line. Up to 80 is acceptable (the limit in WCAG's enhanced guidance); beyond about 90 readers lose their place, and over 100 tires them. Constrain the text column (`max-width` near `70ch`), not the whole page.
 - Marketing copy in narrow columns is often shorter than this; that is fine above roughly 30 characters. On phones, 30 to 45 characters is normal.
 - Body line height is about 1.5; headings sit between 1.0 and 1.35 and tighten as they grow.
 - Paragraphs are separated by 0.5 to 1.5 times the font size. The space above a heading is clearly larger than the space below it.

@@ -4,6 +4,24 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.4.0 - 2026-10-09
+
+A consistency pass across all modules, and a third research round on selling psychology, including virtual items.
+
+### Added
+- `patterns/virtual-goods`: real-money pricing for virtual currency and items, what the buyer gets, randomized rewards and odds, the purchase act, passes and renewals, engagement pressure, children. Built from enforcement actions, consumer-authority principles and research on loot boxes and payment.
+- `ux-psychology`: ease of use as a predictor of adoption, and a table of popular claims that do not hold up (eight-second attention span, three-click rule, seven-item menus, "red buttons convert", the three-second figure, perfect ratings, trust badges, social-norm messages).
+- `pricing-and-persuasion`: ratings and their spread, joining and leaving a subscription, and the evidence on hidden fees and split prices.
+- 22 sources.
+
+### Fixed (contradictions between modules)
+- Existing fake urgency or scarcity: one rule, "Existing pressure that the code proves false", says when a fix pass may remove it. Previously the examples removed it while the written rules said to leave unverified content alone.
+- "Recommended" plans: the lead-generation profile implied the skill should mark one; it now defers to the owner, as the pricing module requires.
+- Line length: two modules gave different upper bounds; both now say 50 to 75 characters with 80 as the limit.
+- Progress indicators: the forms rule (show the step) and the psychology evidence (mixed effect on completion) are reconciled as orientation versus persuasion.
+- Seven new entries in `conflict-resolution.md` for conflicts the newer modules created.
+- Implementation report: a "Deceptive elements removed" section.
+
 ## 1.3.0 - 2026-10-09
 
 Psychology in interface decisions, from checking a set of widely repeated claims against the studies behind them.
