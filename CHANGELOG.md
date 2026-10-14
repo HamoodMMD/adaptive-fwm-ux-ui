@@ -4,6 +4,29 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.6.0 - 2026-10-13
+
+### Added
+- `references/conversion-pass.md`: an eleven-step procedure for turning an ordinary page into one that sells. It separates what the page can fix alone (being understood, being easy) from what needs the owner's real material (being believed), and adds a facts ledger, seven questions to ask the owner once, rules for what may and may not be rewritten, and a content brief.
+- A "Conversion pass" mode in the router.
+- Writing rules in `core/content-and-trust` (concise, scannable, objective; most important first; real photographs) and a single-column rule in `patterns/forms`.
+- 7 sources on web writing, photographs and form layout.
+
+## 1.5.0 - 2026-10-11
+
+Conversion, retention and the pages where they are decided, from a fourth research round and two new measurements of real sites.
+
+### Added
+- `patterns/product-page`: first screen, images, price and offers, options, availability and delivery, the buy action, description, reviews and related products, with figures from 18 real product pages on a phone.
+- `patterns/onboarding`: before sign-up, the sign-up form, verification, first-run setup, the first real task, guidance, permissions, trials in the first session and coming back, with figures from the sign-up pages of 22 software products.
+- `patterns/conversion-and-retention`: where customers are lost, what the evidence supports for conversion and for retention, measuring, experiments, how to talk about business impact, and a table of popular business figures to handle with care.
+- `pricing-and-persuasion`: the pricing page as a whole.
+- 16 sources, including a password standard, usability benchmarks, a trial-length field experiment and the origins of several widely quoted business statistics.
+
+### Rules
+- Conversion and retention are outcomes to observe. A report states the mechanism and what to watch; it never predicts a figure or imports a benchmark as a target.
+- No account was created on any site during the sign-up survey; only public first steps were read.
+
 ## 1.4.0 - 2026-10-09
 
 A consistency pass across all modules, and a third research round on selling psychology, including virtual items.

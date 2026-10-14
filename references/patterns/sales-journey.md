@@ -4,6 +4,7 @@ A selling site does the job a good salesperson does in a shop: greets, works out
 
 **Load when:** the surface exists to sell, sign up or win a lead: home pages of commercial sites, landing and sales pages, product and pricing pages, quote and booking entry points.
 **Skip when:** the visitor is already a signed-in user doing work, or the surface is reference content with no commercial goal.
+**To rebuild a page, not only audit it:** follow [conversion-pass](../conversion-pass.md).
 **Pair with (when present):** [selling-strategies](../selling-strategies.md) for which kind of salesperson this site is trying to be, `patterns/pricing-and-persuasion`, `patterns/visual-scale`, `patterns/forms`, `core/performance`.
 
 ## Objectives

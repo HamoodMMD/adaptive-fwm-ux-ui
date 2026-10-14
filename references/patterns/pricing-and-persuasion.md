@@ -41,6 +41,17 @@ Mark each as *stated in the project*, *confirmed by the owner* or *unverified*. 
 - Where pack sizes or quantities differ, a unit price lets visitors compare.
 - Quote-based services show a range, a starting price or the factors that set the price, when the owner has provided them.
 
+### The pricing page as a whole
+- The page opens with the plans, not a preamble: names, prices and the one-line reason to choose each are on the first screen at desktop width, and the first plan with its price on a phone.
+- Each plan says who it is for, then lists what it adds over the plan before it. A full feature comparison sits below for those who want it, with sticky plan headers.
+- A billing-period switch shows which period is selected, what each costs, and the real saving. Switching changes every figure on the page.
+- The action under each plan says what happens next (start a trial, buy, talk to sales) and whether a card is needed.
+- "Contact sales" plans still say what they include and, where the owner allows, a starting price or the factors that set it.
+- Questions about billing, limits, changing plans, cancelling and refunds are answered on the page.
+- Currency and tax follow the visitor's region where the product supports it, and say so.
+- On phones, plans stack with the differences still comparable: each card repeats the attributes in the same order, or a compact comparison follows.
+- Trial length is the owner's decision. One field experiment found a shorter trial converted better than longer ones at one company; it is evidence to test, not a rule.
+
 ### Framing
 The same fact reads differently depending on how it is put.
 - Describe outcomes in the terms the visitor cares about, using figures the project already states.
@@ -201,6 +212,7 @@ Three levels of action. Apply them to every change in this module.
 - [NNG-41] Scarcity; [NNG-47] reciprocity; [NNG-34] social proof
 - [NNG-42] Comparison tables; [NNG-43] communicating discounts; [NNG-44] taxes and fees; [NNG-46] pricing, trials and trust; [NNG-28] showing prices
 - [BAY-15] Price and discount display; [BAY-16] price per unit
+- [BEH-47] Trial length field experiment; [NNG-42] comparison tables
 - [BEH-35] Hidden fees experiment; [BEH-36] partitioned prices; [BEH-37] reviews and ratings; [LAW-13] enrollment and cancellation
 - [LAW-01] Former-price comparisons; [LAW-02] use of the word "free"; [LAW-03] reviews and testimonials; [LAW-04] practices always considered unfair; [LAW-05] prior price in reductions; [LAW-06] drip pricing and fake reviews; [LAW-07] interface manipulation on platforms; [LAW-08] disclosures before billing
 

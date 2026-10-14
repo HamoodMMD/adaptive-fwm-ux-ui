@@ -9,6 +9,8 @@ Authenticated products people return to in order to get work done, including the
 
 **For customer portals and account areas** (order history, profile, addresses, preferences): use only the sections marked *(also for customer portals)*.
 
+**Sign-up, first run and activation in depth:** `patterns/onboarding`. **Trials, plans and upgrade prompts:** `patterns/pricing-and-persuasion`. **Measuring adoption and retention:** `patterns/conversion-and-retention`.
+
 ## Objectives
 
 A new user reaches something useful quickly without being taught. A returning user finds things where they left them and does repeated work with little effort. Everyone always knows which account or workspace they are in, what state their work is in, and what they are allowed to do.

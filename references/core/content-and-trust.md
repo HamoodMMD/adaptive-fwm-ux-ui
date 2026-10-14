@@ -74,6 +74,14 @@ Never recommend or implement:
 
 If any of these already exist in the project, report them as findings (P1 where they affect money or consent) with the trust and regulatory risk stated plainly. Do not give legal advice; do say that regulators treat several of these as deceptive practices.
 
+### Writing that gets read
+- Concise, scannable and objective. In a measured study the three together more than doubled usability compared with promotional writing.
+- The most important fact comes first, in the page, the section and the sentence.
+- Headings carry the point without the body text, and start with the informative words.
+- Plain words for every audience, experts included. Unsupported superlatives are removed.
+- Photographs show the real people, place, product or work; decorative and stock images are not relied on to persuade.
+- What may and may not be rewritten in a selling page: `conversion-pass.md`.
+
 ## Anti-patterns
 
 - A hero headline that could belong to any company.
@@ -113,4 +121,5 @@ If any of these already exist in the project, report them as findings (P1 where 
 - [FTC-01] Bringing Dark Patterns to Light
 - [NNG-07] Error-message guidelines
 - [GOV-02] Writing error messages
+- [NNG-82] Concise, scannable, objective writing; [NNG-84] most important first; [NNG-85] plain language; [NNG-86] scanning patterns; [NNG-87] headlines; [NNG-83] photographs
 - [NNG-28] Showing prices

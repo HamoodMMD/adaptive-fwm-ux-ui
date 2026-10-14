@@ -3,7 +3,7 @@
 Surfaces whose job is to turn a visitor into an inquiry: contact, quote request, demo, call, message.
 
 **Load when:** the conversion is a lead, not an online purchase: landing pages, sales pages, quote and contact flows.
-**Skip when:** the user completes the purchase online (use `ecommerce`) or the surface is reference content with no conversion goal.
+**Skip when:** the user buys goods through a cart and checkout (use `ecommerce`; a free or trial sign-up still belongs here) or the surface is reference content with no conversion goal.
 **Journey:** arrive → understand the offer → believe it → resolve doubts → take the lead action → know what happens next.
 **Pair with (when present):** `patterns/forms`, `patterns/responsive-mobile`, `patterns/pricing-and-persuasion`, `patterns/visual-scale`, `patterns/sales-journey`; `profiles/service-business` or `profiles/b2b-marketing` for the surrounding site.
 

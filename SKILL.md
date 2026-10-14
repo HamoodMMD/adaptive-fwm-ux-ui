@@ -2,7 +2,7 @@
 name: adaptive-fwm-ux-ui
 description: "Adaptive, evidence-based UX/UI audit and safe improvement for any website or app. Classifies each surface first (user goal, business goal, audience, environment, risk, device, language), then applies only the matching rule modules: ecommerce, fashion, lead generation, service business, B2B marketing, content sites, SaaS apps, dashboards, monitoring, admin tools, AI products, booking, marketplaces and high-stakes flows, plus forms, navigation, tables, search and filters, charts, loading/empty/error states, mobile, RTL/Arabic, type scale, pricing and selling. Preserves existing functionality and brand identity. Use whenever the user asks to audit, review, critique, check, improve, fix or polish the UX, UI, usability, accessibility (WCAG 2.2 AA), responsiveness, conversion flow, checkout, forms, navigation, tables or dashboards of a page, screen, component, flow or whole product, or to plan UX before a build, even if they only say 'check my website', 'make this easier to use' or 'why does this page feel off'."
 metadata:
-  version: "1.4.0"
+  version: "1.6.0"
 ---
 
 # Adaptive UX/UI audit and improvement
@@ -36,6 +36,7 @@ Infer the mode from the request. Natural language is enough; there is no command
 | **Audit + safe fix** | "fix", "improve", "implement", "apply the changes" | Yes, UI-safe changes only | Audit report, then implementation report |
 | **Scoped review** | Names one screen, component or flow | Only if asked | Short audit of that scope |
 | **Design plan** | "plan the UX", "how should we structure this" before a build | No | Classification, workflows, structure and rules to follow |
+| **Conversion pass** | "make this page convert", "make it sell", "why does nobody sign up" | Only if asked to fix | Follow [references/conversion-pass.md](references/conversion-pass.md): diagnosis, facts ledger, owner questions, rebuilt page, content brief. Its question limit replaces the usual one |
 | **Focus pass** | "accessibility pass", "mobile pass", "check the checkout", "check the Arabic layout" | Only if asked | Audit weighted to that focus |
 
 Modes combine. Scope (whole product, one surface or flow, one focus) and editing (read-only or fix) are separate choices: "accessibility pass and fix it" is a focus pass in fix mode; "audit the booking flow" is a scoped, read-only review. A **full audit** means a whole product or whole surface with no narrowing; it uses the full templates and all five core modules. Anything narrower uses the short classification and loads the optional core modules only when their own trigger fits. In fix mode, deliver the audit and then continue to the fixes without waiting, except where Step 9 says to ask.
@@ -144,6 +145,9 @@ Loading everything defeats the purpose: irrelevant rules produce irrelevant find
 | [visual-scale](references/patterns/visual-scale.md) | a public, marketing, sales, content or store surface in a full audit; any question about font, header, banner, hero or button sizes |
 | [sales-journey](references/patterns/sales-journey.md) | a surface whose job is to sell, sign up or win a lead: commercial home pages, landing, product and pricing pages. Read with [selling-strategies](references/selling-strategies.md) |
 | [ux-psychology](references/patterns/ux-psychology.md) | onboarding, sign-up, multi-step flows, defaults, progress indicators, upgrade prompts or engagement features; or anyone cites a psychological principle to justify a design |
+| [product-page](references/patterns/product-page.md) | a page where one product, item or package is evaluated and bought |
+| [onboarding](references/patterns/onboarding.md) | account creation, a trial start, first-run setup, tours, checklists or permission requests |
+| [conversion-and-retention](references/patterns/conversion-and-retention.md) | questions about conversion, retention, churn, business impact or "high-converting" design; planning metrics or experiments |
 | [virtual-goods](references/patterns/virtual-goods.md) | virtual currency, credits or tokens; in-app or in-game purchases, passes or digital items; paid randomized rewards |
 | [pricing-and-persuasion](references/patterns/pricing-and-persuasion.md) | a price, plan choice, discount, free offer, trial, guarantee, urgency or scarcity wording, or a surface whose job is to sell or generate leads |
 

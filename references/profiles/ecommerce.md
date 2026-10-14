@@ -45,6 +45,7 @@ A shopper can find a suitable product, be confident it is the right one, know th
 - Loading more products does not strand the footer or lose the user's place on return from a product page.
 
 ### Product page
+In depth, with phone ordering and observed figures: `patterns/product-page`.
 - **Images:** several per product, large, zoomable; at least one showing scale or use in context; images match the selected variant.
 - **Price:** current price prominent; any original price and saving shown honestly; currency and tax inclusion clear. Detail on reference prices, discounts, "free", urgency and defaults: `patterns/pricing-and-persuasion`.
 - **Variants:** options exposed as visible buttons or swatches rather than buried in a dropdown, so availability is seen at a glance. Unavailable options remain visible and marked as unavailable, not removed. Color options have text names as well as swatches.

@@ -82,6 +82,11 @@ Within moments a visitor knows what the company does, for whom and where. Within
 - Common questions are answered where they arise (pricing, timelines, guarantees, cancellations), and collected on an FAQ page.
 - Terms that affect the decision are summarized in plain language.
 
+### Identity and legal basics
+- The business is identifiable: trading name, legal entity or owner, a real address or service area, and registration details where the country expects them on a business site.
+- A form that collects personal details links to a privacy notice that exists. Terms links lead to real pages.
+- Missing items are flagged for the owner without legal advice.
+
 ## Anti-patterns
 
 - A home page that says "We deliver innovative solutions" and nothing else.

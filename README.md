@@ -5,12 +5,12 @@
 </p>
 
 <p align="center">
-  <img alt="Version 1.4.0" src="https://img.shields.io/badge/version-1.4.0-1f6feb">
+  <img alt="Version 1.6.0" src="https://img.shields.io/badge/version-1.6.0-1f6feb">
   <img alt="Agent Skills format" src="https://img.shields.io/badge/format-Agent%20Skills-6e40c9">
   <img alt="Works with Claude Code and Codex" src="https://img.shields.io/badge/works%20with-Claude%20Code%20%C2%B7%20Codex-2da44e">
   <img alt="WCAG 2.2 AA" src="https://img.shields.io/badge/accessibility-WCAG%202.2%20AA-d4a72c">
-  <img alt="32 rule modules" src="https://img.shields.io/badge/rule%20modules-32-8250df">
-  <img alt="222 sources" src="https://img.shields.io/badge/sources-222-57606a">
+  <img alt="35 rule modules" src="https://img.shields.io/badge/rule%20modules-35-8250df">
+  <img alt="245 sources" src="https://img.shields.io/badge/sources-245-57606a">
 </p>
 
 <p align="center">
@@ -118,6 +118,8 @@ In every example the business-logic files were untouched and the tests passed be
 | Focus on one thing | "Do an accessibility pass" · "Check it on mobile" · "Check the Arabic layout" | Only if you ask |
 | Check the details | "Are my font sizes and header size right?" | Only if you ask |
 | Review a sales page | "Review my pricing page" · "Is my landing page clear?" | Only if you ask |
+| Make a page convert | "Make this page convert" · "Make my landing page sell" | Yes, if you say fix |
+| Fix a leaky funnel | "Why do people sign up and never come back?" · "Why doesn't my product page sell?" | Only if you ask |
 | Review in-app purchases | "Check my game's shop" · "Are my credit packs clear?" | Only if you ask |
 | Check a psychology claim | "This video says to use loss aversion on my upgrade screen. Is that right?" | Only if you ask |
 | Judge the site as a salesperson | "Would a visitor stay and buy, or walk out?" · "What is my site's selling strategy?" | Only if you ask |
@@ -212,7 +214,7 @@ flowchart LR
 | Booking marketplace | booking + marketplace + filters, forms |
 
 <details>
-<summary><strong>All 32 rule modules</strong></summary>
+<summary><strong>All 35 rule modules</strong></summary>
 
 <br>
 
@@ -222,8 +224,8 @@ flowchart LR
 **Profiles (14)** — chosen by what the surface is for
 `ecommerce` · `fashion-apparel` · `sales-lead-generation` · `service-business` · `informational-content` · `b2b-marketing` · `saas-application` · `dashboard-analytics` · `monitoring-observability` · `admin-backoffice` · `ai-product` · `booking-reservation` · `marketplace-directory` · `high-stakes`
 
-**Patterns (13)** — chosen by what is on the screen
-`forms` · `navigation` · `tables` · `search-filter-sort` · `charts-data-viz` · `loading-empty-error-states` · `responsive-mobile` · `rtl-bilingual` · `visual-scale` · `pricing-and-persuasion` · `sales-journey` · `ux-psychology` · `virtual-goods`
+**Patterns (16)** — chosen by what is on the screen
+`forms` · `navigation` · `tables` · `search-filter-sort` · `charts-data-viz` · `loading-empty-error-states` · `responsive-mobile` · `rtl-bilingual` · `visual-scale` · `pricing-and-persuasion` · `sales-journey` · `ux-psychology` · `virtual-goods` · `product-page` · `onboarding` · `conversion-and-retention`
 
 Plus a catalog of thirteen selling strategies in `references/selling-strategies.md`.
 
@@ -258,6 +260,8 @@ It also never promises that a change will increase sales.
 **`ux-psychology`** covers the effects design articles and videos love to quote: smart defaults, the goal gradient, reciprocity, the IKEA and endowment effects, loss aversion, memory limits and more. It checks each claim against the study behind it, because popular versions are often half right. The famous jam study, for example, has not replicated reliably, and "decision fatigue" failed two large replications. Its test for any technique: if the visitor could see exactly how this works, would they feel helped or tricked?
 
 **`virtual-goods`** covers selling things that exist only on a screen: virtual currency, in-app and in-game items, passes, credits and randomized rewards. Its rules are plain: every price is also shown in real money, a purchase takes a deliberate act, chance is stated as chance with its odds, cancelling is as easy as joining, and children are not sold to like adults.
+
+**`product-page`**, **`onboarding`** and **`conversion-and-retention`** cover the places where a sale or a customer is won or lost. The first two come with measurements of real sites: on 18 product pages the buy button sat within a screen and a half on 16, and half greeted shoppers with a pop-up over the product; on 22 software sign-up pages, 18 asked for one field or none on the first step. The third explains what the evidence supports for conversion and retention, and which famous business statistics do not hold up ("every dollar spent on UX returns a hundred" has no traceable study).
 
 ## Installation
 
@@ -349,11 +353,12 @@ adaptive-fwm-ux-ui/
 │   ├── classification.md         how surfaces are classified
 │   ├── conflict-resolution.md    what wins when rules disagree
 │   ├── implementation-safety.md  what may be edited, and the procedure
+│   ├── conversion-pass.md        step-by-step: an ordinary page into one that sells
 │   ├── selling-strategies.md     thirteen ways a site can sell, when each fits, how each fails
-│   ├── research-sources.md       all 222 sources, with how each was checked
+│   ├── research-sources.md       all 245 sources, with how each was checked
 │   ├── core/                     5 modules for every surface
 │   ├── profiles/                 14 modules chosen by classification
-│   └── patterns/                 13 modules chosen by what is on screen
+│   └── patterns/                 16 modules chosen by what is on screen
 ├── assets/                       report templates
 └── docs/examples/                before and after screenshots with write-ups
 ```

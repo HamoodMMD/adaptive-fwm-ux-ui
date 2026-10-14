@@ -99,6 +99,9 @@ Users know what each field wants before they type, can enter it in the way that 
 ### Accessibility summary
 - Label and name every control; group related controls; announce errors and success as status messages; keep focus visible and in a logical order; ensure targets meet the minimum size; do not rely on color; do not time out without warning. See `core/accessibility.md` for the criteria.
 
+### Layout
+- One column. Only closely related inputs (date parts, city and postcode, card details) share a line; side-by-side columns cause skipped and misread fields.
+
 ## Anti-patterns
 
 - Placeholder as label.
@@ -139,6 +142,7 @@ Users know what each field wants before they type, can enter it in the way that 
 
 ## Sources
 
+- [BAY-22] Single-column forms
 - [NNG-25] Placeholders in form fields are harmful
 - [NNG-26] Website forms usability — fewer fields, single column, field size, marking optional and required, visible errors
 - [BAY-05] Inline form validation — when to fire, removing errors when fixed, positive validation

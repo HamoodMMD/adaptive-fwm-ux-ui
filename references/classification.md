@@ -107,6 +107,11 @@ Pattern modules follow the interface, not the profile. Load one when its element
 - `dir="rtl"`, Arabic, Hebrew, Persian or Urdu content, translation files, or a language switcher → `rtl-bilingual`
 - a public marketing, sales, content or store surface in a full audit, or a question about sizes → `visual-scale`
 - prices, plans, discounts, free offers, trials, guarantees, urgency or scarcity wording, or a selling or lead-generation goal → `pricing-and-persuasion`
+- a self-serve software landing page (visitor signs up without talking to anyone) → primary `sales-lead-generation` with the sign-up as the lead action, plus `onboarding`, `pricing-and-persuasion` and `sales-journey`; `b2b-marketing` only when several people in an organization decide
+- a request form with a preferred date that the business confirms later (no live availability) → not `booking-reservation`; treat as a lead form under `sales-lead-generation` or `service-business`
+- a single product, item or package page → `product-page`
+- account creation, trial start, first-run setup, tours or permission requests → `onboarding`
+- the user frames the work as conversion, retention, churn or business impact → `conversion-and-retention`
 - virtual currency, credits, in-app or in-game purchases, digital items or paid randomized rewards → `virtual-goods` (and scope `high-stakes` to the purchase step)
 - onboarding, sign-up, multi-step flows, progress indicators, upgrade prompts, engagement features, or a cited psychological principle → `ux-psychology`
 - the surface's job is to sell, sign up or win a lead → `sales-journey`, and record its selling strategy from `selling-strategies.md`
