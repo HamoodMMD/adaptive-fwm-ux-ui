@@ -37,6 +37,7 @@ Text is comfortable to read at every width, the hierarchy is visible at a glance
 - Paragraphs run about 50 to 75 characters per line. Up to 80 is acceptable (the limit in WCAG's enhanced guidance); beyond about 90 readers lose their place, and over 100 tires them. Constrain the text column (`max-width` near `70ch`), not the whole page.
 - Marketing copy in narrow columns is often shorter than this; that is fine above roughly 30 characters. On phones, 30 to 45 characters is normal.
 - Body line height is about 1.5; headings sit between 1.0 and 1.35 and tighten as they grow.
+- **Lines of a heading never touch.** The descenders of one line (g, j, p, q, y, and commas) clear the ascenders and capitals of the next (b, d, f, h, k, l, t) at every width where the heading wraps. Below a line height of about 1.0 a collision is likely, and it depends on the typeface: faces with long ascenders and descenders, such as Didone and many display serifs, collide sooner. Staggered or indented lines make it worse, because a descender can land straight above an ascender. Numbers cannot show this: look at an enlarged capture of every multi-line heading at each breakpoint.
 - Paragraphs are separated by 0.5 to 1.5 times the font size. The space above a heading is clearly larger than the space below it.
 - Text is not justified. Long passages are not centered.
 
@@ -130,6 +131,7 @@ Store home pages are a different pattern: their main heading is small (20 to 28p
 - The same primary button twice on one screen.
 - A full-height hero with no hint that anything follows.
 - Buttons 30px high on a touch screen; links as the only targets in a tight list.
+- A tightly set headline where a descender runs into the letter below it.
 - White text straight on a busy photograph.
 - A headline sized in `vw` that does not grow when the page is zoomed.
 - Paragraphs in capitals, or body text in a light or condensed face.
@@ -140,7 +142,7 @@ Store home pages are a different pattern: their main heading is small (20 to 28p
 
 - **Dense applications** (admin, dashboards, tables, monitoring) legitimately use 13 to 14px interface text and compact controls for expert, desktop users. Apply the requirements only.
 - **Editorial and long-form reading** benefits from larger body text (18 to 21px) and a strict measure.
-- **Display-led brands** use very large or very small headline type on purpose. Preserve it; check only legibility, wrapping and the first-screen job.
+- **Display-led brands** use very large or very small headline type on purpose. Preserve it; check only legibility, wrapping and the first-screen job. Letters of one line touching or merging with the next is a legibility defect, not a style: fix it with the smallest line-height increase that leaves a visible gap at every breakpoint, and record the before and after values.
 - **Non-Latin scripts** differ: Arabic, CJK and Indic text often need larger sizes and more line height than Latin at the same nominal size, and character counts per line do not transfer. See `patterns/rtl-bilingual`.
 - **Older or low-vision audiences** warrant larger defaults. In one eye-tracking study of long articles, reading ease and comprehension kept improving up to about 18pt (24px).
 - **Legal and regulatory text** may have minimum sizes set by rule.

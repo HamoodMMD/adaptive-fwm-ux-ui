@@ -4,6 +4,11 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.8.1 - 2026-10-14
+
+### Fixed
+- A blind test missed a headline whose lines collided: the descender of "p" in one line merged into the "h" below it. `patterns/visual-scale` now requires that lines of a heading never touch at any breakpoint, explains which typefaces and layouts collide first, and says how to fix it in a display-led brand. The verification step in `SKILL.md` now requires looking at enlarged captures of large headings, not only measuring them.
+
 ## 1.8.0 - 2026-10-14
 
 ### Added

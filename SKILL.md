@@ -2,7 +2,7 @@
 name: adaptive-fwm-ux-ui
 description: "Adaptive, evidence-based UX/UI audit and safe improvement for any website or app. Classifies each surface first (user goal, business goal, audience, environment, risk, device, language), then applies only the matching rule modules: ecommerce, fashion, lead generation, service business, B2B marketing, content sites, SaaS apps, dashboards, monitoring, admin tools, AI products, booking, marketplaces and high-stakes flows, plus forms, navigation, tables, search and filters, charts, loading/empty/error states, mobile, RTL/Arabic, type scale, pricing and selling. Preserves existing functionality and brand identity. Use whenever the user asks to audit, review, critique, check, improve, fix or polish the UX, UI, usability, accessibility (WCAG 2.2 AA), responsiveness, conversion flow, checkout, forms, navigation, tables or dashboards of a page, screen, component, flow or whole product, or to plan UX before a build, even if they only say 'check my website', 'make this easier to use' or 'why does this page feel off'."
 metadata:
-  version: "1.8.0"
+  version: "1.8.1"
 ---
 
 # Adaptive UX/UI audit and improvement
@@ -178,7 +178,7 @@ Screens are only good or bad relative to the task they serve, so begin with task
 5. Can they recover from a mistake or a failure?
 6. Can experienced users do a repeated task efficiently?
 
-**Screens.** For each significant screen in those workflows, check: purpose; hierarchy; information architecture; navigation; primary action; secondary actions; readability; spacing and grouping; density; scanning; labels and icons; state feedback; loading, empty, error and success states; forms; tables; charts; keyboard and focus; responsive behavior; accessibility; performance implications; consistency; brand fit. Apply the loaded modules; do not re-derive rules from memory when a module covers the topic.
+**Screens.** For each significant screen in those workflows, check: purpose; hierarchy; information architecture; navigation; primary action; secondary actions; readability, including whether any letters, lines or elements touch or overlap in an enlarged capture; spacing and grouping; density; scanning; labels and icons; state feedback; loading, empty, error and success states; forms; tables; charts; keyboard and focus; responsive behavior; accessibility; performance implications; consistency; brand fit. Apply the loaded modules; do not re-derive rules from memory when a module covers the topic.
 
 **Strengths.** Record what works and must not be changed, under `STRENGTHS / PRESERVE`. An audit that lists only problems invites a redesign of things that were fine.
 
@@ -224,6 +224,8 @@ Read [references/implementation-safety.md](references/implementation-safety.md) 
 7. Do not commit, push or open a pull request unless the user asks.
 
 ## Step 10 — Verify
+
+Look as well as measure. Before reporting, view enlarged captures of the first screen and every large heading at phone and desktop width, and look for letters, lines or elements that touch, overlap or are clipped. Computed sizes and contrast ratios do not reveal these.
 
 Before reporting completion, check what you changed:
 
