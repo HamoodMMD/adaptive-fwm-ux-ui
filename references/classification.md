@@ -4,6 +4,19 @@ How to decide which rules apply. Read this before auditing anything that has mor
 
 **Contents:** [The unit is the surface](#the-unit-is-the-surface) · [Dimensions](#dimensions) · [Signals](#signals) · [Primary and secondary](#choosing-primary-and-secondary-profiles) · [Pattern modules](#pattern-modules) · [Route-level classification](#route-level-classification) · [Confidence and questions](#confidence-and-questions) · [Hard cases](#hard-cases) · [No profile fits](#when-no-profile-fits) · [Output](#output)
 
+## Contents
+
+- The unit is the surface
+- Dimensions
+- Signals
+- Choosing primary and secondary profiles
+- Pattern modules
+- Route-level classification
+- Confidence and questions
+- Hard cases
+- When no profile fits
+- Output
+
 ## The unit is the surface
 
 A **surface** is a set of routes or screens that share the same users and the same goal. Classify each surface separately. Never classify by industry: "fashion" tells you nothing about whether you are looking at a store, a lookbook, a wholesale portal or an inventory tool, and those need different rules.

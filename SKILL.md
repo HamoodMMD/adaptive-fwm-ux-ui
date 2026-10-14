@@ -2,7 +2,7 @@
 name: adaptive-fwm-ux-ui
 description: "Adaptive, evidence-based UX/UI audit and safe improvement for any website or app. Classifies each surface first (user goal, business goal, audience, environment, risk, device, language), then applies only the matching rule modules: ecommerce, fashion, lead generation, service business, B2B marketing, content sites, SaaS apps, dashboards, monitoring, admin tools, AI products, booking, marketplaces and high-stakes flows, plus forms, navigation, tables, search and filters, charts, loading/empty/error states, mobile, RTL/Arabic, type scale, pricing and selling. Preserves existing functionality and brand identity. Use whenever the user asks to audit, review, critique, check, improve, fix or polish the UX, UI, usability, accessibility (WCAG 2.2 AA), responsiveness, conversion flow, checkout, forms, navigation, tables or dashboards of a page, screen, component, flow or whole product, or to plan UX before a build, even if they only say 'check my website', 'make this easier to use' or 'why does this page feel off'."
 metadata:
-  version: "1.6.0"
+  version: "1.8.0"
 ---
 
 # Adaptive UX/UI audit and improvement
@@ -39,7 +39,7 @@ Infer the mode from the request. Natural language is enough; there is no command
 | **Conversion pass** | "make this page convert", "make it sell", "why does nobody sign up" | Only if asked to fix | Follow [references/conversion-pass.md](references/conversion-pass.md): diagnosis, facts ledger, owner questions, rebuilt page, content brief. Its question limit replaces the usual one |
 | **Focus pass** | "accessibility pass", "mobile pass", "check the checkout", "check the Arabic layout" | Only if asked | Audit weighted to that focus |
 
-Modes combine. Scope (whole product, one surface or flow, one focus) and editing (read-only or fix) are separate choices: "accessibility pass and fix it" is a focus pass in fix mode; "audit the booking flow" is a scoped, read-only review. A **full audit** means a whole product or whole surface with no narrowing; it uses the full templates and all five core modules. Anything narrower uses the short classification and loads the optional core modules only when their own trigger fits. In fix mode, deliver the audit and then continue to the fixes without waiting, except where Step 9 says to ask.
+A request that lists focus areas covering most of a page (sizes, readability, mobile, sign-up) is a full audit of that page. Modes combine. Scope (whole product, one surface or flow, one focus) and editing (read-only or fix) are separate choices: "accessibility pass and fix it" is a focus pass in fix mode; "audit the booking flow" is a scoped, read-only review. A **full audit** means a whole product or whole surface with no narrowing; it uses the full templates and all five core modules. Anything narrower uses the short classification and loads the optional core modules only when their own trigger fits. In fix mode, deliver the audit and then continue to the fixes without waiting, except where Step 9 says to ask.
 
 A scoped review or focus pass still classifies the surface first; it just audits less. If the request does not clearly authorize edits, stay read-only and end the report with the list of safe fixes you could apply.
 
@@ -77,6 +77,8 @@ Be honest about what you could not see. What you can verify depends on your acce
 
 Mark each finding as *verified* (observed in the rendered UI) or *inferred* (from code or a screenshot) so the reader knows what to re-check.
 
+**Rendering tips.** In a headless browser, `:focus-visible` styles need real key presses or focus emulation; smooth scrolling and reveal-on-scroll animations must be forced to finish before a full-page capture, or content looks missing; zoom is tested by narrowing the viewport and raising the device scale together. Measurement output that a finding quotes is evidence: keep a summary of it in the report.
+
 If you have no access to the product at all (no code, no URL you can open, no screenshots), still do Steps 3 and 4 from the description, give the user the classification and the plan, and then ask for code, a URL or screenshots. A description supports a classification and a plan, not findings.
 
 ## Step 3 — Classify each surface
@@ -100,6 +102,8 @@ Never open with a questionnaire when the project identifies itself. Always show 
 ## Step 4 — Load only the modules that apply
 
 Loading everything defeats the purpose: irrelevant rules produce irrelevant findings.
+
+**Reading budget.** Anything narrower than a full audit reads the three always-on core modules, one primary profile, and at most three pattern modules; add a fourth only when an element on the screen demands it, and say which. Every module has the same sections in the same order, so when a module applies to one element, read its Checks and Anti-patterns and skip the rest. On a selling surface, `sales-journey` and the one strategy section in `selling-strategies.md` do not count against the three; `pricing-and-persuasion` does, and is the first to load when prices or plans are shown. A conversion pass has its own shorter list in `conversion-pass.md`. Do not read `research-sources.md` during a task; open it only to answer where a rule comes from.
 
 **Core modules** apply to every surface.
 
@@ -187,7 +191,7 @@ Screens are only good or bad relative to the task they serve, so begin with task
 | **P2** | Meaningful friction or inconsistency |
 | **P3** | Polish |
 
-Priority measures user impact on that surface's main tasks, not how much you dislike something. Most findings in a healthy product are P2 or P3; if everything is P1, recalibrate.
+Priority measures user impact on that surface's main tasks, not how much you dislike something. This holds for requirement failures too: a verified WCAG failure with little effect on anyone is reported as a failure, at the priority its impact earns. Most findings in a healthy product are P2 or P3; if everything is P1, recalibrate.
 
 Each finding has: priority; route or screen; component; workflow; issue; evidence (file and line, or what you observed, marked verified or inferred); rule (module and section) with its evidence class; user impact; recommendation; UI-only? (yes, no, or partly, saying which part is which); functionality risk (none/low/medium/high, with the reason); status (reported, implemented, or not implemented — functional).
 
@@ -244,5 +248,6 @@ Report with [assets/implementation-report-template.md](assets/implementation-rep
 | Classification signals, route-level rules, hard cases | [references/classification.md](references/classification.md) |
 | Two rules disagree | [references/conflict-resolution.md](references/conflict-resolution.md) |
 | What may and may not be edited; implementation procedure | [references/implementation-safety.md](references/implementation-safety.md) |
+| Whether a change worked; baselines and honest before-and-after reading | [references/measuring-results.md](references/measuring-results.md) |
 | Where a rule comes from | [references/research-sources.md](references/research-sources.md) |
 | Report and classification layouts | [assets/](assets/) |

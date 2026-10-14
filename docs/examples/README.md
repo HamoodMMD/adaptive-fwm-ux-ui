@@ -1,6 +1,6 @@
 # Examples
 
-Before and after results from running the skill on five demo pages.
+Before and after results from running the skill on six demo pages.
 
 **How these were made.** Each page is a small demo built for testing, with usability and accessibility flaws planted on purpose and a test suite guarding its business logic. One agent ran the skill in audit mode without being told what was planted. A second agent ran it in fix mode with the instruction "apply the safe UI fixes, keep the brand, don't touch functionality, don't commit". The screenshots were taken with headless Chrome from the untouched baseline and from the fixed version, at the same window size. Nothing in the images was edited by hand. The monitoring dashboard and the clinic booking flow were designed by a separate agent, asked to make them look like polished production pages while containing a given list of flaws; the other three were written by hand.
 
@@ -13,6 +13,43 @@ These are demo pages, not client work. They show what the skill catches, what it
 | [Arabic checkout](#3-arabic-checkout) | ecommerce, RTL, payment step as high-stakes | 12 of 12 | 3 of 3 pass | none |
 | [Monitoring dashboard](#4-monitoring-dashboard) | monitoring-observability + dashboard-analytics | 12 of 12 | 19 of 19 pass | none |
 | [Clinic booking flow](#5-clinic-booking-flow) | booking-reservation, payment step as high-stakes | 13 of 13 | 20 of 20 pass | none |
+
+---
+
+## Conversion pass: cleaning company homepage
+
+A homepage for a home-cleaning company, built by a separate agent as an ordinary small-business page, with no flaws planted on purpose. The owner's request was only "make this page convert". Classified as **service-business + sales-lead-generation**.
+
+| Before | After |
+|---|---|
+| ![Cleaning homepage before, desktop](cleaning-homepage-before-desktop.png) | ![Cleaning homepage after, desktop](cleaning-homepage-after-desktop.png) |
+
+Phone width: [before](cleaning-homepage-before-mobile.png) · [after](cleaning-homepage-after-mobile.png)
+
+**How it ran.** One agent diagnosed the page and wrote questions for the owner. The answers were written by the maintainer playing the owner. A second agent, on a smaller model, rebuilt the page from the diagnosis and the answers.
+
+**Found** (17 findings), including:
+
+- The request form sends nothing: no enquiry has ever arrived through it.
+- The phone number, the address, the "4.9 from 214 reviews" badge, three testimonials and "340+ homes" were placeholders or invented.
+- A cancellation charge, direct debit and several service areas that the business does not have.
+- Two competing main actions, and no prices.
+
+**Fixed**
+
+- First screen says what, where and the fixed-price promise, with the real phone and WhatsApp numbers.
+- The real Google rating with its count and a link, and two real reviews the owner had permission to use.
+- Real prices in each service; the nine areas really covered; correct hours and payment terms.
+- One main action, "Get a free quote", repeated down the page; a call button in the phone header.
+- Invented proof, the dead terms link and the false charges removed.
+
+**Deliberately left alone**
+
+- The form's code, at the owner's request. The report lists what their developer must wire and change.
+- Which option the form starts on, and which fields are required: both decide what gets sent.
+- Photographs: none were available, so the drawing stays and photos are on the owner's list.
+
+Tests: 6 of 6 pass before and after. Logic files changed: none. No uplift was predicted; the report says what to count.
 
 ---
 

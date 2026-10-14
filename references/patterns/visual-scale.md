@@ -48,11 +48,38 @@ Text is comfortable to read at every width, the hierarchy is visible at a glance
 - Headline length suits its size: at display sizes, about a dozen words or fewer.
 - Uppercase, light weights and tight letter-spacing are kept to short text at sizes where they stay legible.
 
+### Typeface, case and weight
+- No single typeface is fastest for everyone; among legible faces the choice still changes reading speed, and older readers lose more to a poor one. Keep the brand's faces; flag only a face that is hard to read at the size it is used.
+- Body text uses a regular width and weight. Condensed, light and hairline faces are for large display text only.
+- Uppercase is for short labels of a few words. Sentences and paragraphs are in sentence case.
+- Two typefaces, one for display and one for text, are enough for most sites; a third needs a job (code, numerals).
+- Hierarchy comes from a few clear steps. If everything is large, bold or colored, nothing stands out: at most one or two elements per screen at the largest size.
+
+### Contrast, images and dark surfaces
+- Low-contrast text is not a way to make something quieter. Reduce prominence with size, position or space, and keep the contrast.
+- Text over a photograph or video meets the contrast requirement against the lightest part of the image it can sit on. Use an overlay, a solid panel or a gradient behind the text; test with the worst image the slot will ever hold.
+- Dark text on a light surface reads better for most people, more so at small sizes. A dark theme is a brand choice or a user option; on a dark surface, small and light-weight text is the first thing to check.
+- Dimmed text is not used for anything a visitor must read: it looks disabled.
+
+### Fluid sizes and zoom
+- A font size that depends mainly on the viewport width (`vw`, or `clamp()` with a large `vw` term and a low maximum) barely grows when the visitor zooms, and fails 1.4.4. Test by zooming the browser to 200% and checking that the text is about twice as large.
+- Safe pattern: sizes in `rem`, with breakpoints for the steps; if fluid sizing is used, the `rem` part dominates and the maximum is at least twice the minimum.
+- The root font size is left at 100%, so the visitor's browser setting carries through.
+- Very large display text (already 48px or more) that does not double at 200% zoom still fails 1.4.4; report it as a failure, at the priority its impact earns, which is usually low. Fixing it changes the display scale at some widths, so it is the owner's decision. Body, labels, buttons and form text that do not grow are fixed.
+
+### Spacing and grouping
+- Spacing comes from a short scale built on one base unit (commonly 4 or 8px), not from one-off values.
+- Related things sit closer together than unrelated things: a label is nearer its own field than the next one; a heading is nearer the text it introduces than the text before it; the gap between sections is clearly larger than any gap inside one.
+- The most important element on a screen has the most space around it.
+- Space, not boxes, does the grouping first; borders and background panels are added only where space alone is not enough.
+- Touch targets are about 1cm across where they can be (44 to 48px), with a visible gap between neighbors. Space does not rescue a target that is too small.
+
 ### Header
 - The header is as short as its content allows while keeping readable text and comfortable targets.
 - A sticky header takes a small share of the screen: on a phone held upright, roughly a tenth of the height or less. Check landscape and 400% zoom, where a sticky header can cover most of the view.
 - Promotional bars, cookie notices and app banners count toward that height when they stack with the header.
 - A sticky header has an opaque background, does not hide focused elements or in-page anchors (`scroll-padding-top`), and does not animate distractingly.
+- When a sticky header is too tall in landscape or at high zoom, prefer, in order: tightening it on short screens with a `max-height` media query; then letting it scroll away on short screens. Keep the main action reachable on the page when the header stops carrying it.
 - If a header does not fit in one row on a phone, something moves into the menu; it does not wrap into a second row. Where no menu exists (adding one is functional work), tighten spacing first; a non-sticky header may wrap as a last resort to avoid horizontal scrolling, and the missing menu is reported.
 
 ### First screen and hero
@@ -103,6 +130,10 @@ Store home pages are a different pattern: their main heading is small (20 to 28p
 - The same primary button twice on one screen.
 - A full-height hero with no hint that anything follows.
 - Buttons 30px high on a touch screen; links as the only targets in a tight list.
+- White text straight on a busy photograph.
+- A headline sized in `vw` that does not grow when the page is zoomed.
+- Paragraphs in capitals, or body text in a light or condensed face.
+- Equal gaps everywhere, so headings float between the section above and the one below.
 - Resizing type to match a competitor.
 
 ## Exceptions and context
@@ -111,7 +142,7 @@ Store home pages are a different pattern: their main heading is small (20 to 28p
 - **Editorial and long-form reading** benefits from larger body text (18 to 21px) and a strict measure.
 - **Display-led brands** use very large or very small headline type on purpose. Preserve it; check only legibility, wrapping and the first-screen job.
 - **Non-Latin scripts** differ: Arabic, CJK and Indic text often need larger sizes and more line height than Latin at the same nominal size, and character counts per line do not transfer. See `patterns/rtl-bilingual`.
-- **Older or low-vision audiences** warrant larger defaults.
+- **Older or low-vision audiences** warrant larger defaults. In one eye-tracking study of long articles, reading ease and comprehension kept improving up to about 18pt (24px).
 - **Legal and regulatory text** may have minimum sizes set by rule.
 
 ## Implementation cautions
@@ -132,6 +163,10 @@ Store home pages are a different pattern: their main heading is small (20 to 28p
 - [WEB-09] The 12px legibility floor
 - [APL-03], [MAT-02] Platform type scales (could not be machine-read; cited from established knowledge)
 - [NNG-20] Touch target size; [NNG-32] sticky headers
+- [NNG-96] Typeface and reading speed; [NNG-97] case, width and size at a glance; [BEH-51] font size and comprehension
+- [NNG-92] Low-contrast text; [NNG-93] text over images; [NNG-95] light and dark surfaces
+- [W3C-25] Viewport units and resizing; [WEB-14] fluid type and zoom
+- [NNG-94] Visual hierarchy; [NNG-98] spacing and proximity; [USWDS-02] a spacing scale
 - [NNG-48] Attention above and below the fold; [BAY-17] homepage carousels
 
 The "Observed practice" table is this skill's own measurement (SURVEY-01), with the limits recorded in the source index. The header share of a tenth of the screen, the first-screen job and the once-per-screen rule for the primary action are this skill's judgment, informed by those measurements.

@@ -8,6 +8,16 @@ Read this for any surface whose job is to sell, sign up or win a lead, together 
 2. **Does that strategy suit what is being sold and who is buying?**
 3. **Does the interface carry the strategy out, or get in its way?** Most findings come from here.
 
+## Contents
+
+- Rules for using this catalog
+- Identifying the strategy (table)
+- Which strategy fits what (table)
+- The strategies: 1 Immersive storytelling, 2 Guided choice, 3 Quiet catalog, 4 Authority by depth, 5 The site is the demo, 6 Try it now, 7 Proof first, 8 Offer first, 9 The letter, 10 Build your own, 11 Task first, 12 Portfolio and conversation, 13 Plain dealing
+- Reporting
+
+Read the rules and the two tables, then only the section for the strategy the surface uses, plus one more if you will recommend it.
+
 ## Rules for using this catalog
 
 - **The strategy is the owner's.** Identify it, judge the site against it, and help it execute. Do not swap it.

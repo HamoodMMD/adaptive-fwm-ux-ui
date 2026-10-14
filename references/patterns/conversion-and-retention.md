@@ -113,6 +113,7 @@ Rank them by how many people meet the problem and how completely it stops them.
 
 ## Sources
 
+- Measuring whether a change worked (procedure in `measuring-results.md`): [NNG-88] conversion rate; [NNG-89] study sizes; [NNG-90] five users; [NNG-91] analytics; [GOV-09] completion rate; [BEH-50] regression to the mean
 - [NNG-77] Return on usability work across case studies; [BEH-44] design maturity and financial performance
 - [BEH-45] How often tested ideas succeed
 - [BAY-21] Checkout form fields; [BAY-01] reasons for abandoning a purchase; [BAY-03] product page benchmarks

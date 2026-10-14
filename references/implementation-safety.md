@@ -4,6 +4,17 @@ Read this before editing any file. It defines what a UX/UI change is allowed to 
 
 The principle: **a user who approved "UX improvements" did not approve a change to how their business works.** Anything that alters behavior, data or contracts needs its own explicit approval.
 
+## Contents
+
+- Protected by default
+- Change boundary
+- The harmful side-effect exception
+- Existing content that cannot be verified
+- Existing pressure that the code proves false
+- Nothing fake; nothing destructive; secrets and privacy
+- Procedure: before the first edit, while editing, before reporting
+- When you cannot verify; if something breaks
+
 ## Protected by default
 
 Unless the user explicitly authorizes functional work, do not alter:
@@ -36,7 +47,7 @@ If a recommendation needs anything on the list, write it up under `FUNCTIONAL UX
 | Token usage (not token values that define the brand) | Hooks, stores, context | Business rules and calculations |
 | Responsive layout and overflow | Event handlers | Auth, sessions, permission checks |
 | Semantic markup, headings, landmarks | Conditional rendering tied to data or roles | Routing and redirects |
-| Labels, accessible names, ARIA | Form validation rules and schemas | Database, migrations |
+| Labels, accessible names, ARIA | Form validation rules and schemas; which option a form starts on | Database, migrations |
 | Focus order and focus styles | Element `id`, `name`, `data-*`, class names used by tests, analytics or third-party scripts | Payment, checkout, booking logic |
 | Copy, microcopy, error wording | Translation keys | Dependencies, framework, build config |
 | Grouping and ordering of existing content | Field order in forms that post to a backend | Feature flags, environment config |

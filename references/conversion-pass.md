@@ -2,6 +2,47 @@
 
 A procedure of eleven steps for turning an ordinary page into one that does its selling job well. Use it when the user asks to "make this page convert", "make it sell", "fix my landing page" or "why does nobody sign up". It ties together `patterns/sales-journey`, `selling-strategies.md`, `patterns/pricing-and-persuasion`, `patterns/ux-psychology` and `patterns/conversion-and-retention`; read those as each step calls for them.
 
+## Contents
+
+- What to read, and the checklist to copy
+- What this can and cannot do
+- The facts ledger
+- Steps 1 to 11: diagnose, ask the owner, first screen, order, rewrite, proof, action, interruptions, check, content brief, report
+- Rules that hold throughout
+
+## What to read
+
+A conversion pass is one page and one job, so read little:
+
+- Always: this file, `patterns/sales-journey`, `core/content-and-trust`, and in `selling-strategies.md` only the rules, the identifying table and the one strategy the page uses.
+- Then at most three pattern modules, chosen by what the page has: `pricing-and-persuasion` (a price or plans), `forms` (a form), `onboarding` (a sign-up), `product-page` (one product), `responsive-mobile` (most visitors on phones).
+- Skim the always-on core modules (`universal-ux`, `accessibility`, `brand-preservation`) for their Checks sections only.
+- `classification.md` only if the surface has not been classified yet.
+- Read anything else only when a specific element calls for it.
+
+**Starting from someone else's diagnosis.** If a diagnosis and the owner's answers already exist, trust the classification, ledger and findings, do not redo Steps 1 and 2, and begin at Step 3. Re-check only what the answers changed.
+
+## The checklist
+
+Copy this into your working notes and tick each line. Do not report until every line is ticked or marked "not applicable" with a reason.
+
+```
+[ ] 1  Ledger built; the main action and every contact link checked for whether they work
+[ ] 2  Owner asked once (or noted as unreachable)
+[ ] 3  First screen: what, who for, what they get, action, one proof line
+[ ] 4  Sections ordered by the buyer's questions
+[ ] 5  Copy concise, scannable, objective; no new claims
+[ ] 6  Real proof beside the doubt; placeholders removed
+[ ] 7  One action label; every answered channel offered; price visible
+[ ] 8  Nothing interrupts on arrival
+[ ] 9a Owner answers reconciled: every answer is on the page, in the brief, or listed as not used with a reason
+[ ] 9b Every number, name, price and promise on the page traced to the ledger
+[ ] 9c Walk-out test repeated on a phone, then a desktop; 320px checked
+[ ] 9d Protected files unchanged; tests run
+[ ] 10 Content brief written
+[ ] 11 Report written from assets/implementation-report-template.md; baseline and what to watch stated; no predicted uplift
+```
+
 ## What this can and cannot do
 
 A page converts when a visitor **understands** the offer, **believes** it, and finds acting **easy**.
@@ -130,7 +171,18 @@ In a measured study, the same content rewritten to be concise, scannable and obj
 
 ## Step 9: Check on a phone, then a desktop
 
-Repeat the walk-out test. Every earlier cause is gone or is in the content brief. The main action is reachable throughout and never appears twice at once. Nothing overflows at 320 pixels wide.
+Three checks, in this order.
+
+**Reconcile the owner's answers.** Go through the owner's message line by line. Each fact they gave is in exactly one place: on the page, in the content brief, or in a short "not used" list with the reason. A contact channel, price, proof or correction the owner supplied and the page does not show is a defect of the pass. Put the reconciliation table in the report:
+
+| Owner's answer | Where it went |
+|---|---|
+| "WhatsApp on 07..." | First screen and contact list |
+| "Photos next week" | Content brief |
+
+**Trace the page back to the ledger.** Read the finished page once more and, for every number, name, price, time and promise, find its ledger line. Anything without one is removed.
+
+**Repeat the walk-out test.** Every earlier cause is gone or is in the content brief. The main action is reachable throughout and never appears twice at once. Nothing overflows at 320 pixels wide. Protected files are unchanged and the project's tests pass.
 
 ## Step 10: The content brief
 
@@ -146,16 +198,29 @@ Leave room in the layout only where an empty space will not look broken; otherwi
 
 ## Step 11: Say what changed and what to watch
 
+Use `assets/implementation-report-template.md`, dropping rows that do not apply to the page, and add in this order: the owner-answer reconciliation table, the content brief, the functional recommendations, and the closing items below.
+
 End the implementation report with:
 
 - A table: each change, the reason to leave it removes, and its evidence class.
 - The reasons to leave that remain and why (awaiting owner content, needs functional work).
-- What to watch: the one or two behaviors that should move (enquiries per visit, sign-ups started and completed, drop-off at a named step), with a note to record the current figure first.
+- What to watch: the one or two behaviors that should move (enquiries per visit, sign-ups started and completed, drop-off at a named step), with a note to record the current figure first. How to record a baseline and read the result honestly: `measuring-results.md`.
 - No predicted uplift.
 
 ## Rules that hold throughout
 
 - Replacing content with what the owner has supplied (a real phone number, address, review, price) is part of the pass: the owner's answer is the authority. Change the visible text and its link target together, note each replacement in the report, and leave code and test fixtures that merely reuse an old placeholder as an example unless they are shown to visitors.
+- When the owner says to leave some code alone, that wins over every rule here. A placeholder that lives in that code (an example number in an error message, wording in a script) is listed for whoever maintains it, not edited.
+- A detail that looks like a placeholder but the owner has confirmed as real (a number in a range reserved for fiction, for instance) is used as given, and flagged once in the report so they can test it.
+- Which option a form starts on (a checked radio, a selected plan) decides what gets sent when the visitor does nothing, so it is behavior: recommend the change, do not make it.
+- On a phone, a sticky header does not repeat the main action while the first screen shows it. Give the header a different answered channel (a call button) or only the menu.
+- Content that waits for script to appear is fixed in the stylesheet, by making it visible by default. Leave the script in place and note it.
+- If the two limits on the main action cannot both be met without script, reach wins: repeat the action as a plain link at each decision point, and accept two in view for a moment while scrolling.
+- "The same words" covers every link that leads to the action. The button that completes the form may say what it completes ("Create account"), and a button that starts a trial says so.
+- A confirmation that is false in this copy but true once the owner's developer has wired it is left alone on the owner's word, with a plain "do not publish before this is wired" line in the report.
+- A date for a figure ("as of October") is not a new claim when the owner gave the figure as current.
+- Audience facts the owner gave (who the best customer is, what they use today) may shape the first screen. Leaving one unused is not a defect; list it under "not used".
+- When a false "most popular" label is removed, the plan's existing visual emphasis stays unless the owner says otherwise; note it.
 - New behavior is still functional work. A header action that hides while another is on screen, a form that posts somewhere, a new sticky bar: recommend these. Prefer a presentation-only way to meet a rule (repeating an existing link at a decision point) over new script.
 - When the owner is available and asked to be consulted, hold every change until they answer; do not fix some things meanwhile.
 - Functionality, data and behavior are protected exactly as in any fix pass (`implementation-safety.md`).
@@ -172,5 +237,6 @@ End the implementation report with:
 - [BAY-22] Single-column forms; [BAY-21] field count; [NNG-26] form recommendations
 - [NNG-11], [STAN-01] credibility; [NNG-34] social proof; [NNG-60] pop-ups
 - [BEH-45] How often changes work; [BEH-13] publication bias
+- [AS-04] Checklists and verification loops for long procedures
 
 The ledger, the owner questions, the step order and the three piles (not understood, not believed, not easy) are this skill's own procedure (evidence class: Judgment), built on the sources above.

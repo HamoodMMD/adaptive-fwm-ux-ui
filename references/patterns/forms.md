@@ -90,6 +90,7 @@ Users know what each field wants before they type, can enter it in the way that 
 - **File upload:** accepted types and size stated first; progress shown; the chosen file named and removable.
 
 ### Submission and success
+- A form that shows success without sending anything is a P0 functional defect, common in pages handed over from a prototype. Read the submit handler; report it under functional recommendations and do not wire it yourself.
 - The submit button says what it does ("Create account", "Send message", "Pay now").
 - Pressing it shows a pending state so users do not press twice.
 - Avoid disabling the submit button as the only signal that something is missing: a disabled button gives no reason and is skipped by keyboard. Prefer an enabled button that reports what is needed.

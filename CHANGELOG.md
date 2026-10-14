@@ -4,6 +4,29 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.8.0 - 2026-10-14
+
+### Added
+- `patterns/visual-scale`: four new groups of checks. Typeface, case and weight; contrast, text over images and dark surfaces; fluid sizes that still zoom; spacing and grouping.
+- 11 sources on typefaces and reading speed, low-contrast text, text over images, light and dark surfaces, viewport-unit type and zoom, visual hierarchy and spacing scales.
+- From a blind test on a page built with a design skill: very large display text that does not zoom, fixing a too-tall sticky header, forms that show success but send nothing, which selling modules count against the reading budget, priority for low-impact requirement failures, and tips for testing in a headless browser.
+- Rules in `conversion-pass.md` for the cases two blind test runs found unclear: owner instructions that outrank a rule, form defaults, sticky headers on phones, and which action-placement limit gives way.
+
+### Changed
+- The README is now a short overview. Usage, selling, how it works, installation, and questions moved to their own pages under `docs/`.
+
+## 1.7.0 - 2026-10-14
+
+### Added
+- `references/measuring-results.md`: how to record a baseline, which method a site's traffic allows, how to read a before-and-after comparison without fooling yourself, and what may honestly be reported.
+- A copyable checklist in `references/conversion-pass.md`, and three closing checks in Step 9: reconcile every owner answer against the page, trace every number and promise back to the facts ledger, then repeat the walk-out test.
+- A reading budget in the router and a short reading list for the conversion pass, so narrow tasks load fewer modules.
+- A contents list at the top of the long reference files.
+- 7 sources on measurement, small-sample testing and skill authoring.
+
+### Changed
+- The first example in the README is now a conversion pass on a service-business homepage.
+
 ## 1.6.0 - 2026-10-13
 
 ### Added
