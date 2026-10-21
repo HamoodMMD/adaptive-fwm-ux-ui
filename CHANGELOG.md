@@ -4,6 +4,15 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.12.0 - 2026-10-22
+
+### Added
+- `patterns/generic-ai-look`: what makes a page look AI-made or templated (type, color, hero, section order, components, motion, imagery, icons and copy defaults), the real defects that travel with it (invented testimonials, logos and numbers, deceptive patterns, weak dark-theme contrast, placeholder leftovers), and how to replace defaults with decisions without fabricating content or dropping useful conventions. Sameness alone is rated P3.
+- Agents in `profiles/ai-product`: approval friction matched to impact with a scope choice, approval contents, one-at-a-time approval and acknowledged declines, clean interruption and takeover, visible plans, watch mode in sensitive places, user rules for when to ask, editable memory, sandbox state.
+- Mixed input devices and installable web apps in `patterns/responsive-mobile`: no guessing input from width, install promotion timing and placement, and a way back once installed.
+- The pricing check for an emphasized plan now says how to test it: same kind of control on every plan, readable text, no faint gray alternatives (a blind test missed this).
+- 9 sources.
+
 ## 1.11.0 - 2026-10-21
 
 ### Added

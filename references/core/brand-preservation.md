@@ -69,7 +69,7 @@ Worked examples:
 ### Things not to do to a brand
 Do not convert a project toward any of these unless the user asks for that specific outcome:
 
-- Generic SaaS styling: blue primary, gray cards, rounded-lg everything.
+- Generic SaaS styling: blue primary, gray cards, rounded-lg everything (see `patterns/generic-ai-look`).
 - Framework defaults: stock Tailwind, Bootstrap or Material look in place of custom components.
 - A platform's native look on a product that has its own.
 - Trend treatments: glassmorphism, neon, gradients, bento grids, oversized type, where they are not already the identity.

@@ -42,6 +42,13 @@ On every supported screen, users can read the content, reach the controls, compl
 - Nothing depends on hover: information and actions revealed on hover have a tap and keyboard equivalent.
 - Gestures (swipe, pinch, drag, long-press) have a visible single-tap alternative. (WCAG 2.5.1, 2.5.7.)
 - Destructive actions are not placed where an accidental touch is likely, such as beside the primary action or at the screen edge.
+- Screen width is not used to guess the input: laptops have touch screens and tablets have keyboards and trackpads. Target sizes and hover behavior follow the `pointer`, `any-pointer` and `hover` media features, and every layout works with touch, mouse and keyboard.
+
+### Installable web apps
+- An install prompt does not appear on the first visit; it is offered after the person has shown interest, or after a completed purchase or sign-up, without competing with the next step.
+- The install promotion sits outside the main task (a header button, a menu item, a dismissible banner), can be dismissed, and stays dismissed.
+- The promotion says what installing gives the user (offline access, faster start, notifications they chose), and appears only when installing is actually possible on that browser.
+- Installed, the app still offers its own way back and its own sign-out, because the browser's toolbar and back button may be gone.
 
 ### Reach
 - Where one-handed phone use is typical, frequent actions sit in the lower part of the screen and rarely used or destructive ones further away. Treat this as a judgment for consumer mobile surfaces, not a universal rule.
@@ -150,6 +157,8 @@ Check at least: 320 and 360–390 CSS pixels wide (phones), about 768 (tablet po
 - [W3C-04] Focus not obscured
 - [BAY-09] Mobile ecommerce practices; [BAY-11] touch keyboards and hit areas
 - [WEB-07] Input types and autofill on mobile
+- [WEB-22] Promoting installation: not on first load, outside the main flow, dismissible and remembered, after engagement or a conversion
+- [MDN-07] pointer and any-pointer media features for input accuracy
 - [W3C-01] WCAG 2.2 — 1.3.4, 1.4.4, 1.4.10, 2.4.11, 2.5.1, 2.5.7, 2.5.8
 
 The reach guidance, the 16-pixel input note and the list of widths to check are practical judgments, not requirements (evidence class: Judgment).

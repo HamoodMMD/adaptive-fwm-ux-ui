@@ -485,6 +485,20 @@ Enforcement actions are cited through news reports because the regulator's site 
 | UNI-01 | Unicode CLDR | Plural rules | https://cldr.unicode.org/index/cldr-spec/plural-rules | normative | 2026-10-21 | fetched | Six plural categories (zero, one, two, few, many, other); do not build plurals by adding s; avoid 'hour(s)' |
 | MDN-06 | MDN Web Docs | Intl | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl | implementation | 2026-10-21 | fetched | Locale-aware date, number, plural, list, relative time formatting and collation |
 
+## Generic and AI-generated design
+
+| ID | Source | Title / topic | URL | Type | Checked | Verified | Guidance derived |
+|---|---|---|---|---|---|---|---|
+| NNG-108 | Nielsen Norman Group | Good from Afar, But Far from Good: AI Prototyping in Real Design Contexts (2025) | https://www.nngroup.com/articles/ai-prototyping/ | research | 2026-10-22 | fetched | Without visual direction AI tools produce flat, interchangeable designs biased toward mainstream conventions; miss hierarchy, contrast, spacing and grouping; attached sketches and mockups improve fidelity |
+| BEH-52 | Chen, Shen, Luna & Vaccaro | Hidden Darkness in LLM-Generated Designs: deceptive designs in ecommerce web components (2025) | https://arxiv.org/abs/2502.13499 | research | 2026-10-22 | fetched | 1,296 generated components: 55.8% had at least one deceptive design, 30.6% two or more; interface interference dominant (color steering, concealed information) |
+| BEH-53 | Kobak, Gonzalez-Marquez, Horvat & Lause | Delving into LLM-assisted writing in biomedical publications through excess vocabulary (Science Advances, 2025) | https://arxiv.org/abs/2406.07016 | research | 2026-10-22 | fetched | Abrupt excess of style words after LLMs in 15 million abstracts; at least 13.5% of 2024 abstracts processed with LLMs |
+| WEB-20 | Anthropic | frontend-design skill | https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md | implementation | 2026-10-22 | fetched | Generic defaults to avoid: identical rounded cards with one shadow, gradient washes, tracked all-caps eyebrows, accenting one headline word, fade-and-slide on every section; ground choices in the subject; spend boldness in one place |
+| WEB-21 | Developers Digest | AI Design Slop: 16 Patterns That Mark a Site as Vibe-Coded | https://www.developersdigest.tech/blog/ai-design-slop-and-how-to-spot-it | implementation | 2026-10-22 | fetched | Practitioner list: Inter everywhere, serif italic accent word, purple, permanent dark mode with weak contrast, gradients and glows, centered hero with badge, identical icon cards, numbered steps, stat banners, emoji navigation, all-caps labels |
+| UXR-06 | AWS Cloudscape Design System | Generative AI pattern: user-authorized actions | https://cloudscape.design/gen-ai/patterns/user-authorized-actions/ | design-system | 2026-10-22 | fetched | Scope selector (this time, this chat, always); typed confirmation for irreversible actions; describe the tool and show the command; state reversibility; approve or skip one at a time; acknowledge declines |
+| BEH-54 | Feng, Kim, Pang, Huq, August & Zhang | On the Regulatory Potential of User Interfaces for AI Agent Governance (NeurIPS 2025 RegML workshop) | https://arxiv.org/abs/2512.00742 | research | 2026-10-22 | fetched | Six patterns from 22 agent systems: visible thoughts, plans and actions; interrupt and take over; watch mode; user rules for approval; inspectable, editable memory; sandbox state |
+| WEB-22 | web.dev | Patterns for promoting PWA installation (2019) | https://web.dev/articles/promote-install | implementation | 2026-10-22 | fetched | Keep promotions outside user journeys; dismissible and remembered; not on first load; show only when installable; after engagement or a conversion |
+| MDN-07 | MDN Web Docs | pointer media feature | https://developer.mozilla.org/en-US/docs/Web/CSS/@media/pointer | implementation | 2026-10-22 | fetched | pointer tests the primary input's accuracy (none, coarse, fine); any-pointer tests all inputs |
+
 ## Measuring results
 
 | ID | Source | Title / topic | URL | Type | Checked | Verified | Guidance derived |
@@ -529,7 +543,7 @@ Areas where strong, openly accessible sources were thin when this index was buil
 - **Selling strategies.** No published study validates the thirteen-strategy grouping in `selling-strategies.md`; it is an interpretation of observed sites supported by research on the individual techniques, and the survey covered large brands only: small-business and local-service sites were not measured. Configurators and product quizzes in particular lack open research (the main studies are paywalled).
 - **Virtual goods.** No open usability study of in-app or in-game purchase flows was found; `patterns/virtual-goods` is built from the enforcement record, consumer-authority principles and research on loot boxes and payment.
 - **Marketplaces and directories.** Little open usability research specific to two-sided platforms was found; the module adapts ecommerce list, credibility and reviews research.
-- **Agentic AI.** Published human-AI guidance largely predates widely deployed agents that act on a user's behalf; approval-boundary guidance is reasoned from control and error-prevention principles.
+- **Agentic AI.** Guidance for agents that act on a user's behalf now draws on one design-system pattern and one workshop analysis of 22 products; no published usability study of approval and oversight interfaces was found.
 - **Service-business sites.** Guidance is assembled from credibility, content and B2B research rather than a dedicated study.
 - **Ready-size versus made-to-measure apparel flows.** No dedicated published study was found.
 - **Mirroring rules.** The two platform references marked `partial` could not be machine-read reliably; the mirroring table should be re-read against them by a person.

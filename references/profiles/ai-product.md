@@ -68,9 +68,18 @@ Users form an accurate picture of what the AI can and cannot do, can express wha
 - Before the AI takes an action with consequences outside the conversation (sending, purchasing, deleting, publishing, changing settings or records, calling external services), it shows exactly what it will do and waits for explicit approval.
 - The approval step states the scope: which items, which recipients, what amounts, which systems.
 - Standing permissions ("always allow") are granular, visible and revocable in one obvious place.
+- Friction matches impact. Routine tool calls offer a scope choice (this time, for this conversation, always); irreversible or high-impact actions need an explicit confirmation, which may ask the user to type a phrase for the most serious ones.
+- An approval names the action in words, explains what the tool does when its name would mean nothing to the user, shows the exact command, recipients or values for checking, and says whether the result can be reversed.
+- When several actions wait for approval, each can be approved or skipped on its own; a declined action is acknowledged by the agent, which carries on without it or explains why it cannot.
+- Actions run under an earlier approval are still reported in the conversation or activity trace.
 - A record of actions taken by the AI is available: what, when, on whose instruction, with what result.
 - Irreversible actions are never taken without confirmation, and the interface says they are irreversible.
-- A running agent can be paused or stopped, and says what has already been done.
+- A running agent can be paused or stopped, halts cleanly, and says what has already been done and what was left half-finished. The user can take over a step and hand it back.
+- The agent's plan and steps are visible as it works and afterwards, at a level of detail people can follow; full detail is available on request rather than flooding the view.
+- In sensitive places (banking, email, health records, payments) the agent pauses or asks the user to watch, and says why.
+- Users can set rules for when the agent must ask first, and those rules win over the agent's own judgment.
+- What the agent remembers about the user can be viewed, corrected and deleted from a place reached in a few clicks, not buried in settings.
+- Where an agent works in a sandbox or a separate environment, the interface says so and shows its state.
 - See `profiles/high-stakes.md` when actions touch money, data loss, permissions or external communication.
 
 ### Errors, failure and fallback
@@ -101,6 +110,10 @@ Users form an accurate picture of what the AI can and cannot do, can express wha
 - "Ask me anything" with no indication of scope or limits.
 - Presenting output as authoritative, with no sources and no way to check.
 - An agent that sends, buys, deletes or publishes without showing what it will do.
+- An approval dialog that shows only an internal tool name.
+- "Always allow" as the preselected choice for an action that cannot be undone.
+- Wording that nudges the user to approve ("Approve to continue your great progress!").
+- A stop button that leaves the user unsure what already happened.
 - Losing the prompt on error.
 - Regenerate that overwrites the only good answer.
 - Output that cannot be edited or copied.
@@ -144,5 +157,7 @@ Users form an accurate picture of what the AI can and cannot do, can express wha
 - [NNG-03] Response-time limits
 - [APL-01] Platform guidance for generative AI features
 - [W3C-05] Status messages
+- [UXR-06] Agent actions that need user authorization: scope choice, friction by impact, confirmation contents, one-at-a-time approval, acknowledging declines
+- [BEH-54] Interface patterns across 22 agent products: visible plans and actions, interrupt and take over, watch mode, user rules for approval, editable memory, sandbox state
 
-Guidance on approval boundaries for agentic actions combines the control and consequence guidelines above with error-prevention principles (evidence class: Judgment); the published guidance predates widely deployed agents.
+Guidance on approval boundaries for agentic actions combines the control and consequence guidelines above with error-prevention principles (evidence class: Judgment); published guidance is still young: [UXR-06] is a design-system pattern and [BEH-54] a 2025 workshop analysis, not usability studies.

@@ -69,7 +69,7 @@ The first figure seen, and the figures nearby, shape how a price is judged.
 People often choose a middle option when options are easy to compare, and a clearly inferior option can make its neighbor look better.
 - Where the owner offers several tiers, they are shown side by side with the same attributes in the same order and the differences made obvious.
 - A "recommended" or "most popular" mark is used only when the owner says which plan it is and, for "popular", that the claim is true. One plan is marked, not several.
-- The marked plan is emphasized without hiding, shrinking or graying the others, and cheaper or free options stay as easy to select.
+- The marked plan is emphasized without hiding, shrinking or graying the others, and cheaper or free options stay as easy to select. Check it concretely: every plan has a selection control of the same kind (a real button, not a link styled as faint text), each control's text meets 4.5:1, and the other plans' prices and contents are as readable as the marked one. A glowing or filled button on one plan with dim gray "Choose" text on the rest is interface interference and a finding.
 - A page with one or two real options is not a defect. Never propose a tier whose purpose is to be rejected. If a third tier would help buyers, say so as a recommendation to the owner.
 
 ### Number of choices
