@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img alt="Version 1.12.0" src="https://img.shields.io/badge/version-1.12.0-1f6feb">
+  <img alt="Version 1.12.1" src="https://img.shields.io/badge/version-1.12.1-1f6feb">
   <img alt="Agent Skills format" src="https://img.shields.io/badge/format-Agent%20Skills-6e40c9">
   <img alt="Works with Claude Code and Codex" src="https://img.shields.io/badge/works%20with-Claude%20Code%20%C2%B7%20Codex-2da44e">
   <img alt="WCAG 2.2 AA" src="https://img.shields.io/badge/accessibility-WCAG%202.2%20AA-d4a72c">

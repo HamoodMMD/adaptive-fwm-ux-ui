@@ -4,6 +4,11 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.12.1 - 2026-10-22
+
+### Changed
+- The skill description now names the areas added since 1.9.0 (sign-in, notifications, dark mode, motion and visual styles, localization, roles and permissions, AI agents, component libraries and the generic "made by AI" look) so requests about them load the skill.
+
 ## 1.12.0 - 2026-10-22
 
 ### Added
