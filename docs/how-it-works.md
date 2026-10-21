@@ -28,7 +28,7 @@ flowchart LR
 | Booking marketplace | booking + marketplace + filters, forms |
 
 <details>
-<summary><strong>All 41 rule modules</strong></summary>
+<summary><strong>All 43 rule modules</strong></summary>
 
 <br>
 
@@ -38,8 +38,8 @@ flowchart LR
 **Profiles (14)** — chosen by what the surface is for
 `ecommerce` · `fashion-apparel` · `sales-lead-generation` · `service-business` · `informational-content` · `b2b-marketing` · `saas-application` · `dashboard-analytics` · `monitoring-observability` · `admin-backoffice` · `ai-product` · `booking-reservation` · `marketplace-directory` · `high-stakes`
 
-**Patterns (22)** — chosen by what is on the screen
-`forms` · `navigation` · `tables` · `search-filter-sort` · `charts-data-viz` · `loading-empty-error-states` · `responsive-mobile` · `rtl-bilingual` · `visual-scale` · `pricing-and-persuasion` · `sales-journey` · `ux-psychology` · `virtual-goods` · `product-page` · `onboarding` · `conversion-and-retention` · `account-security` · `notifications` · `component-libraries` · `dark-mode-and-themes` · `motion` · `visual-styles`
+**Patterns (24)** — chosen by what is on the screen
+`forms` · `navigation` · `tables` · `search-filter-sort` · `charts-data-viz` · `loading-empty-error-states` · `responsive-mobile` · `rtl-bilingual` · `visual-scale` · `pricing-and-persuasion` · `sales-journey` · `ux-psychology` · `virtual-goods` · `product-page` · `onboarding` · `conversion-and-retention` · `account-security` · `notifications` · `component-libraries` · `dark-mode-and-themes` · `motion` · `visual-styles` · `roles-and-permissions` · `localization`
 
 Plus a catalog of thirteen selling strategies in `references/selling-strategies.md`.
 
@@ -87,7 +87,7 @@ adaptive-fwm-ux-ui/
 │   ├── conversion-pass.md        step-by-step: an ordinary page into one that sells
 │   ├── measuring-results.md      how to tell honestly whether a change worked
 │   ├── selling-strategies.md     thirteen ways a site can sell, when each fits, how each fails
-│   ├── research-sources.md       all 323 sources, with how each was checked
+│   ├── research-sources.md       all 335 sources, with how each was checked
 │   ├── core/                     5 modules for every surface
 │   ├── profiles/                 14 modules chosen by classification
 │   └── patterns/                 18 modules chosen by what is on screen

@@ -136,6 +136,8 @@ Pattern modules follow the interface, not the profile. Load one when its element
 - a dark theme, a theme switcher, `prefers-color-scheme`, or a dark-only design → `dark-mode-and-themes`
 - transitions, entrance or scroll-triggered animation, parallax, carousels, autoplaying media, or a motion library → `motion`
 - a named or expressive visual style or effect (particles, liquid morph, neon glow, chrome, kinetic type, paper cutout, holographic, isometric, ASCII art, clay 3D, VHS, comic, split-flap, hand-drawn, blueprint, physics, pixel art, Bauhaus, Art Deco, neo-brutalism, glassmorphism, WebGL and similar) → `visual-styles`
+- roles, team members, invitations, sharing, permission-limited actions, access-denied pages, several workspaces, organizations, clients or tenants, or acting as another user → `roles-and-permissions`
+- an interface in a language other than English, more than one language, country or currency, translation files, or dates, times, prices, names or addresses shown to an international audience → `localization` (plus `rtl-bilingual` for right-to-left scripts or a language switcher)
 - the surface's job is to sell, sign up or win a lead → `sales-journey`, and record its selling strategy from `selling-strategies.md`
 
 For a desktop-dominant internal tool, `responsive-mobile` is loaded only to check that the tool degrades honestly at narrower widths, not to redesign it for phones.

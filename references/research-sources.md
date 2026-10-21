@@ -468,6 +468,23 @@ Enforcement actions are cited through news reports because the regulator's site 
 | MDN-04 | MDN Web Docs | image-rendering | https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering | implementation | 2026-10-21 | fetched | pixelated and crisp-edges keep pixel art sharp when scaled |
 | MDN-05 | MDN Web Docs | Page Visibility API | https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API | implementation | 2026-10-21 | fetched | Pause carousels, polling, video and sound when the page is hidden; most browsers stop animation frames in background tabs |
 
+## Roles, permissions and localization
+
+| ID | Source | Title / topic | URL | Type | Checked | Verified | Guidance derived |
+|---|---|---|---|---|---|---|---|
+| NIST-02 | NIST | SP 800-53 Rev. 5, AC-6 Least Privilege | https://csf.tools/reference/nist-sp-800-53/r5/ac/ac-6/ | normative | 2026-10-21 | fetched | Allow only the access users need for their assigned tasks |
+| UXR-03 | SAP Emarsys Design System | Permission handling guidelines | https://client-version.cf.emarsys.net/eds-docs-museum/latest/v6/patterns/permission-handling-guidelines/index.html | design-system | 2026-10-21 | fetched | Keep main-workflow elements visible and disabled with a tooltip reason; hide extra functions; full-page Permission Denied state; generic message for sensitive data |
+| UXR-04 | AWS Cloudscape Design System | Disabled and read-only states | https://cloudscape.design/patterns/general/disabled-and-read-only-states/ | design-system | 2026-10-21 | fetched | Disabled when an action can be enabled, read-only to view without editing; disabled reason in one sentence; do not disable form submission |
+| UXR-05 | Atlassian | Invite a user | https://support.atlassian.com/user-management/docs/invite-a-user/ | implementation | 2026-10-21 | fetched | Roles chosen while inviting; personalized or silent invitations; resend invitation |
+| GOV-14 | UK Department for Education | Designing no access (design history, 2023) | https://design-histories.education.gov.uk/connect-families-to-support/designing-no-access | design-system | 2026-10-21 | fetched | Separate pages for no access to the service and no permission for an action; say who to contact; plan a route to get access |
+| W3C-38 | W3C Internationalization | Text size in translation | https://www.w3.org/International/articles/article-text-size | implementation | 2026-10-21 | fetched | Short strings expand 200-300%, long ones about 130%; flexible layouts; compound words; wider CJK; more line height for Thai, Arabic, Devanagari |
+| W3C-39 | W3C Internationalization | Personal names around the world | https://www.w3.org/International/questions/qa-personal-names | implementation | 2026-10-21 | fetched | Prefer one full-name field; avoid first and last labels; do not require a family name; long names, any script, permissive validation |
+| W3C-40 | W3C Internationalization | Date formats on the web | https://www.w3.org/International/questions/qa-date-format | implementation | 2026-10-21 | fetched | Avoid ambiguous numeric dates; use month names or ISO 8601; match the page's language context |
+| W3C-41 | W3C Internationalization | Language negotiation and site navigation | https://www.w3.org/International/questions/qa-site-conneg | implementation | 2026-10-21 | fetched | Do not guess language from IP; links to other languages on every page in their own language; offer to remember the choice; a default |
+| W3C-42 | W3C Internationalization | Working with Time and Timezones (Group Draft Note, 2025) | https://www.w3.org/TR/timezone/ | implementation | 2026-10-21 | fetched | Let users choose a zone and keep it; exemplar cities; show the zone with the value; floating versus incremental times |
+| UNI-01 | Unicode CLDR | Plural rules | https://cldr.unicode.org/index/cldr-spec/plural-rules | normative | 2026-10-21 | fetched | Six plural categories (zero, one, two, few, many, other); do not build plurals by adding s; avoid 'hour(s)' |
+| MDN-06 | MDN Web Docs | Intl | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl | implementation | 2026-10-21 | fetched | Locale-aware date, number, plural, list, relative time formatting and collation |
+
 ## Measuring results
 
 | ID | Source | Title / topic | URL | Type | Checked | Verified | Guidance derived |

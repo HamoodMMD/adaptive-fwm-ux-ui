@@ -3,6 +3,7 @@
 Right-to-left languages (Arabic, Hebrew, Persian, Urdu), interfaces offered in more than one language, and content that mixes directions.
 
 **Load when:** the surface uses an RTL language, offers more than one language, or has a language switcher.
+**Pair with:** `patterns/localization` for text length, formats, plurals, names, time zones and language choice.
 **For a single-language RTL product:** skip the language-switching section; everything else applies.
 
 **Contents:** [Foundations](#foundations) · [What mirrors](#what-mirrors-and-what-does-not) · [Mixed-direction text](#mixed-direction-text) · [Numbers, dates and time](#numbers-dates-and-time) · [Typography](#typography) · [Components](#components) · [Language switching](#language-switching) · [CSS](#css-techniques)

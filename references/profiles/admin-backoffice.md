@@ -5,7 +5,7 @@ Internal tools where staff manage records all day: orders, customers, products, 
 **Load when:** the users are staff or administrators doing frequent, repetitive work over business records.
 **Skip when:** customers manage a few of their own records (use `saas-application` account sections).
 **Journey:** find the record(s) → inspect → edit or act → confirm → next record, many times a day.
-**Pair with (when present):** `patterns/tables`, `patterns/search-filter-sort`, `patterns/forms`, `patterns/loading-empty-error-states`; `profiles/high-stakes` for destructive, financial or permission actions.
+**Pair with (when present):** `patterns/tables`, `patterns/search-filter-sort`, `patterns/forms`, `patterns/loading-empty-error-states`; `profiles/high-stakes` for destructive, financial or permission actions; `patterns/roles-and-permissions` for roles, invitations, access-denied pages and tenants.
 
 The usual mistake with admin tools is to "simplify" them: bigger cards, fewer columns, more steps. For people who use the tool for hours, that is a slowdown presented as an improvement.
 

@@ -4,6 +4,13 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.11.0 - 2026-10-21
+
+### Added
+- `patterns/roles-and-permissions`: current workspace and tenant context, switching, role names and descriptions, invitations and members, disabled-with-reason versus hidden versus read-only, access-denied pages with a way to get access, acting on behalf of others, and sharing scope.
+- `patterns/localization`: text expansion and layout, strings and plurals, dates, times and time zones, numbers, currencies and units, names, addresses and phone numbers, choosing language and region without guessing from location, and locale sorting.
+- 12 sources.
+
 ## 1.10.0 - 2026-10-21
 
 ### Added
