@@ -80,6 +80,7 @@ List by priority, highest first. One block per finding.
 | **Recommendation** | <The specific change> |
 | **UI-only?** | Yes / No / Partly (say which part) |
 | **Functionality risk** | None / Low / Medium / High — <why> |
+| **Validate with** | <only when the evidence is Research, Guidance or Judgment and the fix is costly or disputed: the cheapest method that would confirm it> |
 | **Status** | Reported / Implemented / Not implemented — functional |
 
 ## 6. Accessibility

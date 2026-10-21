@@ -43,6 +43,9 @@ Record each of these per surface. Unknown is an acceptable value; a guess presen
 | AI involvement | none, assistive, generative, agentic |
 | Transaction model | none, lead, ecommerce, subscription, booking, payment, marketplace |
 | Roles | anonymous, customer, member, staff, manager, admin, super admin, agency, client, domain-specific |
+| User skill and confidence | novice, general, professional, expert, mixed |
+
+**User skill and confidence** is about the people, not the product: how comfortable they are with technology, how much they trust it, and how often they will use this surface. Public services and consumer products are usually *mixed*, and some of their users lack skills, confidence, access or trust. Novice and mixed audiences need plainer words, fewer choices per screen, visible help and the cognitive checks in `core/accessibility` Part D. Expert audiences need speed, density and shortcuts (`profiles/admin-backoffice`). Do not mark a public surface *expert* because its developers are.
 
 Three dimensions switch modules on directly, whatever the profile:
 
@@ -127,6 +130,11 @@ Pattern modules follow the interface, not the profile. Load one when its element
 - the user frames the work as conversion, retention, churn or business impact → `conversion-and-retention`
 - virtual currency, credits, in-app or in-game purchases, digital items or paid randomized rewards → `virtual-goods` (and scope `high-stakes` to the purchase step)
 - onboarding, sign-up, multi-step flows, progress indicators, upgrade prompts, engagement features, or a cited psychological principle → `ux-psychology`
+- sign-in, passwords, one-time codes, passkeys, account recovery, session timeouts, security settings or API keys → `account-security`
+- toasts, banners, badges, alerts, confirmation dialogs, a notification center, or email and push notifications → `notifications`
+- planning a new build, choosing a UI component library, or a fix that needs a dialog, combobox, menu, date picker, data grid or toast the project does not have → `component-libraries`
+- a dark theme, a theme switcher, `prefers-color-scheme`, or a dark-only design → `dark-mode-and-themes`
+- transitions, entrance or scroll-triggered animation, parallax, carousels, autoplaying media, or a motion library → `motion`
 - the surface's job is to sell, sign up or win a lead → `sales-journey`, and record its selling strategy from `selling-strategies.md`
 
 For a desktop-dominant internal tool, `responsive-mobile` is loaded only to check that the tool degrades honestly at narrower widths, not to redesign it for phones.

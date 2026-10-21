@@ -9,6 +9,7 @@ Read this when the user asks "did it work?", "how will I know?", or wants proof 
 - Pick the method the traffic allows
 - Reading a before-and-after comparison
 - Watching five people
+- Which method answers which question
 - What to report
 
 ## What you may and may not claim
@@ -63,6 +64,24 @@ Numbers say where people leave; watching says why. Five people who match the cus
 
 Do not turn what five people did into a percentage or compare it with a conversion rate. One measures whether people can; the other whether they do.
 
+## Which method answers which question
+
+Reading code and screenshots answers some questions well and others not at all. Match the question to the method:
+
+| Question | Can the skill answer it from the project? | Method that answers it |
+|---|---|---|
+| Is there a label, a focus style, enough contrast, a heading structure? | Yes | Inspection and measurement |
+| Does the flow follow known good patterns? | Mostly | Heuristic review, cognitive walkthrough |
+| Do people understand the pricing, the icon, the wording? | No | Watching five people try (qualitative usability test) |
+| Can people find the right product or page? | No | Usability test; tree testing for navigation; search-log review |
+| Where do people drop out, and how many? | No | Analytics and funnel data |
+| Why do they drop out? | No | Usability test, interviews, session review |
+| Is version B better than version A? | No | A controlled experiment where traffic allows; otherwise a before-and-after read with care |
+| How satisfied are people, how does it compare over time? | No | Surveys, benchmark tests repeated over time |
+| Does it work with screen readers and other assistive technology? | Partly | Testing with assistive technology, ideally with its users |
+
+What people say and what they do differ; prefer watching behavior to asking for opinions. Most real questions need two methods: numbers to show where, people to show why.
+
 ## What to report
 
 - The baseline, the period after, and the counts behind every rate.
@@ -75,7 +94,7 @@ Do not turn what five people did into a percentage or compare it with a conversi
 
 - [NNG-88] Conversion rate: definition, consistent counting, small steps and outcomes, no universal benchmark
 - [NNG-89] Qualitative and quantitative studies and their sample sizes; [NNG-90] five users; [NNG-91] what analytics can and cannot show
-- [GOV-09] Completion rate and using data with research
+- [GOV-09] Completion rate and using data with research; [NNG-102] choosing a research method
 - [BEH-50] Regression to the mean
 - [BEH-45] Controlled experiments, surprising results and stopping rules; [BEH-13] published effects overstate
 

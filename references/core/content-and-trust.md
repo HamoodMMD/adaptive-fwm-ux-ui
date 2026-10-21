@@ -74,6 +74,15 @@ Never recommend or implement:
 
 If any of these already exist in the project, report them as findings (P1 where they affect money or consent) with the trust and regulatory risk stated plainly. Do not give legal advice; do say that regulators treat several of these as deceptive practices.
 
+### Consent and privacy choices
+- Non-essential cookies and tracking wait for consent; continuing to browse is not consent.
+- Refusing is as easy as accepting: the same number of steps, a button of equal standing, not a link hidden under "settings".
+- No pre-ticked boxes for marketing, sharing or tracking.
+- Each choice says what it does and why, in plain words, where the choice is made, not only in a policy.
+- Privacy controls are easy to find again later, and changing your mind is as easy as the first choice.
+- Patterns regulators name as deceptive in privacy choices: overloading people with requests or options; skipping privacy steps out of the flow; stirring with emotional wording or visual nudges; hindering access to controls; inconsistent (fickle) design that hides what a choice does; and leaving people in the dark about how their data is used.
+- Changing what a banner sets or what is collected is functional work; wording, order and equal styling of the choices are UI.
+
 ### Writing that gets read
 - Concise, scannable and objective. In a measured study the three together more than doubled usability compared with promotional writing.
 - The most important fact comes first, in the page, the section and the sentence.
@@ -121,5 +130,6 @@ If any of these already exist in the project, report them as findings (P1 where 
 - [FTC-01] Bringing Dark Patterns to Light
 - [NNG-07] Error-message guidelines
 - [GOV-02] Writing error messages
+- [LAW-15] Cookie consent rules; [LAW-16] deceptive design patterns in privacy choices
 - [NNG-82] Concise, scannable, objective writing; [NNG-84] most important first; [NNG-85] plain language; [NNG-86] scanning patterns; [NNG-87] headlines; [NNG-83] photographs
 - [NNG-28] Showing prices

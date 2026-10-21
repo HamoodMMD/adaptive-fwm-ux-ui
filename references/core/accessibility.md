@@ -117,16 +117,31 @@ These improve real use. Report them as recommendations, never as failures.
 
 ### Part C — Component behavior
 
-Expected keyboard and semantics for common patterns (ARIA Authoring Practices).
+Expected keyboard and semantics for common patterns (ARIA Authoring Practices). A role is a promise: giving an element a widget role commits the page to that widget's full keyboard behavior, and a native element that does the job beats an ARIA one. Check these by keyboard, not by reading the markup.
 
-- **Modal dialog.** `role="dialog"` with `aria-modal="true"` and an accessible name. Focus moves into the dialog on open, Tab and Shift+Tab cycle within it, Escape closes it, and focus returns to the control that opened it. A native `dialog` opened with `showModal()` provides most of this.
+- **Modal dialog.** `role="dialog"` with `aria-modal="true"` and an accessible name. Focus moves into the dialog on open (to the first control, to the title for long content, or to the least destructive choice when the action cannot be undone), Tab and Shift+Tab cycle within it, Escape closes it, and focus returns to the control that opened it. A native `dialog` opened with `showModal()` provides most of this.
 - **Tabs (in-page).** `tablist` / `tab` / `tabpanel`; arrow keys move between tabs, Home and End jump to the ends, Tab moves into the panel; `aria-selected` marks the active tab. Activate on focus only when panels render instantly. Tabs that navigate to other pages are links, not ARIA tabs.
 - **Navigation menus.** Site navigation is a `nav` landmark containing links, with disclosure buttons using `aria-expanded` for submenus. The ARIA `menu` roles are for application-style command menus and bring arrow-key expectations; do not put them on ordinary navigation.
-- **Disclosure and accordion.** A `button` with `aria-expanded` controlling the region.
+- **Disclosure and accordion.** A `button` with `aria-expanded` controlling the region; Enter and Space toggle it.
+- **Command menus** (an actions menu, a context menu). A menu button with `aria-haspopup` and `aria-expanded`; Enter, Space or Down Arrow opens the menu and focuses the first item; arrow keys move between items; Escape closes it and returns focus to the button; Tab leaves the menu and closes it.
+- **Combobox** (an input with suggestions). Focus stays in the input; Down Arrow moves into the suggestions, marked with `aria-activedescendant`; Enter accepts the highlighted suggestion; Escape closes the list; `aria-expanded` reflects whether the list is open. Typed text stays the value unless the user picks a suggestion, unless the design deliberately autoselects and shows it.
 - **Tables.** `th` for headers with `scope`, a `caption` or other accessible name, `aria-sort` on sorted columns. Never use tables for layout.
 - **Custom selects, comboboxes, date pickers.** If a native control can do the job, use it. Otherwise implement the full published pattern, not part of it.
 - **Toasts and inline status.** `role="status"` for confirmations; `role="alert"` for errors. Do not move focus to them. Do not auto-dismiss anything the user must act on.
 - **Tooltips.** Supplementary only; never the sole place for essential information; must satisfy 1.4.13.
+
+### Part D — Cognitive accessibility (beyond AA)
+
+WCAG AA leaves most cognitive and learning needs to supplementary guidance. Treat these as recommendations (evidence class: Guidance), and give them more weight on public services, consumer products and any audience marked novice or mixed. Automated checks cannot find them; reading and walking the task can.
+
+- **What things are and how to use them:** the page's purpose is clear; controls look like controls; icons have words; layout and behavior are consistent from page to page.
+- **Finding things:** the most important tasks are the easiest to reach; long media and pages are broken into chunks; search is offered on large sites.
+- **Clear content:** common words, short sentences, literal language, no double negatives; numbers explained in words where they matter; one instruction per step.
+- **Avoiding and fixing mistakes:** nothing moves unexpectedly; users can go back; fees appear at the start; forms accept common formats; work is not lost to timeouts.
+- **Focus:** interruptions are limited; critical paths are short; the page does not carry more than the task needs; people are told in advance what they will need (documents, numbers, time).
+- **Memory:** sign-in does not rely on remembering or transcribing (3.3.8); information is not asked twice (3.3.7); the user never has to calculate or remember something from a previous screen.
+- **Help:** human help is reachable; help is in the same place on every page (3.2.6); results and downsides of choices are stated before the choice.
+- **Adaptation:** motion and auto-updating content can be paused; the interface works with browser text-size, reading and simplification tools.
 
 ## Anti-patterns
 
@@ -164,6 +179,8 @@ Expected keyboard and semantics for common patterns (ARIA Authoring Practices).
 ## Sources
 
 - [W3C-01] WCAG 2.2 — the normative text for Part A
+- [W3C-14] A role is a promise of behavior; [W3C-26] combobox; [W3C-27] menus; [W3C-28] disclosure
+- [W3C-29] Making content usable for people with cognitive and learning disabilities; [W3C-32] consistent help; [GOV-13] users who lack digital skills, confidence or access
 - [W3C-02] What's new in WCAG 2.2
 - [W3C-13] How to Meet WCAG (Quick Reference)
 - [W3C-03] Understanding 2.5.8 Target Size (Minimum)

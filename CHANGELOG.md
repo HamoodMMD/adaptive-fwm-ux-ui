@@ -4,6 +4,21 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.9.0 - 2026-10-21
+
+### Added
+- `patterns/account-security`: sign-in, passwords, one-time codes, passkeys, recovery, session expiry, security settings and API keys, built on current authentication standards and accessible-authentication rules.
+- `patterns/notifications`: a loudness ladder from badge to dialog, toasts, banners, confirmations versus undo, email and push, and alerting products.
+- Cognitive accessibility (Part D of `core/accessibility`), from W3C's guidance on cognitive and learning disabilities, and full keyboard behavior for command menus and comboboxes in Part C.
+- A "user skill and confidence" dimension in classification.
+- Consent and privacy choices in `core/content-and-trust`.
+- Hidden versus disabled controls, offline sync, download sizes and double submission in `patterns/loading-empty-error-states`.
+- Which research method answers which question, in `measuring-results.md`, and an optional "validate with" field on findings.
+- `patterns/component-libraries`: which kind of free UI library suits which project and page type (unstyled primitives, copied-in components, styled kits, government systems, focused widgets), what to check before choosing (license and paid tiers, upkeep, accessibility evidence, right-to-left, reduced motion), and a dated license and maintenance snapshot of 44 libraries. It never replaces a library a project already uses.
+- `patterns/dark-mode-and-themes`: follow the system appearance, switchers with a System option, no flash on load, dark surfaces and desaturated accents, contrast in every theme, logos, images, charts and embeds.
+- `patterns/motion`: what motion is for, durations and easing, never blocking input, scroll-triggered reveals, carousels and autoplay (2.2.2), reduced motion (2.3.3) and flashing.
+- 47 sources.
+
 ## 1.8.1 - 2026-10-14
 
 ### Fixed

@@ -69,6 +69,7 @@ Also distinguish: **not found** (the item does not exist or was removed), **sess
 - The message says what is needed (a role, a plan, an approval) and who or where to ask, without exposing details they should not see.
 - A feature that needs setup shows what to configure and links straight to it; it does not look like a failure.
 - Upgrade-gated features say so honestly and can be dismissed.
+- Hide a control the user will never be able to use in their role; show it disabled, with the reason and how to get access, when they could gain access (another role, a plan, an approval). A disabled control with no reason is a finding.
 
 ### Errors
 - The message appears where the problem is: beside the field, inside the panel, on the row.
@@ -85,6 +86,9 @@ Also distinguish: **not found** (the item does not exist or was removed), **sess
 ### Connection and staleness
 - Loss of connection is shown promptly and persistently without blocking reading of what is already loaded.
 - Actions that cannot work offline are disabled with the reason, or queued visibly where the product supports that.
+- What still works offline is said, and work done offline shows whether it has synced.
+- Large downloads state their size before starting, for people on metered or slow connections.
+- A submit button shows a pending state at once and ignores a second click while the first is in progress, so slow connections and double-clicks do not send twice; the server must also guard against duplicates (functional).
 - Reconnection is confirmed, and content refreshes.
 - Data that updates periodically shows when it was last updated; if an update is overdue, that is flagged so old values are not mistaken for current ones.
 
@@ -146,6 +150,7 @@ Also distinguish: **not found** (the item does not exist or was removed), **sess
 ## Sources
 
 - [NNG-05] Skeleton screens — no indicator under a second, skeleton or spinner up to about ten seconds, progress bar beyond, avoid frame-only skeletons
+- [WEB-15] Offline states, queued actions and sync status; [GOV-12] preventing double submission and avoiding disabled buttons; [WEB-16] hiding versus disabling unavailable controls
 - [NNG-03] Response-time limits
 - [NNG-08] Empty states in complex applications — communicate status, provide learning cues, offer a direct path
 - [CARB-03] Empty-state types — no data, user action, error management

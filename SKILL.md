@@ -2,7 +2,7 @@
 name: adaptive-fwm-ux-ui
 description: "Adaptive, evidence-based UX/UI audit and safe improvement for any website or app. Classifies each surface first (user goal, business goal, audience, environment, risk, device, language), then applies only the matching rule modules: ecommerce, fashion, lead generation, service business, B2B marketing, content sites, SaaS apps, dashboards, monitoring, admin tools, AI products, booking, marketplaces and high-stakes flows, plus forms, navigation, tables, search and filters, charts, loading/empty/error states, mobile, RTL/Arabic, type scale, pricing and selling. Preserves existing functionality and brand identity. Use whenever the user asks to audit, review, critique, check, improve, fix or polish the UX, UI, usability, accessibility (WCAG 2.2 AA), responsiveness, conversion flow, checkout, forms, navigation, tables or dashboards of a page, screen, component, flow or whole product, or to plan UX before a build, even if they only say 'check my website', 'make this easier to use' or 'why does this page feel off'."
 metadata:
-  version: "1.8.1"
+  version: "1.9.0"
 ---
 
 # Adaptive UX/UI audit and improvement
@@ -153,6 +153,11 @@ Loading everything defeats the purpose: irrelevant rules produce irrelevant find
 | [onboarding](references/patterns/onboarding.md) | account creation, a trial start, first-run setup, tours, checklists or permission requests |
 | [conversion-and-retention](references/patterns/conversion-and-retention.md) | questions about conversion, retention, churn, business impact or "high-converting" design; planning metrics or experiments |
 | [virtual-goods](references/patterns/virtual-goods.md) | virtual currency, credits or tokens; in-app or in-game purchases, passes or digital items; paid randomized rewards |
+| [account-security](references/patterns/account-security.md) | sign-in, passwords, one-time codes, passkeys, recovery, session timeouts, security settings or API keys |
+| [notifications](references/patterns/notifications.md) | toasts, banners, badges, alerts, confirmation dialogs, a notification center, or email and push notifications |
+| [component-libraries](references/patterns/component-libraries.md) | planning a build, choosing a UI library, or a fix that needs a complex component the project lacks |
+| [dark-mode-and-themes](references/patterns/dark-mode-and-themes.md) | a dark theme, a theme switcher, following the system appearance, or a dark-by-design brand |
+| [motion](references/patterns/motion.md) | transitions, entrance or scroll animation, parallax, carousels, autoplay, or a motion library |
 | [pricing-and-persuasion](references/patterns/pricing-and-persuasion.md) | a price, plan choice, discount, free offer, trial, guarantee, urgency or scarcity wording, or a surface whose job is to sell or generate leads |
 
 Pattern modules depend on what the interface contains, which you may not know until you have looked. Choose them after gathering evidence, and add one the moment its element turns up. "Load" means read the module before auditing the surface it applies to; for a module scoped to one step or panel, read only the sections that bear on it.
@@ -193,7 +198,7 @@ Screens are only good or bad relative to the task they serve, so begin with task
 
 Priority measures user impact on that surface's main tasks, not how much you dislike something. This holds for requirement failures too: a verified WCAG failure with little effect on anyone is reported as a failure, at the priority its impact earns. Most findings in a healthy product are P2 or P3; if everything is P1, recalibrate.
 
-Each finding has: priority; route or screen; component; workflow; issue; evidence (file and line, or what you observed, marked verified or inferred); rule (module and section) with its evidence class; user impact; recommendation; UI-only? (yes, no, or partly, saying which part is which); functionality risk (none/low/medium/high, with the reason); status (reported, implemented, or not implemented — functional).
+Each finding has: priority; route or screen; component; workflow; issue; evidence (file and line, or what you observed, marked verified or inferred); rule (module and section) with its evidence class; user impact; recommendation; UI-only? (yes, no, or partly, saying which part is which); functionality risk (none/low/medium/high, with the reason); status (reported, implemented, or not implemented — functional). When a finding rests on Research, Guidance or Judgment and the fix is costly or disputed, add **validate with**: the cheapest method that would confirm it (see `measuring-results.md`). Code and screenshots can show whether a label exists; only people can show whether they understand it.
 
 ### Evidence classes
 
