@@ -4,6 +4,12 @@ All notable changes to this skill are recorded here. Versions follow [Semantic V
 
 The version is also recorded in `SKILL.md` under `metadata.version`.
 
+## 1.10.0 - 2026-10-21
+
+### Added
+- `patterns/visual-styles`: expressive styles and effects (particles, liquid morph, neon glow, Y2K chrome, kinetic type, paper cutout, holographic, isometric, ASCII art, clay 3D, retro VHS, comic book, split-flap, hand-drawn, blueprint, physics, pixel art, Bauhaus, Art Deco, neo-brutalism, glassmorphism, neumorphism, glitch, typewriter, marquee, cursor effects, WebGL and more), where each fits and the failures to check, with the rule that the style is kept and fixed from within.
+- 13 sources.
+
 ## 1.9.0 - 2026-10-21
 
 ### Added

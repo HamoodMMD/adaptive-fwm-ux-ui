@@ -4,7 +4,7 @@ Transitions, micro-interactions, entrance effects, scroll effects, parallax, car
 
 **Load when:** the surface animates: page or panel transitions, hover and press effects, entrance or scroll-triggered animation, parallax, carousels or auto-advancing content, autoplaying video, animated illustrations, or a motion library is in use.
 **Skip when:** nothing on the surface moves except native scrolling and focus.
-**Pair with (when present):** `core/accessibility` (2.2.2 and reduced motion), `core/performance`, `core/brand-preservation`, `patterns/loading-empty-error-states`, `patterns/component-libraries`.
+**Pair with (when present):** `patterns/visual-styles` (particles, kinetic type, glitch and other expressive effects), `core/accessibility` (2.2.2 and reduced motion), `core/performance`, `core/brand-preservation`, `patterns/loading-empty-error-states`, `patterns/component-libraries`.
 
 ## Objectives
 

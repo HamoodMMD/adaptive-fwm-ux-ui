@@ -2,7 +2,7 @@
 name: adaptive-fwm-ux-ui
 description: "Adaptive, evidence-based UX/UI audit and safe improvement for any website or app. Classifies each surface first (user goal, business goal, audience, environment, risk, device, language), then applies only the matching rule modules: ecommerce, fashion, lead generation, service business, B2B marketing, content sites, SaaS apps, dashboards, monitoring, admin tools, AI products, booking, marketplaces and high-stakes flows, plus forms, navigation, tables, search and filters, charts, loading/empty/error states, mobile, RTL/Arabic, type scale, pricing and selling. Preserves existing functionality and brand identity. Use whenever the user asks to audit, review, critique, check, improve, fix or polish the UX, UI, usability, accessibility (WCAG 2.2 AA), responsiveness, conversion flow, checkout, forms, navigation, tables or dashboards of a page, screen, component, flow or whole product, or to plan UX before a build, even if they only say 'check my website', 'make this easier to use' or 'why does this page feel off'."
 metadata:
-  version: "1.9.0"
+  version: "1.10.0"
 ---
 
 # Adaptive UX/UI audit and improvement
@@ -158,6 +158,7 @@ Loading everything defeats the purpose: irrelevant rules produce irrelevant find
 | [component-libraries](references/patterns/component-libraries.md) | planning a build, choosing a UI library, or a fix that needs a complex component the project lacks |
 | [dark-mode-and-themes](references/patterns/dark-mode-and-themes.md) | a dark theme, a theme switcher, following the system appearance, or a dark-by-design brand |
 | [motion](references/patterns/motion.md) | transitions, entrance or scroll animation, parallax, carousels, autoplay, or a motion library |
+| [visual-styles](references/patterns/visual-styles.md) | a named or expressive style or effect: particles, neon, chrome, kinetic type, 3D, retro, pixel, brutalist, glass and others |
 | [pricing-and-persuasion](references/patterns/pricing-and-persuasion.md) | a price, plan choice, discount, free offer, trial, guarantee, urgency or scarcity wording, or a surface whose job is to sell or generate leads |
 
 Pattern modules depend on what the interface contains, which you may not know until you have looked. Choose them after gathering evidence, and add one the moment its element turns up. "Load" means read the module before auditing the surface it applies to; for a module scoped to one step or panel, read only the sections that bear on it.

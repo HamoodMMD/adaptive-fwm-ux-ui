@@ -135,6 +135,7 @@ Pattern modules follow the interface, not the profile. Load one when its element
 - planning a new build, choosing a UI component library, or a fix that needs a dialog, combobox, menu, date picker, data grid or toast the project does not have → `component-libraries`
 - a dark theme, a theme switcher, `prefers-color-scheme`, or a dark-only design → `dark-mode-and-themes`
 - transitions, entrance or scroll-triggered animation, parallax, carousels, autoplaying media, or a motion library → `motion`
+- a named or expressive visual style or effect (particles, liquid morph, neon glow, chrome, kinetic type, paper cutout, holographic, isometric, ASCII art, clay 3D, VHS, comic, split-flap, hand-drawn, blueprint, physics, pixel art, Bauhaus, Art Deco, neo-brutalism, glassmorphism, WebGL and similar) → `visual-styles`
 - the surface's job is to sell, sign up or win a lead → `sales-journey`, and record its selling strategy from `selling-strategies.md`
 
 For a desktop-dominant internal tool, `responsive-mobile` is loaded only to check that the tool degrades honestly at narrower widths, not to redesign it for phones.
